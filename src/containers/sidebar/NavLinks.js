@@ -10,12 +10,14 @@ const FlexLinks = styled.nav`
   height: 100%;
 `
 
+const getPathObj = () => ({ prevPath: window.location.pathname })
+
 export default () => (
   <FlexLinks>
-    <Link to="/">Home</Link>
-    <Link to="/projects">Projects</Link>
-    <Link to="/mind">Mind</Link>
-    <Link to="/cv">CV</Link>
-    <Link to="/contact">Contact</Link>
+    <Link to="/" state={getPathObj()}>Home</Link>
+    <Link to="/projects" state={getPathObj()}>Projects</Link>
+    <Link to="/mind" state={getPathObj()}>Mind</Link>
+    <Link to="/cv" state={getPathObj()}>CV</Link>
+    <Link to="/contact" state={getPathObj()}>Contact</Link>
   </FlexLinks>
 );

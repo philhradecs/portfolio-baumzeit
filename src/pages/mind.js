@@ -1,10 +1,7 @@
 import React, { Component } from 'react';
 
 class Mind extends Component {
-  componentDidMount() {
-    this.props.updatePath();
-  }
-
+  
   render() {
     return (
       <div>

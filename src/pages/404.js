@@ -1,9 +1,6 @@
 import React, { Component } from 'react';
 
 class NotFound extends Component {
-  componentDidMount() {
-    this.props.updatePath();
-  }
 
   render() {
     return (
