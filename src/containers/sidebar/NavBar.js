@@ -1,35 +1,109 @@
 import React, { Component } from 'react';
-import styled, { css } from 'styled-components';
+import styled from 'styled-components';
 
 import NavLinks from './NavLinks';
 
+const w = {
+  font: '1.4rem',
+  widthBar: '22vw',
+  indent: '10vw',
+  bg: '#222',
+  color: '#fafafa',
+  widthHeader: '23.3vw'
+}
+
+const n = {
+  font: '1.2rem',
+  widthBar: '10vw',
+  indent: '2.5vw',
+  bg: 'transparent',
+  color: '#222',
+  widthHeader: '11.3vw'
+}
+
 const NavBar = styled.aside`
-  --header-height: 35vh;
-  --bar-width: ${props => props.theme.wide ? '25vw' : '12vw'};
-  
-  width: var(--bar-width);
-  background: ${props => props.theme.wide ? '#222': 'transparent'};
-  
+
+  display: grid;
+  grid-template-rows: 2fr 3fr;
+
   position: sticky;
-  overflow: hidden;
   top: 0;
   height: 100vh;
 
+  width: ${props => props.theme.wide ? w.widthBar : n.widthBar};
+  background: ${props => props.theme.wide ? w.bg : n.bg};
+
   &.resize-enter {
-    width: ${props => props.theme.wide ? '12vw' : '25vw'};
+    width: ${props => !props.theme.wide ? w.widthBar : n.widthBar};
+    background: ${props => !props.theme.wide ? w.bg : n.bg};
+
+    & #header {
+      width: ${props => !props.theme.wide ? w.widthHeader : n.widthHeader}
+    }
+
+    & #avatar {
+      opacity: 0;
+    }
+
+    & .link {
+      color: ${props => !props.theme.wide ? w.color : n.color};
+      padding-left: ${props => !props.theme.wide ? w.indent : n.indent};
+      font-size: ${props => !props.theme.wide ? w.font : n.font};
+    }
+    
   }
+
   &.resize-enter.resize-enter-active {
-    width: ${props => props.theme.wide ? '25vw' : '12vw'};
-    transition: width 3000ms ease;
+    width: ${props => props.theme.wide ? w.widthBar : n.widthBar};
+    background: ${props => props.theme.wide ? w.bg : n.bg};
+    transition: width 200ms ease,
+                background-color 200ms ease;
+
+    & #header {
+      width: ${props => props.theme.wide ? w.widthHeader : n.widthHeader};
+      transition: width 200ms ease;
+    }
+
+    & #avatar {
+      opacity: 1;
+      transition: opacity 200ms ease;
+    }
+
+    & .link {
+      color: ${props => props.theme.wide ? w.color : n.color};
+      padding-left: ${props => props.theme.wide ? w.indent : n.indent};
+      font-size: ${props => props.theme.wide ? w.font : n.font};
+      transition: color 200ms ease,
+                  padding-left 200ms ease,
+                  font-size 200ms ease,
+    }
+  }
+
+  &.resize-enter-done {
+    width: ${props => props.theme.wide ? w.widthBar : n.widthBar};
+    background: ${props => props.theme.wide ? w.bg : n.bg};
+
+    & #header {
+      width: ${props => props.theme.wide ? w.widthHeader : n.widthHeader}
+    }
+
+    & #avatar {
+      opacity: 1;
+    }
+
+    & .link  {
+      color: ${props => props.theme.wide ? w.color : n.color};
+      padding-left: ${props => props.theme.wide ? w.indent : n.indent};
+      font-size: ${props => props.theme.wide ? w.font : n.font};
+    }
   }
 `;
 
 const SideHeader = styled.div`
-  position: fixed;
-  top: 8vh;
-  height: var(--header-height);
-  width: calc(var(--bar-width) + 1.5vw);
-  border-radius: 0 0.3em 0.3em 0;
+  margin-top: 10vh;
+  min-height: 10rem;
+  width: ${props => props.theme.wide ? w.widthHeader : n.widthHeader};
+  border-radius: 0 0.35em 0.35em 0;
   overflow: hidden;
 `;
 
@@ -41,35 +115,23 @@ const Avatar = styled.div`
 `;
 
 const LinkWrapper = styled.div`
-  margin-top: calc(var(--header-height) + 16vh);
-  height: 38vh;
+    margin: 6vh 0 8vh 0;
+    min-height: 10rem;
 
-  a {
-    font-size: 1.2em;
+  & .link {
     text-decoration: none;
-    padding: 0.3em 0.2em 0.1em 0;
-    padding-left: calc(var(--bar-width) / 4);
-    border-bottom: 1px solid transparent;
-    color: #222;
     outline: 0;
-    transition: border-color 140ms ease-out;
+    padding: 0.3em 0.3em 0.05em 0;
+    padding-left: ${props => props.theme.wide ? w.indent : n.indent};
+    color: ${props => props.theme.wide ? w.color : n.color};
+    font-size: ${props => props.theme.wide ? w.font : n.font};
+
+    border-bottom: ${props => props.theme.wide ? '1px solid #111' : '1px solid transparent'};
+    transition: border-color 180ms ease-out;
 
     & :hover, & :active, & :focus {
-      border-bottom: 1px solid black;
+      border-bottom: ${props => props.theme.wide ? '1px solid #fafafa' : '1px solid #111'};
     }
-
-    ${({theme})  =>
-      theme.wide &&
-      css`
-        font-size: 1.4em;
-        white-space: no-wrap;
-        padding-left: calc(var(--bar-width) / 2);
-        border-bottom: 1px solid black;
-        color: #fafafa;
-        & :hover, & :active, & :focus {
-          border-bottom: 1px solid white;
-        }
-    `};
   }
 `;
 
@@ -82,8 +144,8 @@ class NavComp extends Component {
   render() {
     return (
       <NavBar>
-        <SideHeader>
-          <Avatar />
+        <SideHeader id="header">
+          <Avatar id="avatar"/>
         </SideHeader>
         <LinkWrapper>
           <NavLinks />
@@ -94,14 +156,3 @@ class NavComp extends Component {
 }
 
 export default NavComp;
-
-/*export default ({ theme: { wide, navImg }}) => (
-  <NavBar wide={wide}>
-    <SideHeader>
-      <Image src={navImg} alt=''/>
-    </SideHeader>
-    <LinkWrapper wide={wide}>
-      <NavLinks />
-    </LinkWrapper>
-  </NavBar>
-);*/

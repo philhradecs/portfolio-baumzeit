@@ -13,17 +13,20 @@ const GlobalStyle = createGlobalStyle`
   }
 
   body, html {
-    background: #fafafa;
     min-height: 100%;
     margin: 0;
   }
 
   body {
-    font-family: 'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue', Helvetica, Arial,
-      'Lucida Grande', sans-serif;
-    font-weight: 300;
-    font-size: 16px;
-    padding: 0;
+    @import url('https://fonts.googleapis.com/css?family=Titillium+Web');
+    font-family: 'Titillium Web', sans-serif;
+
+    background: #fafafa;
+
+    h1 {
+      color: #fafafa;
+    }
+
   }
 `;
 

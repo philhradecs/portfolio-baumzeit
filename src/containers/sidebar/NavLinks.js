@@ -14,10 +14,10 @@ const getPathObj = () => ({ prevPath: window.location.pathname })
 
 export default () => (
   <FlexLinks>
-    <Link to="/" state={getPathObj()}>Home</Link>
-    <Link to="/projects" state={getPathObj()}>Projects</Link>
-    <Link to="/mind" state={getPathObj()}>Mind</Link>
-    <Link to="/cv" state={getPathObj()}>CV</Link>
-    <Link to="/contact" state={getPathObj()}>Contact</Link>
+    <Link className="link" to="/" state={getPathObj()}>Home</Link>
+    <Link className="link" to="/projects" state={getPathObj()}>Projects</Link>
+    <Link className="link" to="/mind" state={getPathObj()}>Mind</Link>
+    <Link className="link" to="/cv" state={getPathObj()}>CV</Link>
+    <Link className="link" to="/contact" state={getPathObj()}>Contact</Link>
   </FlexLinks>
 );

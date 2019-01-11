@@ -6,15 +6,17 @@ import routeThemes from '../../themes/routeThemes';
 
 import NavBar from './NavBar';
 
-const getTransitionName = (location) => {
+const shouldTransition = (location) => {
+  // assign default prevPath on first page load (where there is no history)
   if (!location.state || !routeThemes.hasOwnProperty(location.state.prevPath)) {
     location.state = { prevPath: 'default'};
   }
+  // check if current path is defined and assign default path if it is not
   if (!routeThemes.hasOwnProperty(location.pathname)) {
     location.pathname = 'default';
   }
-
-  const wasWide = routeThemes[location.state.prevPath].nav.wide; // prevPath was passed to state in sidebar/NavLinks component
+  // prevPath was passed to the Link component in sidebar/NavLinks
+  const wasWide = routeThemes[location.state.prevPath].nav.wide;
   const willBeWide = routeThemes[location.pathname].nav.wide;
   
   return (wasWide !== willBeWide) ? 'resize' : '';
@@ -23,14 +25,13 @@ const getTransitionName = (location) => {
 export default () => (
   <Location>
     {({ location }) => {
-      const transitionName = getTransitionName(location);
+      const className = shouldTransition(location);
       return (
       <TransitionGroup>
         <CSSTransition 
           key={location.key}
-          classNames={transitionName}
-          timeout={3000}
-          enter={!!transitionName}
+          classNames={className}
+          timeout={200}
           exit={false}
           unmountOnExit
         >

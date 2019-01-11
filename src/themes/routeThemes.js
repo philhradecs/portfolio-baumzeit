@@ -5,7 +5,8 @@ export default {
       navImg: 'http://www.onextrapixel.com/wp-content/uploads/2014/08/24-FineClassicalPatternBackground.jpg', 
     },
     content: {
-      bg: 'thistle',
+      shadow: false,
+      bg: '#CCC9B6',
       highlight: 'darkMagenta'
     }
   },
@@ -15,6 +16,7 @@ export default {
       navImg: 'http://www.onextrapixel.com/wp-content/uploads/2014/08/24-FineClassicalPatternBackground.jpg', 
     },
     content: {
+      shadow: true,
       bg: 'blue',
       highlight: 'darkMagenta'
     }
@@ -25,8 +27,9 @@ export default {
       navImg: 'http://www.onextrapixel.com/wp-content/uploads/2014/08/24-FineClassicalPatternBackground.jpg', 
     },
     content: {
-      bg: 'red',
-      highlight: 'darkMagenta'
+      shadow: true,
+      bg: '#98764F',
+      highlight: 'thistle'
     }
   },
   '/cv': {
@@ -35,7 +38,8 @@ export default {
       navImg: 'http://www.onextrapixel.com/wp-content/uploads/2014/08/24-FineClassicalPatternBackground.jpg', 
     },
     content: {
-      bg: 'green',
+      shadow: true,
+      bg: '#88929D',
       highlight: 'darkMagenta'
     }
   },
@@ -45,7 +49,8 @@ export default {
       navImg: 'https://img.freepik.com/free-vector/hexagonal-pattern_1051-833.jpg', 
     },
     content: {
-      bg: 'yellow',
+      shadow: true,
+      bg: '#9DA995',
       highlight: 'darkMagenta'
     }
   },
@@ -55,7 +60,8 @@ export default {
       navImg: 'http://www.onextrapixel.com/wp-content/uploads/2014/08/24-FineClassicalPatternBackground.jpg', 
     },
     content: {
-      bg: 'gray',
+      shadow: true,
+      bg: '#757865',
       highlight: 'darkMagenta'
     }
   },
@@ -65,6 +71,7 @@ export default {
       navImg: 'http://fabrilabo.ro/wp-content/uploads/2015/11/default-image2.jpg'
     },
     content: {
+      shadow: true,
       bg: 'thistle',
       highlight: 'darkMagenta'
     }
