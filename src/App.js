@@ -13,7 +13,6 @@ const GlobalStyle = createGlobalStyle`
   }
 
   body, html {
-    min-height: 100%;
     margin: 0;
   }
 

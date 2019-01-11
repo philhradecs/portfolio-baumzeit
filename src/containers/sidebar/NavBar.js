@@ -6,7 +6,7 @@ import NavLinks from './NavLinks';
 const w = {
   font: '1.4rem',
   widthBar: '22vw',
-  indent: '10vw',
+  indent: '8vw',
   bg: '#222',
   color: '#fafafa',
   widthHeader: '23.3vw'
@@ -22,19 +22,22 @@ const n = {
 }
 
 const NavBar = styled.aside`
+  position: sticky;
+  top: 0;
+  height: 100vh;
 
   display: grid;
   grid-template-rows: 2fr 3fr;
 
-  position: sticky;
-  top: 0;
-  height: 100vh;
+  box-shadow: ${props => props.theme.wide
+                  ? '0.2em -0.15em 2.8em -0.4em rgba(30, 30, 30, 0.7)'
+                  : ''};
 
   width: ${props => props.theme.wide ? w.widthBar : n.widthBar};
   background: ${props => props.theme.wide ? w.bg : n.bg};
 
   &.resize-enter {
-    width: ${props => !props.theme.wide ? w.widthBar : n.widthBar};
+    min-width: ${props => !props.theme.wide ? w.widthBar : n.widthBar};
     background: ${props => !props.theme.wide ? w.bg : n.bg};
 
     & #header {
@@ -61,7 +64,7 @@ const NavBar = styled.aside`
 
     & #header {
       width: ${props => props.theme.wide ? w.widthHeader : n.widthHeader};
-      transition: width 200ms ease;
+      transition: width 150ms ease;
     }
 
     & #avatar {
@@ -110,7 +113,7 @@ const SideHeader = styled.div`
 const Avatar = styled.div`
   background: url("${props => props.theme.navImg}");
   background-size: cover;
-  background-position: center;
+  background-position: right center;
   height: 100%;
 `;
 

@@ -27,19 +27,19 @@ export default () => (
     {({ location }) => {
       const className = shouldTransition(location);
       return (
-      <TransitionGroup>
-        <CSSTransition 
-          key={location.key}
-          classNames={className}
-          timeout={200}
-          exit={false}
-          unmountOnExit
-        >
-          <ThemeProvider theme={routeThemes[location.pathname].nav}>
-            <NavBar />
-          </ThemeProvider>
-        </CSSTransition>
-      </TransitionGroup>
+        <TransitionGroup>
+          <CSSTransition 
+            key={location.key}
+            classNames={className}
+            timeout={200}
+            exit={false}
+            unmountOnExit
+          >
+            <ThemeProvider theme={routeThemes[location.pathname].nav}>
+              <NavBar />
+            </ThemeProvider>
+          </CSSTransition>
+        </TransitionGroup>
       )
     }}
   </Location>

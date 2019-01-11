@@ -19,10 +19,11 @@ const ContentWrapper = styled.section`
   background: ${props => props.theme.bg};
   padding: 2.8rem 3.5rem;
   box-shadow: ${props => props.theme.shadow 
-                  ? '-0.15em 0.2em 2.8em -0.4em rgba(30, 30, 30, 0.7)'
+                  ? '-0.1em 0.2em 2.6em -0.3em rgba(30, 30, 30, 0.7)'
                   : ''};
   border-radius: 0.4rem;
   position: absolute;
+  top: 0;
   width: 100%;
   min-height: 100%;
 
@@ -32,7 +33,7 @@ const ContentWrapper = styled.section`
 
   &.fade-enter.fade-enter-active {
     opacity: 1;
-    transition: opacity 500ms linear;
+    transition: opacity 400ms linear;
   }
 
   &.fade-exit {
@@ -41,7 +42,7 @@ const ContentWrapper = styled.section`
 
   &.fade-exit.fade-exit-active {
     opacity: 0.2;
-    transition: opacity 500ms linear;
+    transition: opacity 400ms linear;
   }
 `;
 
@@ -51,22 +52,22 @@ export default () => (
       const samePath = location.pathname === location.state.prevPath;
       return (
         <FixedGridArea>
-          <ThemeProvider theme={routeThemes[location.pathname].content}>
-            <TransitionGroup>
-              <CSSTransition 
-                key={location.key}
-                classNames='fade'
-                timeout={500}
-                enter={!samePath}
-                exit={!samePath}
-                unmountOnExit
-              >
+          <TransitionGroup>
+            <CSSTransition 
+              key={location.key}
+              classNames='fade'
+              timeout={400}
+              enter={!samePath}
+              exit={!samePath}
+              unmountOnExit
+            >
+              <ThemeProvider theme={routeThemes[location.pathname].content}>
                 <ContentWrapper>
                   <Routes />
                 </ContentWrapper>
-              </CSSTransition>
-            </TransitionGroup>
-          </ThemeProvider>
+              </ThemeProvider>
+            </CSSTransition>
+          </TransitionGroup>
         </FixedGridArea>
       )
     }}
