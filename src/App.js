@@ -5,6 +5,8 @@ import styled, { createGlobalStyle } from 'styled-components';
 import SlideNavBar from './containers/sidebar/SlideNavBar';
 import RoutesContent from './containers/RoutesContent';
 
+require('typeface-titillium-web');
+
 
 const GlobalStyle = createGlobalStyle`
 
@@ -17,7 +19,6 @@ const GlobalStyle = createGlobalStyle`
   }
 
   body {
-    @import url('https://fonts.googleapis.com/css?family=Titillium+Web');
     font-family: 'Titillium Web', sans-serif;
 
     background: #fafafa;
