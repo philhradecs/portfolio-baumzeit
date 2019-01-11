@@ -28,7 +28,7 @@ const ContentWrapper = styled.section`
   min-height: 100%;
 
   &.fade-enter {
-    opacity: 0.2;
+    opacity: ${props => props.samePath ? '1' : '0.2'};
   }
 
   &.fade-enter.fade-enter-active {
@@ -41,7 +41,7 @@ const ContentWrapper = styled.section`
   }
 
   &.fade-exit.fade-exit-active {
-    opacity: 0.2;
+    opacity: ${props => props.samePath ? '1' : '0.2'};
     transition: opacity 400ms linear;
   }
 `;
@@ -57,12 +57,10 @@ export default () => (
               key={location.key}
               classNames='fade'
               timeout={400}
-              enter={!samePath}
-              exit={!samePath}
               unmountOnExit
             >
               <ThemeProvider theme={routeThemes[location.pathname].content}>
-                <ContentWrapper>
+                <ContentWrapper samePath={samePath}>
                   <Routes />
                 </ContentWrapper>
               </ThemeProvider>
