@@ -1,79 +1,44 @@
 export default {
   '/': {
-    nav: {
-      wide: true,
-      navImg: 'http://www.onextrapixel.com/wp-content/uploads/2014/08/24-FineClassicalPatternBackground.jpg', 
-    },
-    content: {
-      shadow: false,
-      bg: '#CCC9B6',
-      highlight: 'darkMagenta'
-    }
+    wide: true,
+    navImg: 'http://www.onextrapixel.com/wp-content/uploads/2014/08/24-FineClassicalPatternBackground.jpg', 
+    contentBg: 'transparent; #CCC9B6',
+    colorHighlight: 'darkMagenta'
   },
   '/404': {
-    nav: {
-      wide: false,
-      navImg: 'http://www.onextrapixel.com/wp-content/uploads/2014/08/24-FineClassicalPatternBackground.jpg', 
-    },
-    content: {
-      shadow: true,
-      bg: 'blue',
-      highlight: 'darkMagenta'
-    }
+    wide: false,
+    navImg: 'http://www.onextrapixel.com/wp-content/uploads/2014/08/24-FineClassicalPatternBackground.jpg', 
+    contentBg: 'blue',
+    colorHighlight: 'darkMagenta'
   },
   '/contact': {
-    nav: {
-      wide: false,
-      navImg: 'http://www.onextrapixel.com/wp-content/uploads/2014/08/24-FineClassicalPatternBackground.jpg', 
-    },
-    content: {
-      shadow: true,
-      bg: '#98764F',
-      highlight: 'thistle'
-    }
+    wide: false,
+    navImg: 'http://www.onextrapixel.com/wp-content/uploads/2014/08/24-FineClassicalPatternBackground.jpg', 
+    contentBg: '#98764F',
+    colorHighlight: 'thistle'
   },
   '/cv': {
-    nav: {
-      wide: false,
-      navImg: 'http://www.onextrapixel.com/wp-content/uploads/2014/08/24-FineClassicalPatternBackground.jpg', 
-    },
-    content: {
-      shadow: true,
-      bg: '#88929D',
-      highlight: 'darkMagenta'
-    }
+    wide: false,
+    navImg: 'http://www.onextrapixel.com/wp-content/uploads/2014/08/24-FineClassicalPatternBackground.jpg', 
+    contentBg: '#88929D',
+    colorHighlight: 'darkMagenta'
   },
   '/mind': {
-    nav: {
-      wide: false,
-      navImg: 'https://img.freepik.com/free-vector/hexagonal-pattern_1051-833.jpg', 
-    },
-    content: {
-      shadow: true,
-      bg: '#9DA995',
-      highlight: 'darkMagenta'
-    }
+    wide: false,
+    navImg: 'https://img.freepik.com/free-vector/hexagonal-pattern_1051-833.jpg', 
+    contentBg: '#9DA995',
+    colorHighlight: 'darkMagenta'
   },
   '/projects': {
-    nav: {
-      wide: false,
-      navImg: 'http://www.onextrapixel.com/wp-content/uploads/2014/08/24-FineClassicalPatternBackground.jpg', 
-    },
-    content: {
-      shadow: true,
-      bg: '#757865',
-      highlight: 'darkMagenta'
-    }
+    wide: false,
+    navImg: 'http://www.onextrapixel.com/wp-content/uploads/2014/08/24-FineClassicalPatternBackground.jpg', 
+    contentBg: '#757865',
+    colorHighlight: 'darkMagenta'
   },
   'default': {
-    nav: {
-      wide: false,
-      navImg: 'http://fabrilabo.ro/wp-content/uploads/2015/11/default-image2.jpg'
-    },
-    content: {
-      shadow: true,
-      bg: 'thistle',
-      highlight: 'darkMagenta'
-    }
+    wide: false,
+    navImg: 'http://fabrilabo.ro/wp-content/uploads/2015/11/default-image2.jpg',
+    contentBg: 'thistle',
+    colorHighlight: 'darkMagenta'
   }
 }

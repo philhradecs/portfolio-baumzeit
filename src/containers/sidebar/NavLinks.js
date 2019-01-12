@@ -13,14 +13,16 @@ const FlexLinks = styled.nav`
 export default () => (
   <Location>
     {({ location }) => {
-      const getPathObj = () => ({ prevPath: location.pathname });
-      return (
+      const prevPath = ({ prevPath: location.pathname });
+      const isActive = ({ isCurrent }) => isCurrent ? { className: "active link" } : { className: "link" };
+
+      return( 
         <FlexLinks>
-          <Link className="link" to="/" state={getPathObj()}>Home</Link>
-          <Link className="link" to="/projects" state={getPathObj()}>Projects</Link>
-          <Link className="link" to="/mind" state={getPathObj()}>Mind</Link>
-          <Link className="link" to="/cv" state={getPathObj()}>CV</Link>
-          <Link className="link" to="/contact" state={getPathObj()}>Contact</Link>
+          <Link getProps={isActive} to="/" state={prevPath}> Home </Link>
+          <Link getProps={isActive} to="/projects" state={prevPath}> Projects </Link>
+          <Link getProps={isActive} to="/mind" state={prevPath}> Mind </Link>
+          <Link getProps={isActive} to="/cv" state={prevPath}> CV </Link>
+          <Link getProps={isActive} to="/contact" state={prevPath}> Contact </Link>
         </FlexLinks>
       )
     }}

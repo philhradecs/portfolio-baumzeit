@@ -16,10 +16,10 @@ const shouldTransition = (location) => {
     location.pathname = 'default';
   }
   // prevPath was passed to the Link component in sidebar/NavLinks
-  const wasWide = routeThemes[location.state.prevPath].nav.wide;
-  const willBeWide = routeThemes[location.pathname].nav.wide;
+  const wasWide = routeThemes[location.state.prevPath].wide;
+  const willBeWide = routeThemes[location.pathname].wide;
   
-  return (wasWide !== willBeWide) ? 'resize' : '';
+  return (wasWide !== willBeWide) ? 'resize' : 'keepSize';
 }
 
 export default () => (
@@ -30,12 +30,12 @@ export default () => (
         <TransitionGroup>
           <CSSTransition 
             key={location.key}
-            classNames={className}
-            timeout={200}
+            classNames={shouldTransition(location)}
+            timeout={510}
             exit={false}
             unmountOnExit
           >
-            <ThemeProvider theme={routeThemes[location.pathname].nav}>
+            <ThemeProvider theme={routeThemes[location.pathname]}>
               <NavBar />
             </ThemeProvider>
           </CSSTransition>

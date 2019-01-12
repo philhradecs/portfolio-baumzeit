@@ -3,13 +3,16 @@ import styled from 'styled-components';
 
 import NavLinks from './NavLinks';
 
+const transitionDuration = '510ms';
+
 const w = {
   font: '1.4rem',
   widthBar: '22vw',
-  indent: '8vw',
-  bg: '#222',
+  indent: '9vw',
+  bg: '#443A31',
   color: '#fafafa',
-  widthHeader: '23.3vw'
+  widthHeader: '23.3vw',
+  underline: '#fafafa'
 }
 
 const n = {
@@ -18,26 +21,48 @@ const n = {
   indent: '2.5vw',
   bg: 'transparent',
   color: '#222',
-  widthHeader: '11.3vw'
+  widthHeader: '11.3vw',
+  underline: '#222'
 }
 
 const NavBar = styled.aside`
-  position: sticky;
-  top: 0;
   height: 100vh;
-
   display: grid;
   grid-template-rows: 2fr 3fr;
 
   box-shadow: ${props => props.theme.wide
-                  ? '0.2em -0.15em 2.8em -0.4em rgba(30, 30, 30, 0.7)'
+                  ? '0.1em 0.2em 2.6em -0.3em rgba(30, 30, 30, 0.7)'
                   : ''};
 
   width: ${props => props.theme.wide ? w.widthBar : n.widthBar};
   background: ${props => props.theme.wide ? w.bg : n.bg};
 
+  &.keepSize-enter {
+
+    & #avatar {
+      opacity: 0;
+      z-index: 1;
+    }
+  }
+
+   &.keepSize-enter.keepSize-enter-active {
+    
+    & #avatar {
+      opacity: 1;
+      transition: opacity ${transitionDuration} ease-out;
+    }
+  }
+
+  &.keepSize-enter-done {
+
+    & #avatar {
+      opacity: 1;
+    }
+  }
+
+
   &.resize-enter {
-    min-width: ${props => !props.theme.wide ? w.widthBar : n.widthBar};
+    width: ${props => !props.theme.wide ? w.widthBar : n.widthBar};
     background: ${props => !props.theme.wide ? w.bg : n.bg};
 
     & #header {
@@ -46,6 +71,7 @@ const NavBar = styled.aside`
 
     & #avatar {
       opacity: 0;
+      z-index: 1;
     }
 
     & .link {
@@ -59,26 +85,26 @@ const NavBar = styled.aside`
   &.resize-enter.resize-enter-active {
     width: ${props => props.theme.wide ? w.widthBar : n.widthBar};
     background: ${props => props.theme.wide ? w.bg : n.bg};
-    transition: width 200ms ease,
-                background-color 200ms ease;
+    transition: width ${transitionDuration} ease,
+                background ${transitionDuration} ease-in-out;
 
     & #header {
       width: ${props => props.theme.wide ? w.widthHeader : n.widthHeader};
-      transition: width 150ms ease;
+      transition: width ${transitionDuration} ease;
     }
 
     & #avatar {
       opacity: 1;
-      transition: opacity 200ms ease;
+      transition: opacity ${transitionDuration} ease;
     }
 
     & .link {
       color: ${props => props.theme.wide ? w.color : n.color};
       padding-left: ${props => props.theme.wide ? w.indent : n.indent};
       font-size: ${props => props.theme.wide ? w.font : n.font};
-      transition: color 200ms ease,
-                  padding-left 200ms ease,
-                  font-size 200ms ease,
+      transition: color ${transitionDuration} ease,
+                  padding-left ${transitionDuration} ease,
+                  font-size ${transitionDuration} ease,
     }
   }
 
@@ -129,11 +155,15 @@ const LinkWrapper = styled.div`
     color: ${props => props.theme.wide ? w.color : n.color};
     font-size: ${props => props.theme.wide ? w.font : n.font};
 
-    border-bottom: ${props => props.theme.wide ? '1px solid #111' : '1px solid transparent'};
+    border-bottom: ${props => props.theme.wide ? '1px solid #222' : '1px solid transparent'};
     transition: border-color 180ms ease-out;
 
-    & :hover, & :active, & :focus {
-      border-bottom: ${props => props.theme.wide ? '1px solid #fafafa' : '1px solid #111'};
+    & :hover, & :focus {
+      border-bottom: ${props => props.theme.wide ? `1px solid ${w.underline}` : `1px solid ${n.underline}`};
+    }
+    &.active {
+      border-bottom: ${props => props.theme.wide ? `1px solid ${w.underline}` : `1px solid ${n.underline}`};
+      pointer-events: none;
     }
   }
 `;
