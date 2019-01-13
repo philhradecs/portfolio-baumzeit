@@ -1,18 +1,12 @@
-import React, { Component } from 'react';
+import React from 'react';
+import styled from 'styled-components';
 
-class Home extends Component {
-  
-  render() {
-    return (
-      <div>
-        <h1>Home</h1>
-        <p>
-          React, static sites, performance, speed. It's the stuff that makes us
-          tick.
-        </p>
-      </div>
-    )
-  }
-}
-
-export default Home;
+export default () => (
+  <div>
+    <h1>Home</h1>
+    <p>
+      React, static sites, performance, speed. It's the stuff that makes us
+      tick.
+    </p>
+  </div>
+)

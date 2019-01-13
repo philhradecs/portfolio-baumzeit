@@ -19,6 +19,7 @@ const GlobalStyle = createGlobalStyle`
   }
 
   body {
+    @import url('https://fonts.googleapis.com/css?family=Titillium+Web');
     font-family: 'Titillium Web', sans-serif;
 
     background: #fafafa;

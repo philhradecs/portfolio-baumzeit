@@ -27,11 +27,11 @@ export default () => (
     {({ location }) => {
       const className = shouldTransition(location);
       return (
-        <TransitionGroup>
+        <TransitionGroup component={null}>
           <CSSTransition 
             key={location.key}
             classNames={shouldTransition(location)}
-            timeout={510}
+            timeout={300}
             exit={false}
             unmountOnExit
           >

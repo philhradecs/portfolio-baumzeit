@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
-
 import NavLinks from './NavLinks';
+import SocialIconsBar from './SocialIconsBar';
 
-const transitionDuration = '510ms';
+const transitionDuration = '300ms';
 
 const w = {
   font: '1.4rem',
@@ -12,28 +12,28 @@ const w = {
   bg: '#443A31',
   color: '#fafafa',
   widthHeader: '23.3vw',
-  underline: '#fafafa'
+  underline: '#eaeaea',
+  shadow: '0.1em 0.2em 2.6em -0.3em rgba(30, 30, 30, 0.7)',
+  sizeIcon: '1.4rem'
 }
 
 const n = {
-  font: '1.2rem',
+  font: '1.1rem',
   widthBar: '10vw',
   indent: '2.5vw',
   bg: 'transparent',
   color: '#222',
   widthHeader: '11.3vw',
-  underline: '#222'
+  underline: '#222',
+  shadow: '0.1em 0.2em 2.6em -0.3em transparent',
+  sizeIcon: '1.1rem'
 }
 
 const NavBar = styled.aside`
-  height: 100vh;
+  min-height: 100vh;
   display: grid;
-  grid-template-rows: 2fr 3fr;
-
-  box-shadow: ${props => props.theme.wide
-                  ? '0.1em 0.2em 2.6em -0.3em rgba(30, 30, 30, 0.7)'
-                  : ''};
-
+  grid-template-rows: auto 2fr 3fr;
+  position: relative;
   width: ${props => props.theme.wide ? w.widthBar : n.widthBar};
   background: ${props => props.theme.wide ? w.bg : n.bg};
 
@@ -60,10 +60,14 @@ const NavBar = styled.aside`
     }
   }
 
-
   &.resize-enter {
     width: ${props => !props.theme.wide ? w.widthBar : n.widthBar};
     background: ${props => !props.theme.wide ? w.bg : n.bg};
+    box-shadow: ${props => !props.theme.wide ? w.shadow : n.shadow};
+    
+    & .socialIcon {
+      font-size: ${props => !props.theme.wide ? w.sizeIcon : n.sizeIcon};
+    }
 
     & #header {
       width: ${props => !props.theme.wide ? w.widthHeader : n.widthHeader}
@@ -71,11 +75,11 @@ const NavBar = styled.aside`
 
     & #avatar {
       opacity: 0;
-      z-index: 1;
     }
 
     & .link {
       color: ${props => !props.theme.wide ? w.color : n.color};
+      border-bottom: ${props => !props.theme.wide ? '1px solid #222' : '1px solid transparent'};
       padding-left: ${props => !props.theme.wide ? w.indent : n.indent};
       font-size: ${props => !props.theme.wide ? w.font : n.font};
     }
@@ -85,8 +89,15 @@ const NavBar = styled.aside`
   &.resize-enter.resize-enter-active {
     width: ${props => props.theme.wide ? w.widthBar : n.widthBar};
     background: ${props => props.theme.wide ? w.bg : n.bg};
+    box-shadow: ${props => props.theme.wide ? w.shadow : n.shadow};
     transition: width ${transitionDuration} ease,
-                background ${transitionDuration} ease-in-out;
+                background ${transitionDuration} ease,
+                box-shadow ${transitionDuration} ease;
+
+    & .socialIcon {
+      font-size: ${props => props.theme.wide ? w.sizeIcon : n.sizeIcon};
+      transition: font-size ${transitionDuration} ease;
+    }           
 
     & #header {
       width: ${props => props.theme.wide ? w.widthHeader : n.widthHeader};
@@ -104,13 +115,19 @@ const NavBar = styled.aside`
       font-size: ${props => props.theme.wide ? w.font : n.font};
       transition: color ${transitionDuration} ease,
                   padding-left ${transitionDuration} ease,
-                  font-size ${transitionDuration} ease,
+                  font-size ${transitionDuration} ease;
     }
   }
 
   &.resize-enter-done {
     width: ${props => props.theme.wide ? w.widthBar : n.widthBar};
     background: ${props => props.theme.wide ? w.bg : n.bg};
+    box-shadow: ${props => props.theme.wide ? w.shadow : n.shadow};
+
+
+    & .socialIcon {
+      font-size: ${props => props.theme.wide ? w.sizeIcon : n.sizeIcon};
+    }
 
     & #header {
       width: ${props => props.theme.wide ? w.widthHeader : n.widthHeader}
@@ -129,11 +146,12 @@ const NavBar = styled.aside`
 `;
 
 const SideHeader = styled.div`
-  margin-top: 10vh;
+  margin-top: 4vh;
   min-height: 10rem;
   width: ${props => props.theme.wide ? w.widthHeader : n.widthHeader};
   border-radius: 0 0.35em 0.35em 0;
   overflow: hidden;
+  position: relative;
 `;
 
 const Avatar = styled.div`
@@ -144,22 +162,25 @@ const Avatar = styled.div`
 `;
 
 const LinkWrapper = styled.div`
-    margin: 6vh 0 8vh 0;
+    margin: 4vh 0 8vh 0;
     min-height: 10rem;
 
   & .link {
+    flex: 1;
+    display: flex;
+    align-items: flex-end;
     text-decoration: none;
     outline: 0;
-    padding: 0.3em 0.3em 0.05em 0;
+    padding: 0.3rem 0.3rem 0.1rem 0;
     padding-left: ${props => props.theme.wide ? w.indent : n.indent};
     color: ${props => props.theme.wide ? w.color : n.color};
     font-size: ${props => props.theme.wide ? w.font : n.font};
-
+    transition: border-color 140ms ease;
     border-bottom: ${props => props.theme.wide ? '1px solid #222' : '1px solid transparent'};
-    transition: border-color 180ms ease-out;
 
     & :hover, & :focus {
       border-bottom: ${props => props.theme.wide ? `1px solid ${w.underline}` : `1px solid ${n.underline}`};
+      
     }
     &.active {
       border-bottom: ${props => props.theme.wide ? `1px solid ${w.underline}` : `1px solid ${n.underline}`};
@@ -177,6 +198,7 @@ class NavComp extends Component {
   render() {
     return (
       <NavBar>
+        <SocialIconsBar />
         <SideHeader id="header">
           <Avatar id="avatar"/>
         </SideHeader>

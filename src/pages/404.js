@@ -1,18 +1,12 @@
-import React, { Component } from 'react';
+import React from 'react';
+import styled from 'styled-components';
 
-class NotFound extends Component {
-
-  render() {
-    return (
-      <div>
-        <h1>404</h1>
-        <p>
-          React, static sites, performance, speed. It's the stuff that makes us
-          tick.
-        </p>
-      </div>
-    )
-  }
-}
-
-export default NotFound;
+export default () => (
+  <div>
+    <h1>404</h1>
+    <p>
+      React, static sites, performance, speed. It's the stuff that makes us
+      tick.
+    </p>
+  </div>
+)
