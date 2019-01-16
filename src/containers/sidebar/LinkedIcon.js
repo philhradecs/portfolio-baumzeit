@@ -34,7 +34,6 @@ const CaptionWrapper = styled.div`
   position: absolute;
   top: 0;
   height: 100%;
-  width: 100%;
   font-size: 0.65em;
   display: flex;
   align-items: center;

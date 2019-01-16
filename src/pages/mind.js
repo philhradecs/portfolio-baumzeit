@@ -3,7 +3,7 @@ import styled from 'styled-components';
 
 export default () => (
   <div>
-    <h1>Home</h1>
+    <h1>Mind</h1>
     <p>
       React, static sites, performance, speed. It's the stuff that makes us
       tick.

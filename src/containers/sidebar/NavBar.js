@@ -12,8 +12,8 @@ const w = {
   bg: '#443A31',
   color: '#fafafa',
   widthHeader: '23.3vw',
-  underline: '#eaeaea',
-  shadow: '0.1em 0.2em 2.6em -0.3em rgba(30, 30, 30, 0.7)',
+  underline: 'palevioletred',
+  shadow: '0 0.15em 1.6em -0.3em rgba(30, 30, 30, 0.7)',
   sizeIcon: '1.4rem'
 }
 
@@ -24,13 +24,14 @@ const n = {
   bg: 'transparent',
   color: '#222',
   widthHeader: '11.3vw',
-  underline: '#222',
-  shadow: '0.1em 0.2em 2.6em -0.3em transparent',
+  underline: 'palevioletred',
+  shadow: '0 0.15em 1.6em -0.3em transparent',
   sizeIcon: '1.1rem'
 }
 
 const NavBar = styled.aside`
   min-height: 100vh;
+  min-width: ${props => props.theme.wide ? '10rem' : '3rem'}; 
   display: grid;
   grid-template-rows: auto 2fr 3fr;
   position: relative;
@@ -40,7 +41,7 @@ const NavBar = styled.aside`
   &.keepSize-enter {
 
     & #avatar {
-      opacity: 0;
+      opacity: 0.01;
       z-index: 1;
     }
   }
@@ -74,7 +75,7 @@ const NavBar = styled.aside`
     }
 
     & #avatar {
-      opacity: 0;
+      opacity: 0.01;
     }
 
     & .link {
@@ -147,7 +148,7 @@ const NavBar = styled.aside`
 
 const SideHeader = styled.div`
   margin-top: 4vh;
-  min-height: 10rem;
+  min-width: ${props => props.theme.wide ? '11rem' : '4.5rem'}; 
   width: ${props => props.theme.wide ? w.widthHeader : n.widthHeader};
   border-radius: 0 0.35em 0.35em 0;
   overflow: hidden;

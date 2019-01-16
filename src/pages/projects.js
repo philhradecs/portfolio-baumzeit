@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import styled from 'styled-components';
 
 import FilterBar from '../containers/contents/projects/filterbar/FilterBar';
 import ShowList from '../containers/contents/projects/showlist/ShowList';
@@ -23,17 +22,22 @@ class Projects extends Component {
     } else {
       newFilterArr = newFilterArr.filter(val => val !== filter);
     }
-    console.log(newFilterArr)
+
     this.setState({
-      activeFilters: newFilterArr
+      activeFilters: newFilterArr,
+      show: false
     });
+  }
+
+  show() {
+    this.setState({ show: true })
   }
 
   render() {
 
     return (
       <div>
-        <h1>Projects</h1>
+        <h1 style={{color: '#222'}}>Projects</h1>
         <p>
           React, static sites, performance, speed. It's the stuff that makes us
           tick.

@@ -3,21 +3,25 @@ import styled from 'styled-components';
 
 const Button = styled.div`
   flex: 1;
-  margin: 0 1rem;
+  white-space: nowrap;
+  margin-left: 1rem;
   height: 100%;
   padding: 0.2rem 0.8rem;
-  background: ${props => props.color};
+  background: var(--body-bg);
   cursor: pointer;
-  border: 2px solid transparent;
+  border: 2px solid ${props => props.color};
   border-radius: 0.3rem;
-
-  &.active {
-    border: 2px solid white;
+  
+  &:hover, &.active {
+    background: ${props => props.color};
+    color: var(--body-bg);
+    transition: background 80ms ease-out,
+                color 80ms ease;
   }
 `;
 
 export default ({ filterToggle, filter }) => (
   <Button onClick={filterToggle} id={filter.key} color={filter.color}>
-    {filter.name}
+    {filter.key}
   </Button>  
 )

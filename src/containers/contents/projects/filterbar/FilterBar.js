@@ -4,43 +4,42 @@ import FilterButton from './FilterButton';
 
 const filters = [
   {
-    name: 'React',
-    key: 'react',
+    key: 'React',
     color: '#61DAFB'
   },
   {
-    name: 'D3',
-    key: 'd3',
+    key: 'D3',
     color: '#CC624E'
   },
   {
-    name: 'Express',
-    key: 'express',
+    key: 'Express',
     color: '#026E00'
   },
   {
-    name: 'vanillaJS',
-    key: 'vanillajs',
+    key: 'MongoDB',
+    color: '#92D9C9'
+  },
+  {
+    key: 'vanillaJS',
     color: '#e80a89'
   },
   {
-    name: 'Responsive',
-    key: 'responsive',
+    key: 'Responsive Design',
     color: '#4A8CFC'
   }
 ]
 
-const BarWrapper = styled.div`
+const BarWrapper = styled.nav`
   display: flex;
   justify-content: space-between;
   align-items: center;
   position: sticky;
-  top: 1rem;
-  background: rgba(0,0,0,0.2);
-  padding: 1rem;
+  top: 0;
+  margin-bottom: 2rem;  
+  z-index: 1;
 `;
 
-export default ({filterToggle}) => (
+export default ({ filterToggle }) => (
   <BarWrapper>
     { filters.map(filter => (
       <FilterButton 
