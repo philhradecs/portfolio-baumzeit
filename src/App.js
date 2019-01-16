@@ -6,7 +6,7 @@ import WebFont from "webfontloader";
 import SlideNavBar from './containers/sidebar/SlideNavBar';
 import RoutesContent from './containers/RoutesContent';
 
-if (document !== undefined) {
+if (typeof document !== 'undefined') {
   WebFont.load({
     google: {
       families: ['Titillium Web:400,600']
