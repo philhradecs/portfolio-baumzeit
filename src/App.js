@@ -1,12 +1,18 @@
 import React, { Component } from 'react';
 import { Root } from 'react-static';
 import styled, { createGlobalStyle } from 'styled-components';
+import WebFont from "webfontloader";
 
 import SlideNavBar from './containers/sidebar/SlideNavBar';
 import RoutesContent from './containers/RoutesContent';
 
-require('typeface-titillium-web');
-
+if (document !== undefined) {
+  WebFont.load({
+    google: {
+      families: ['Titillium Web:400,600']
+    }
+  });
+}
 
 const GlobalStyle = createGlobalStyle`
 
@@ -19,16 +25,9 @@ const GlobalStyle = createGlobalStyle`
   }
 
   body {
-    @import url('https://fonts.googleapis.com/css?family=Titillium+Web');
-    font-family: 'Titillium Web', sans-serif;
-    
     --body-bg: #fafafa;
     background: var(--body-bg);
-
-    h1 {
-      color: #fafafa;
-    }
-
+    font-family: 'Titillium Web';
   }
 `;
 

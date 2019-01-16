@@ -1,12 +1,12 @@
 import React from 'react';
-import styled from 'styled-components';
+import { LightTitle, Paragraph } from '../styles/styledPageComponents';
 
 export default () => (
   <div>
-    <h1>Mind</h1>
-    <p>
+    <LightTitle>Mind</LightTitle>
+    <Paragraph>
       React, static sites, performance, speed. It's the stuff that makes us
       tick.
-    </p>
+    </Paragraph>
   </div>
 )

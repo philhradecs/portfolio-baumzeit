@@ -15,8 +15,8 @@ const ProjectEntry = styled.li`
   background: ${props => props.theme.contentBg};
 
   width: 100%;
-  height: 26rem;
-  margin: 0 0 2rem 2rem;
+  height: 350px;
+  margin: 0 0 2rem 2vw;
   padding: 0rem 2rem 2rem 2rem;
   border-radius: 0.3rem;
   //box-shadow: 0 0 1.7em -0.45em rgba(30, 30, 30, 0.8);
@@ -50,7 +50,7 @@ const Description = styled.p`
 `;
 const PreviewWrapper = styled.div`
   grid-area: pw;
-  transform: translateX(calc(0px - 2rem - 2vw));
+  transform: translateX(calc(0px - 2rem - 2vw - 2px));
   width: calc(100% + calc(2rem + 2vw));
 `;
 

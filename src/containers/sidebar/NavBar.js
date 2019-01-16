@@ -147,10 +147,11 @@ const NavBar = styled.aside`
 `;
 
 const SideHeader = styled.div`
-  margin-top: 4vh;
+  margin-top: 5vh;
   min-width: ${props => props.theme.wide ? '11rem' : '4.5rem'}; 
   width: ${props => props.theme.wide ? w.widthHeader : n.widthHeader};
   border-radius: 0 0.35em 0.35em 0;
+  box-shadow: 0 0.15em 1.6em -0.5em rgba(30, 30, 30, 0.7);
   overflow: hidden;
   position: relative;
 `;

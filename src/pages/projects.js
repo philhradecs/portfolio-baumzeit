@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 
+import { DarkTitle, Paragraph } from '../styles/styledPageComponents';
 import FilterBar from '../containers/contents/projects/filterbar/FilterBar';
 import ShowList from '../containers/contents/projects/showlist/ShowList';
 
@@ -14,34 +15,28 @@ class Projects extends Component {
 
   filterToggle(e) {
     const button = e.target;
-    const filter = button.id;
+    const filterKey = e.target.id;
     let newFilterArr = this.state.activeFilters;
 
     if (button.classList.toggle('active')) {
-      newFilterArr = this.state.activeFilters.concat(filter);
+      newFilterArr = this.state.activeFilters.concat(filterKey);
     } else {
-      newFilterArr = newFilterArr.filter(val => val !== filter);
+      newFilterArr = newFilterArr.filter(val => val !== filterKey);
     }
 
     this.setState({
       activeFilters: newFilterArr,
-      show: false
     });
   }
 
-  show() {
-    this.setState({ show: true })
-  }
-
   render() {
-
     return (
       <div>
-        <h1 style={{color: '#222'}}>Projects</h1>
-        <p>
+        <DarkTitle>Projects</DarkTitle>
+        <Paragraph>
           React, static sites, performance, speed. It's the stuff that makes us
           tick.
-        </p>
+        </Paragraph>
         <FilterBar filterToggle={this.filterToggle}/>
         <ShowList activeFilters={this.state.activeFilters} />
       </div>

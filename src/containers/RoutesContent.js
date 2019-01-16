@@ -4,7 +4,7 @@ import { Location } from '@reach/router';
 import styled, { ThemeProvider } from 'styled-components';
 import { CSSTransition, TransitionGroup } from 'react-transition-group';
 
-import routeThemes from '../themes/routeThemes';
+import routeThemes from '../styles/routeThemes';
 
 const transitionDuration = 250;
 
@@ -23,7 +23,7 @@ const ContentWrapper = styled.section`
   background: ${props => props.theme.pageView
                   ? props.theme.contentBg
                   : 'var(--body-bg)'};
-  padding: 2.8rem 3.5rem;
+  padding: 0 2.8rem;
   box-shadow: ${props => props.theme.pageView 
                   ? '0 0.1em 1.6em -0.3em rgba(30, 30, 30, 0.7)'
                   : ''};

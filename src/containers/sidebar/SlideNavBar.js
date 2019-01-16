@@ -2,7 +2,7 @@ import React from 'react';
 import { CSSTransition, TransitionGroup } from 'react-transition-group';
 import { Location } from '@reach/router';
 import { ThemeProvider } from 'styled-components';
-import routeThemes from '../../themes/routeThemes';
+import routeThemes from '../../styles/routeThemes';
 
 import NavBar from './NavBar';
 

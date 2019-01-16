@@ -8,7 +8,7 @@ const IconWrapper = styled.div`
   justify-content: center;
   align-items: center;
   height: 100%;
-  margin-top: 3vh;
+  margin-top: 4vh;
   padding: 0 10%;
 `;
 

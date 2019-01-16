@@ -1,12 +1,12 @@
 import React from 'react';
-import styled from 'styled-components';
+import { DarkTitle, Paragraph } from '../styles/styledPageComponents';
 
 export default () => (
   <div>
-    <h1>Home</h1>
-    <p>
+    <DarkTitle>Home</DarkTitle>
+    <Paragraph>
       React, static sites, performance, speed. It's the stuff that makes us
       tick.
-    </p>
+    </Paragraph>
   </div>
 )
