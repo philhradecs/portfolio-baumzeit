@@ -12,7 +12,7 @@ const filters = [
     color: '#CC624E'
   },
   {
-    key: 'Express',
+    key: 'Node',
     color: '#026E00'
   },
   {
@@ -20,13 +20,18 @@ const filters = [
     color: '#92D9C9'
   },
   {
-    key: 'vanillaJS',
-    color: '#e80a89'
+    key: 'API',
+    color: 'slategray'
   },
   {
     key: 'Responsive Design',
     color: '#4A8CFC'
-  }
+  },
+  {
+    key: 'vanillaJS',
+    color: '#e80a89'
+  },
+  
 ]
 
 const BarWrapper = styled.nav`

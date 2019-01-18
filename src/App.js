@@ -1,23 +1,21 @@
 import React, { Component } from 'react';
 import { Root } from 'react-static';
 import styled, { createGlobalStyle } from 'styled-components';
-import WebFont from "webfontloader";
 
 import SlideNavBar from './containers/sidebar/SlideNavBar';
 import RoutesContent from './containers/RoutesContent';
+import loadWebFonts from './loadWebFonts';
 
-if (typeof document !== 'undefined') {
-  WebFont.load({
-    google: {
-      families: ['Titillium Web:400,600']
-    }
-  });
-}
+loadWebFonts();
 
 const GlobalStyle = createGlobalStyle`
 
   * {
     box-sizing: border-box;
+  }
+
+  .wf-active {
+    font-family: 'Titillium Web';
   }
 
   body, html {
@@ -27,7 +25,6 @@ const GlobalStyle = createGlobalStyle`
   body {
     --body-bg: #fafafa;
     background: var(--body-bg);
-    font-family: 'Titillium Web';
   }
 `;
 

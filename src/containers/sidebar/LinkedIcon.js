@@ -6,6 +6,7 @@ const Anchor = styled.a`
   text-decoration: none;
   min-height: 3.5rem;
   font-size: ${props => props.theme.wide ? '1.4rem' : '1.1rem'};
+  font-weight: ${props => props.theme.wide ? '300' : '600' };
   opacity: 0.9;
   color: ${props => props.theme.wide ? 'white' : '#222'};
   text-align: center;

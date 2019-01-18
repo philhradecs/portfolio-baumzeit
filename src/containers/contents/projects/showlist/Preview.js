@@ -1,6 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
 
+import LinkedButton from './LinkedButton';
+
 const Container = styled.div`
   height: 100%;
   overflow: hidden;
@@ -11,7 +13,7 @@ const Container = styled.div`
 `;
 
 const Image = styled.div`
-  background: url('${props => props.imgUrl}') left center;
+  background: url('${props => props.imgUrl}') center;
   background-size: cover;
   border-radius: 0.3rem;
   height: 100%;
@@ -30,32 +32,22 @@ const LinkOverlay = styled.a`
   background: rgba(0,0,0,0);
 
   &:hover {
-    background: rgba(0,0,0,0.25);
+    background: rgba(0,0,0,0.35);
     transition: background 80ms ease-out;
 
-    & #live-button {
-      opacity: 0.9;
+    & .link-button {
+      opacity: 0.95;
       transition: opacity 80ms ease-out;
     }
   }
 `;
 
-const LiveButton = styled.div`
-  color: #333;
-  font-size: 1rem;
-  opacity: 0;
-  padding: 0.5rem 0.7rem;
-  background: var(--body-bg);
-  border-radius: 0.2rem;
-`;
-
 export default ({ url, img, title }) => (
   <Container>
     <Image imgUrl={'/previews/' + img} title={title}/>
-    <LinkOverlay href={url} target='_blank' rel='noopener noreferrer'>
-      <LiveButton id='live-button'>
-        View Live
-      </LiveButton> 
+    <LinkOverlay>
+      <LinkedButton url={url.live} text='Live'/>
+      <LinkedButton url={url.code} text='Code' inverse/>
     </LinkOverlay>
   </Container>
 )

@@ -6,7 +6,7 @@ import Preview from './Preview';
 const ProjectEntry = styled.li`
 
   display: grid;
-  grid-template-columns: 2fr 1fr 5fr;
+  grid-template-columns: 3fr 1fr 6fr;
   grid-template-rows: 1fr 4fr;
   grid-template-areas: 
     'ti ta ta'
@@ -25,11 +25,12 @@ const ProjectEntry = styled.li`
 const Tags = styled.p`
   grid-area: ta;
   align-self: center;
-  margin: 0;
+  margin-left: 1rem;
   padding: 0;
 
   & span {
     font-size: 0.8em;
+    font-weight: 600;
     margin-right: 0.6rem;
   }
 `;

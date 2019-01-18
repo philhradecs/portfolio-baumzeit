@@ -9,10 +9,18 @@ const w = {
   font: '1.4rem',
   widthBar: '22vw',
   indent: '9vw',
-  bg: '#443A31',
-  color: '#fafafa',
+  bg: '#292F2B',
+  colorFont: {
+    passive: '#eee',
+    active: 'white',
+    hover: 'white'
+  },
   widthHeader: '23.3vw',
-  underline: 'palevioletred',
+  underline: {
+    passive: '#111',
+    active: 'black',
+    hover: 'palevioletred'
+  },
   shadow: '0 0.15em 1.6em -0.3em rgba(30, 30, 30, 0.7)',
   sizeIcon: '1.4rem'
 }
@@ -22,9 +30,17 @@ const n = {
   widthBar: '10vw',
   indent: '2.5vw',
   bg: 'transparent',
-  color: '#222',
+  colorFont: {
+    passive: '#222',
+    active: 'black',
+    hover: 'black'
+  },
   widthHeader: '11.3vw',
-  underline: 'palevioletred',
+  underline: {
+    passive: 'transparent',
+    active: 'black',
+    hover: '#222'
+  },
   shadow: '0 0.15em 1.6em -0.3em transparent',
   sizeIcon: '1.1rem'
 }
@@ -80,7 +96,7 @@ const NavBar = styled.aside`
 
     & .link {
       color: ${props => !props.theme.wide ? w.color : n.color};
-      border-bottom: ${props => !props.theme.wide ? '1px solid #222' : '1px solid transparent'};
+      border-bottom: 1px solid ${props => !props.theme.wide ? w.underline.passive : n.underline.passive};
       padding-left: ${props => !props.theme.wide ? w.indent : n.indent};
       font-size: ${props => !props.theme.wide ? w.font : n.font};
     }
@@ -175,17 +191,19 @@ const LinkWrapper = styled.div`
     outline: 0;
     padding: 0.3rem 0.3rem 0.1rem 0;
     padding-left: ${props => props.theme.wide ? w.indent : n.indent};
-    color: ${props => props.theme.wide ? w.color : n.color};
+    color: ${props => props.theme.wide ? w.colorFont.passive : n.colorFont.passive};
     font-size: ${props => props.theme.wide ? w.font : n.font};
-    transition: border-color 140ms ease;
-    border-bottom: ${props => props.theme.wide ? '1px solid #222' : '1px solid transparent'};
+    transition: border-color 140ms ease,
+                color 140ms ease;
+    border-bottom: 1px solid ${props => props.theme.wide ? w.underline.passive : n.underline.passive};
 
     & :hover, & :focus {
-      border-bottom: ${props => props.theme.wide ? `1px solid ${w.underline}` : `1px solid ${n.underline}`};
-      
+      border-color: ${props => props.theme.wide ? w.underline.hover : n.underline.hover};
+      color: ${props => props.theme.wide ? w.colorFont.hover : n.colorFont.hover};
     }
     &.active {
-      border-bottom: ${props => props.theme.wide ? `1px solid ${w.underline}` : `1px solid ${n.underline}`};
+      border-color: ${props => props.theme.wide ? w.underline.active : n.underline.active};
+      color: ${props => props.theme.wide ? w.colorFont.active : n.colorFont.active};
       pointer-events: none;
     }
   }

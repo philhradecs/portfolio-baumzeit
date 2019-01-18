@@ -17,14 +17,14 @@ export default {
     wide: false,
     navImg: 'http://www.onextrapixel.com/wp-content/uploads/2014/08/24-FineClassicalPatternBackground.jpg', 
     pageView: true,
-    contentBg: '#98764F',
+    contentBg: '#88929D',
     colorHighlight: 'thistle'
   },
   '/cv': {
     wide: false,
     navImg: 'http://www.onextrapixel.com/wp-content/uploads/2014/08/24-FineClassicalPatternBackground.jpg', 
     pageView: true,
-    contentBg: '#88929D',
+    contentBg: '#B39475',
     colorHighlight: 'darkMagenta'
   },
   '/mind': {
