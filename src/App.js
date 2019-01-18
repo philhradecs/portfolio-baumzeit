@@ -6,7 +6,9 @@ import SlideNavBar from './containers/sidebar/SlideNavBar';
 import RoutesContent from './containers/RoutesContent';
 import loadWebFonts from './loadWebFonts';
 
-loadWebFonts();
+if (typeof window !== 'undefined') {
+  loadWebFonts();
+}
 
 const GlobalStyle = createGlobalStyle`
 
