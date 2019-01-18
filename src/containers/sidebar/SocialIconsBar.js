@@ -5,11 +5,10 @@ import LinkedIcon from './LinkedIcon';
 
 const IconWrapper = styled.div`
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
   height: 100%;
-  margin-top: 4vh;
-  padding: 0 10%;
+  margin: 0 1.5vw 0 1vw;
 `;
 
 export default () => (

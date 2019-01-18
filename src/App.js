@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
 import { Root } from 'react-static';
 import styled, { createGlobalStyle } from 'styled-components';
+import withSizes from 'react-sizes';
 
-import SlideNavBar from './containers/sidebar/SlideNavBar';
+import ProvideNavBar from './containers/sidebar/ProvideNavBar';
 import RoutesContent from './containers/RoutesContent';
 import loadWebFonts from './loadWebFonts';
 
@@ -12,12 +13,17 @@ if (typeof window !== 'undefined') {
 
 const GlobalStyle = createGlobalStyle`
 
-  * {
-    box-sizing: border-box;
+  .wf-loading {
+    opacity: 0;
   }
 
-  .wf-active {
-    font-family: 'Titillium Web';
+  .wf-active *, 
+  .wf-inactive * {
+    transition: opacity 400ms ease-out;  
+  }
+
+  * {
+    box-sizing: border-box;
   }
 
   body, html {
@@ -25,30 +31,29 @@ const GlobalStyle = createGlobalStyle`
   }
 
   body {
+
     --body-bg: #fafafa;
     background: var(--body-bg);
+    font-family: 'Titillium Web';
+
   }
 `;
 
 const SiteLayout = styled.div`
   display: grid;
-  grid-template-columns: auto 1fr;
+  grid-template-columns: ${props => props.singleColumn ? '1fr' : 'auto 1fr'};
 `;
 
-export class App extends Component {
-  constructor() {
-    super();
-    this.state = {
-    }
-  }
+@withSizes(({ width }) => ({ singleColumn: width <= 768 }))
 
+class App extends Component {
   render() {
     return (
       <Root>
         <GlobalStyle />
-        <SiteLayout>
-          <SlideNavBar />
-          <RoutesContent />
+        <SiteLayout singleColumn={this.props.singleColumn}>
+          <ProvideNavBar singleColumn={this.props.singleColumn} />
+          <RoutesContent singleColumn={this.props.singleColumn} />
         </SiteLayout>
       </Root>
     );

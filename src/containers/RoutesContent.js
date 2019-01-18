@@ -11,7 +11,8 @@ const transitionDuration = 250;
 const FixedGridArea = styled.div`
   display: grid;
   grid-template-areas: 'fixedArea';
-  padding: 1.4rem 1.8rem 1.4rem 3.3rem; 
+  padding: ${props => props.singleColumn ? '0' : '3.5vh 2.5vw 3.5vh 4.4vw'};
+
   min-height: 100vh;
   overflow: auto;
   overflow-y: overlay;
@@ -22,8 +23,8 @@ const ContentWrapper = styled.section`
   grid-area: fixedArea;
   background: ${props => props.theme.pageView
                   ? props.theme.contentBg
-                  : 'var(--body-bg)'};
-  padding: 0 2.8rem;
+                  : 'transparent'};
+  padding: 0 3.2vw;
   box-shadow: ${props => props.theme.pageView 
                   ? '0 0.1em 1.6em -0.3em rgba(30, 30, 30, 0.7)'
                   : ''};
@@ -52,10 +53,10 @@ const ContentWrapper = styled.section`
   }
 `;
 
-export default () => (
+export default ({ singleColumn }) => (
   <Location>
     {({ location }) => (
-      <FixedGridArea>
+      <FixedGridArea singleColumn={singleColumn}>
         <TransitionGroup component={null}>
           <CSSTransition 
             key={location.key}

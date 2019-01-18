@@ -19,8 +19,7 @@ const Image = styled.div`
   height: 100%;
 `;
 
-const LinkOverlay = styled.a`
-  text-decoration: none;
+const LinkOverlay = styled.div`
   position: absolute;
   top: 0;
   left: 0;

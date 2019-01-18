@@ -3,13 +3,12 @@ import styled from 'styled-components';
 
 const Button = styled.div`
   flex: 1;
+  max-width: 12rem;
   white-space: nowrap;
   margin-left: 1rem;
-  &:first-child {
-    margin-left: 0;
-  }
   height: 100%;
   padding: 0.2rem 0.8rem;
+  margin-bottom: 0.2rem;
   background: var(--body-bg);
   cursor: pointer;
   border: 2px solid ${props => props.color};

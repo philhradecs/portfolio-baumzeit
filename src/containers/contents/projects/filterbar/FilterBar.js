@@ -38,9 +38,11 @@ const BarWrapper = styled.nav`
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
   position: sticky;
   top: 0;
-  margin-bottom: 2rem;  
+  margin-bottom: 2rem;
+  margin-left: -1rem;
   z-index: 1;
 `;
 

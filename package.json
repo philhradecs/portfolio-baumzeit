@@ -17,6 +17,7 @@
     "react": "^16.7.0",
     "react-dom": "^16.7.0",
     "react-hot-loader": "^4.3.12",
+    "react-sizes": "^1.0.4",
     "react-static": "^6.0.0-beta.30",
     "react-static-plugin-styled-components": "^6.0.8",
     "react-transition-group": "^2.5.2",
@@ -24,6 +25,7 @@
     "webfontloader": "^1.6.28"
   },
   "devDependencies": {
+    "@babel/plugin-proposal-decorators": "^7.2.3",
     "babel-plugin-styled-components": "^1.10.0",
     "eslint-config-react-tools": "1.x.x",
     "serve": "^10.1.1"

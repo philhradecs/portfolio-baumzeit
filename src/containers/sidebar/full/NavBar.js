@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
-import NavLinks from './NavLinks';
-import SocialIconsBar from './SocialIconsBar';
+import NavLinks from '../NavLinks';
+import SocialIconsBar from '../SocialIconsBar';
 
 const transitionDuration = '300ms';
 
@@ -46,8 +46,8 @@ const n = {
 }
 
 const NavBar = styled.aside`
-  min-height: 100vh;
-  min-width: ${props => props.theme.wide ? '10rem' : '3rem'}; 
+  min-height: 100vh; 
+  padding-top: 6.5vh;
   display: grid;
   grid-template-rows: auto 2fr 3fr;
   position: relative;
@@ -187,8 +187,6 @@ const LinkWrapper = styled.div`
     flex: 1;
     display: flex;
     align-items: flex-end;
-    text-decoration: none;
-    outline: 0;
     padding: 0.3rem 0.3rem 0.1rem 0;
     padding-left: ${props => props.theme.wide ? w.indent : n.indent};
     color: ${props => props.theme.wide ? w.colorFont.passive : n.colorFont.passive};
@@ -209,25 +207,14 @@ const LinkWrapper = styled.div`
   }
 `;
 
-class NavComp extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-    }
-  }
-  render() {
-    return (
-      <NavBar>
-        <SocialIconsBar />
-        <SideHeader id="header">
-          <Avatar id="avatar"/>
-        </SideHeader>
-        <LinkWrapper>
-          <NavLinks />
-        </LinkWrapper>
-      </NavBar>
-    )
-  }
-}
-
-export default NavComp;
+export default () => (
+  <NavBar>
+    <SocialIconsBar />
+    <SideHeader id="header">
+      <Avatar id="avatar"/>
+    </SideHeader>
+    <LinkWrapper>
+      <NavLinks />
+    </LinkWrapper>
+  </NavBar>
+)
