@@ -5,10 +5,9 @@ import LinkedIcon from './LinkedIcon';
 
 const IconWrapper = styled.div`
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
   height: 100%;
-  margin: 0 1.5vw 0 1vw;
 `;
 
 export default () => (

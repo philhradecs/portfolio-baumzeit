@@ -162,6 +162,11 @@ const NavBar = styled.aside`
   }
 `;
 
+const IconsBarWrapper = styled.div`
+  margin-left: 5%;
+  margin-right: 10%;
+`;
+
 const SideHeader = styled.div`
   margin-top: 5vh;
   min-width: ${props => props.theme.wide ? '11rem' : '4.5rem'}; 
@@ -209,7 +214,9 @@ const LinkWrapper = styled.div`
 
 export default () => (
   <NavBar>
-    <SocialIconsBar />
+    <IconsBarWrapper>
+      <SocialIconsBar />
+    </IconsBarWrapper>
     <SideHeader id="header">
       <Avatar id="avatar"/>
     </SideHeader>

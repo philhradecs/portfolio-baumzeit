@@ -42,6 +42,8 @@ const GlobalStyle = createGlobalStyle`
 const SiteLayout = styled.div`
   display: grid;
   grid-template-columns: ${props => props.singleColumn ? '1fr' : 'auto 1fr'};
+  grid-template-rows: ${props => props.singleColumn ? '4rem' : '1fr'};
+  height: 100vh;
 `;
 
 @withSizes(({ width }) => ({ singleColumn: width <= 768 }))

@@ -13,7 +13,7 @@ const FixedGridArea = styled.div`
   grid-template-areas: 'fixedArea';
   padding: ${props => props.singleColumn ? '0' : '3.5vh 2.5vw 3.5vh 4.4vw'};
 
-  min-height: 100vh;
+  min-height: ${props => props.singleColumn ? '100%' : '100vh'};
   overflow: auto;
   overflow-y: overlay;
   position: relative;
