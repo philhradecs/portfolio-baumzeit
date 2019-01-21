@@ -1,9 +1,17 @@
 import React from 'react';
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 
 import Preview from './Preview';
 
 const ProjectEntry = styled.li`
+
+  background: ${props => props.theme.contentBg};
+
+  width: 100%;
+  height: 350px;
+  margin: 0 0 2rem 2vw;
+  padding: 0rem 2rem 2rem 1.8rem;
+  border-radius: 0.3rem;
 
   display: grid;
   grid-template-columns: 3fr 1fr 6fr;
@@ -12,47 +20,58 @@ const ProjectEntry = styled.li`
     'ti ta ta'
     'pw pw de';
   justify-content: center;
-  background: ${props => props.theme.contentBg};
 
-  width: 100%;
-  height: 350px;
-  margin: 0 0 2rem 2vw;
-  padding: 0rem 2rem 2rem 2rem;
-  border-radius: 0.3rem;
+  ${props =>
+      props.theme.singleColumn && css`
+        grid-template-columns: 1fr;
+        grid-template-rows: auto 200px auto auto;
+        grid-template-areas: 'ti'
+                             'pw'
+                             'ta'
+                             'de';
+        height: auto;
+      `
+  }
   //box-shadow: 0 0 1.7em -0.45em rgba(30, 30, 30, 0.8);
 `;
 
 const Tags = styled.p`
   grid-area: ta;
   align-self: center;
-  margin-left: 1rem;
+  font-family: 'Muli';
+  font-weight: 300;
+  font-size: 1rem;
   padding: 0;
+  border-bottom: 1px solid white;
 
   & span {
-    font-size: 0.8em;
-    font-weight: 600;
-    margin-right: 0.6rem;
+    font-size: 0.85em;
+    margin-right: 0.7rem;
   }
 `;
 const Title = styled.h2`
+  font-family: 'Titillium Web';
+  font-weight: 400;
   grid-area: ti;
   align-self: center;
-  color: #333;
+  color: #222;
   font-size: 1.2rem;
-  font-weight: 400;
   margin: 0;
-  margin-bottom: 0.5rem;
-  padding: 0;
-  border-radius: 0.3rem;
+  margin-bottom: 0.3rem;
+  padding: 0.5rem 0;
 `;
 const Description = styled.p`
+  font-family: 'Roboto Slab';
+  font-weight: 300;
+  font-size: 0.9rem;
   grid-area: de;
+  margin-top: 0.5rem;
   margin-left: 2rem;
 `;
 const PreviewWrapper = styled.div`
   grid-area: pw;
-  transform: translateX(calc(0px - 2rem - 2vw - 2px));
-  width: calc(100% + calc(2rem + 2vw));
+  transform: translateX(calc(0px - 1.8rem - 2vw - 2px)); // padding - excess - border
+  width: calc(100% + calc(1.8rem + 2vw));
 `;
 
 const LiveLink = styled.a`
@@ -61,8 +80,8 @@ const LiveLink = styled.a`
 
 export default ({ projectData: { data, tags, url, img }}) => (
   <ProjectEntry>
-    <Tags><span>Focus:</span>{tags.join(' / ')}</Tags>
     <Title>{data.title}</Title>
+    <Tags><span>Focus:</span>{tags.join(' \\ ')}</Tags>
     <PreviewWrapper>
       <Preview url={url} img={img} title={data.title} />
     </PreviewWrapper>

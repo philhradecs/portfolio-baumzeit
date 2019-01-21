@@ -11,7 +11,10 @@ const DarkTitle = styled(LightTitle)`
 `;
 
 const Paragraph = styled.p`
+	font-family: 'Roboto Slab';
+	font-weight: 300;
   font-size: 1rem;
+  line-height: 1.6;
   color: #222;
 `;
 

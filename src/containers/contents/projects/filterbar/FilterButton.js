@@ -4,10 +4,13 @@ import styled from 'styled-components';
 const Button = styled.div`
   flex: 1;
   max-width: 12rem;
+  font-family: 'Muli';
+  font-weight: 400;
+  font-size: 0.9rem;
   white-space: nowrap;
   margin-left: 1rem;
   height: 100%;
-  padding: 0.2rem 0.8rem;
+  padding: 0.3rem 0.8rem;
   margin-bottom: 0.2rem;
   background: var(--body-bg);
   cursor: pointer;

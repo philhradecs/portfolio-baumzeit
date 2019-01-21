@@ -6,7 +6,7 @@ export default () => {
   import('webfontloader').then(WebFont => {
     WebFont.load({
       google: {
-        families: ['Titillium Web:400,600']
+        families: ['Titillium Web:300,400', 'Muli:300,400', 'Roboto Slab:300']
       },
       active: () => {
         sessionStorage.setItem('fonts', true);

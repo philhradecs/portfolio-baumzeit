@@ -24,7 +24,9 @@ const ContentWrapper = styled.section`
   background: ${props => props.theme.pageView
                   ? props.theme.contentBg
                   : 'transparent'};
-  padding: 0 3.2vw;
+  padding: ${props => props.theme.pageView
+                ? '0 3.2vw'
+                : '0 2.6vw'};
   box-shadow: ${props => props.theme.pageView 
                   ? '0 0.1em 1.6em -0.3em rgba(30, 30, 30, 0.7)'
                   : ''};
@@ -64,7 +66,8 @@ export default ({ singleColumn }) => (
             timeout={transitionDuration}
             unmountOnExit
           >
-            <ThemeProvider theme={routeThemes[location.pathname] || routeThemes.default}>
+            <ThemeProvider theme={() => { const theme = routeThemes[location.pathname] || routeThemes.default;
+                                          return { singleColumn, ...theme }}}>
               <ContentWrapper>
                 <Routes />
               </ContentWrapper>

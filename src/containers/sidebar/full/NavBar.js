@@ -11,14 +11,14 @@ const w = {
   indent: '9vw',
   bg: '#292F2B',
   colorFont: {
-    passive: '#eee',
+    passive: '#ddd',
     active: 'white',
     hover: 'white'
   },
   widthHeader: '23.3vw',
   underline: {
     passive: '#111',
-    active: 'black',
+    active: '#111',
     hover: 'palevioletred'
   },
   shadow: '0 0.15em 1.6em -0.3em rgba(30, 30, 30, 0.7)',
@@ -31,14 +31,14 @@ const n = {
   indent: '2.5vw',
   bg: 'transparent',
   colorFont: {
-    passive: '#222',
+    passive: '#333',
     active: 'black',
     hover: 'black'
   },
   widthHeader: '11.3vw',
   underline: {
     passive: 'transparent',
-    active: 'black',
+    active: '#222',
     hover: '#222'
   },
   shadow: '0 0.15em 1.6em -0.3em transparent',
@@ -168,7 +168,7 @@ const IconsBarWrapper = styled.div`
 `;
 
 const SideHeader = styled.div`
-  margin-top: 5vh;
+  margin-top: 4vh;
   min-width: ${props => props.theme.wide ? '11rem' : '4.5rem'}; 
   width: ${props => props.theme.wide ? w.widthHeader : n.widthHeader};
   border-radius: 0 0.35em 0.35em 0;
@@ -185,7 +185,7 @@ const Avatar = styled.div`
 `;
 
 const LinkWrapper = styled.div`
-    margin: 4vh 0 8vh 0;
+    margin: 3.5vh 0 9vh 0;
     min-height: 10rem;
 
   & .link {

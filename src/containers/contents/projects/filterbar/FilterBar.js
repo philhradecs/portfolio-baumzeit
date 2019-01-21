@@ -12,6 +12,10 @@ const filters = [
     color: '#CC624E'
   },
   {
+    key: 'vanillaJS',
+    color: '#e80a89'
+  },
+  {
     key: 'Node',
     color: '#026E00'
   },
@@ -26,11 +30,7 @@ const filters = [
   {
     key: 'Responsive Design',
     color: '#4A8CFC'
-  },
-  {
-    key: 'vanillaJS',
-    color: '#e80a89'
-  },
+  }
   
 ]
 
@@ -40,7 +40,7 @@ const BarWrapper = styled.nav`
   align-items: center;
   flex-wrap: wrap;
   position: sticky;
-  top: 0;
+  top: 0.5rem;
   margin-bottom: 2rem;
   margin-left: -1rem;
   z-index: 1;
