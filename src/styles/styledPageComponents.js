@@ -13,9 +13,13 @@ const DarkTitle = styled(LightTitle)`
 const Paragraph = styled.p`
 	font-family: 'Roboto Slab';
 	font-weight: 300;
-  font-size: 1rem;
-  line-height: 1.6;
-  color: #222;
+  font-size: 0.95rem;
+  margin: 1.5rem 0;
+  line-height: 1.5;
+  color: black;
+  border-left: ${props => props.emphasis ? `1px dotted ${props.theme.colorHighlight}` : '' };
+  padding-left: ${props => props.emphasis ? '0.6rem' : '0' };
+  margin-left: ${props => props.emphasis ? '-0.6rem' : '0' }
 `;
 
 export { LightTitle, DarkTitle, Paragraph }

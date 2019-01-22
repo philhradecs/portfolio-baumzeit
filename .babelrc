@@ -1,6 +1,4 @@
 {
   "presets": ["react-static/babel-preset.js"],
-  "plugins": ["babel-plugin-styled-components",
-              ["@babel/plugin-proposal-decorators", {"legacy": true} ]
-             ]
+  "plugins": ["babel-plugin-styled-components"]
 }

@@ -54,7 +54,7 @@ const Title = styled.h2`
   font-weight: 400;
   grid-area: ti;
   align-self: center;
-  color: #222;
+  color: black;
   font-size: 1.2rem;
   margin: 0;
   margin-bottom: 0.3rem;
@@ -62,7 +62,7 @@ const Title = styled.h2`
 `;
 const Description = styled.p`
   font-family: 'Roboto Slab';
-  font-weight: 300;
+  font-weight: 400;
   font-size: 0.9rem;
   grid-area: de;
   margin-top: 0.5rem;

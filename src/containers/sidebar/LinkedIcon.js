@@ -24,7 +24,7 @@ const Anchor = styled.a`
     }
     & #caption {
       opacity: 1;
-      color: palevioletred;
+      color: ${props => props.theme.colorHighlight};
       transition: opacity 250ms ease,
                   color 250ms ease;
     }

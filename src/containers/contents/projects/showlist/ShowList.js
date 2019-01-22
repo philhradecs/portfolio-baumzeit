@@ -46,7 +46,7 @@ const List = styled.ul`
 `;
 
 export default ({ activeFilters }) => (
-<Delayed waitBeforeShow={250}>
+<Delayed waitBeforeShow={300}>
   <List>
     <TransitionGroup component={null}>
         {projectsData.map(project => {

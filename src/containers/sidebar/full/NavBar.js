@@ -19,10 +19,11 @@ const w = {
   underline: {
     passive: '#111',
     active: '#111',
-    hover: 'palevioletred'
+    hover: '#B20032'
   },
   shadow: '0 0.15em 1.6em -0.3em rgba(30, 30, 30, 0.7)',
-  sizeIcon: '1.4rem'
+  sizeIcon: '1.4rem',
+  colorTag: 'rgba(255,255,255, 0.1)'
 }
 
 const n = {
@@ -42,7 +43,8 @@ const n = {
     hover: '#222'
   },
   shadow: '0 0.15em 1.6em -0.3em transparent',
-  sizeIcon: '1.1rem'
+  sizeIcon: '1.1rem',
+  colorTag: 'rgba(0,0,0, 0.1)'
 }
 
 const NavBar = styled.aside`
@@ -165,6 +167,7 @@ const NavBar = styled.aside`
 const IconsBarWrapper = styled.div`
   margin-left: 5%;
   margin-right: 10%;
+  position: relative;
 `;
 
 const SideHeader = styled.div`
@@ -178,7 +181,7 @@ const SideHeader = styled.div`
 `;
 
 const Avatar = styled.div`
-  background: url("${props => props.theme.navImg}");
+  background: url('${props => `/avatars/${props.theme.navImg}`}');
   background-size: cover;
   background-position: right center;
   height: 100%;
@@ -205,16 +208,26 @@ const LinkWrapper = styled.div`
       color: ${props => props.theme.wide ? w.colorFont.hover : n.colorFont.hover};
     }
     &.active {
-      border-color: ${props => props.theme.wide ? w.underline.active : n.underline.active};
+      border-color: ${props => props.theme.colorHighlight};/*${props => props.theme.wide ? w.underline.active : n.underline.active};*/
       color: ${props => props.theme.wide ? w.colorFont.active : n.colorFont.active};
       pointer-events: none;
     }
   }
 `;
 
+const Tag = styled.div`
+  position: absolute;
+  top: -1.5rem;
+  left: 0;
+  font-family: 'Muli';
+  font-size: 1.2rem;
+  color: ${props => props.wide ? w.colorTag : n.colorTag};
+`;
+
 export default () => (
   <NavBar>
     <IconsBarWrapper>
+      <Tag></Tag>
       <SocialIconsBar />
     </IconsBarWrapper>
     <SideHeader id="header">

@@ -1,6 +1,6 @@
 import React from 'react';
-import { Link, Location } from '@reach/router';
 import styled, { css } from 'styled-components';
+import HistoryLink from './HistoryLink';
 
 const FlexLinks = styled.nav`
   display: flex;
@@ -23,20 +23,15 @@ const FlexLinks = styled.nav`
   )}
 `;
 
-export default (props) => (
-  <Location>
-    {({ location }) => {
-      const prevPath = ({ prevPath: location.pathname });
-      const isActive = ({ isCurrent }) => isCurrent ? { className: "active link" } : { className: "link" };
-      return( 
-        <FlexLinks row={props.row}>
-          <Link getProps={isActive} to="/" state={prevPath}> Home </Link>
-          <Link getProps={isActive} to="/projects" state={prevPath}> Projects </Link>
-          <Link getProps={isActive} to="/mind" state={prevPath}> Mind </Link>
-          <Link getProps={isActive} to="/cv" state={prevPath}> CV </Link>
-          <Link getProps={isActive} to="/contact" state={prevPath}> Contact </Link>
-        </FlexLinks>
-      )
-    }}
-  </Location>
-);
+export default ({ row }) => {
+  const isActive = ({ isCurrent }) => isCurrent ? { className: "active link" } : { className: "link" };
+  return( 
+    <FlexLinks row={row}>
+      <HistoryLink getProps={isActive} to="/"> Home </HistoryLink>
+      <HistoryLink getProps={isActive} to="/projects"> Projects </HistoryLink>
+      <HistoryLink getProps={isActive} to="/mind"> Mind </HistoryLink>
+      <HistoryLink getProps={isActive} to="/cv"> CV </HistoryLink>
+      <HistoryLink getProps={isActive} to="/contact"> Contact </HistoryLink>
+    </FlexLinks>
+  )
+}

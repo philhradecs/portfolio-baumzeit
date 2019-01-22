@@ -26,7 +26,7 @@ const ContentWrapper = styled.section`
                   : 'transparent'};
   padding: ${props => props.theme.pageView
                 ? '0 3.2vw'
-                : '0 2.6vw'};
+                : '0 2.2vw 3.5vh 0'};
   box-shadow: ${props => props.theme.pageView 
                   ? '0 0.1em 1.6em -0.3em rgba(30, 30, 30, 0.7)'
                   : ''};
