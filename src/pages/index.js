@@ -55,7 +55,7 @@ const List = styled.ul`
 	list-style: none;
 	margin: 0;
 	padding: 0 1.2rem;
-	border-left: 1px solid black;
+	border-left: 1px dotted black;
 `;
 
 const Resource = styled.li`
@@ -153,10 +153,10 @@ export default () => (
   		</ColorLink>
   	</Paragraph>
   	<Paragraph>
-    	Coming from a background in the NGO and Social Entrepreneurship environment I am well aware of the <b>importance of a well-functioning team</b> - to deliver even when resources are scarce. I'm <b>sensible to the needs of the group</b> and will naturally try to come up with ways of <b>improving the quality</b> of our collaboration.
+    	Coming from a background in the NGO and Social Entrepreneurship environment I am aware of the <b>importance of a well-functioning team</b> - to deliver even when resources are scarce. I'm <b>sensible to the needs of the group</b> and will naturally come up with ways of <b>improving the quality</b> and <b>joy</b> of our collaboration.
   	</Paragraph>
   	<Paragraph>
-  		There are several core disciplines/ways of thinking that I can put to the table when working on a given project. <b>Diversity of thought</b> helps me frame the problem at hand in a way that yields <b>creative solutions</b> and <b>effective strategies</b> that can not be found in any particular discipline alone.
+  		My thinking has been shaped by a handful of disciplines/ways of seing that I can readily put to the table when working on a given project. <b>Diversity of thought</b> helps me frame the problem at hand in a way that yields <b>creative solutions</b> and <b>effective strategies</b> that could not be found in any particular discipline alone.
   	</Paragraph>
   	<Paragraph emphasis>
   		See what's on my mind → <ColorLink>
