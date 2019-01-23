@@ -8,7 +8,6 @@ const Welcome = styled.h1`
 	font-weight: 300;
 	margin: 0;
 	font-size: 2.4rem;
-	font-weight: 300;
 `;
 
 const Subtitle = styled.p`
@@ -28,6 +27,10 @@ const SubLine = styled.span`
 	margin-left: 1vw;
 	flex: 1;
 	border-bottom: 1px solid ${props => props.theme.colorHighlight};
+`;
+
+const Bold = styled.span`
+	font-weight: 400;
 `;
 
 const Look = styled.span`
@@ -115,7 +118,7 @@ export default () => (
     <Welcome>Hello, I'm <Look value='#AAC14F'>Philip Hradecsni</Look></Welcome>
     <Subtitle><span>Javascript Developer / Designer</span><SubLine /></Subtitle>
     <Paragraph emphasis>
-    	Based in the Austrian woodlands close to the city of Vienna, I am developing <b>frontend and backend</b> applications using responsibly <b>state of the art technologies</b> to create <b>meaningful and effortless</b> user experiences that bring about the best of our users.
+    	Based in the Austrian woodlands close to the city of Vienna, I am developing <Bold>frontend and backend</Bold> applications using responsibly <Bold>state of the art technologies</Bold> to create <Bold>meaningful and effortless</Bold> user experiences that bring about the best of our users.
     </Paragraph>
     <Paragraph>
     	 I'm currently designing my work around <Look value='#357CC9'>React</Look>, <Look value='#026E00'>Node</Look>, <Look value='#62A999'>MongoDB</Look> and <Look value='#CC624E' bold>D3</Look> with a broad set of related technologies, frameworks, tools and packages to leverage efficiency, flexibility, maintainability, scalability, security and personal well-being.
@@ -134,11 +137,11 @@ export default () => (
 				</ColorLink>
     </Paragraph>
     <Paragraph>
-    	Even before setting off to become a developer I have been designing my own learning trajectories full sail, persistently carried by a <b>wholehearted curiosity</b> to better understand how we shape the world we live in, yearning for <b>more creative and sustainable approaches</b> in dealing with intricate problems - able to <b>break free of debilitating patterns</b> both small and large scale.
+    	Even before setting off to become a developer I have been designing my own learning trajectories full sail, persistently carried by a <Bold>wholehearted curiosity</Bold> to better understand how we shape the world we live in, yearning for <Bold>more creative and sustainable approaches</Bold> in dealing with difficult problems - able to <Bold>break free of debilitating patterns</Bold> both small and large scale.
   	</Paragraph>
   	<FlexWrapper>
   		<Paragraph>
-  		 Working on <b>hands-on projects</b> while paying very <b>close attention to the fundamentals</b> has tought me to ask the right questions and develop a <b>reliable intuition for problem solving</b> and <b>choosing the right tools</b>. Here's a list of some notable resources that were seminal to my education.
+  		 Working on <Bold>hands-on projects</Bold> while paying very <Bold>close attention to the fundamentals</Bold> has tought me to ask the right questions and formed an <Bold>intuition for identifying problems</Bold> and <Bold>choosing the right tools to solve them</Bold>. I put together a small list of notable resources that were seminal to my education as developer.
 	  	</Paragraph>
 	  	<List>
 	  		{resources.map(item => 
@@ -153,10 +156,10 @@ export default () => (
   		</ColorLink>
   	</Paragraph>
   	<Paragraph>
-    	Coming from a background in the NGO and Social Entrepreneurship environment I am aware of the <b>importance of a well-functioning team</b> - to deliver even when resources are scarce. I'm <b>sensible to the needs of the group</b> and will naturally come up with ways of <b>improving the quality</b> and <b>joy</b> of our collaboration.
+    	Coming from a background in the NGO and Social Entrepreneurship environment I am aware of the <Bold>importance of a well-functioning team</Bold> - to deliver even when resources are scarce. I'm <Bold>sensible to the needs of the group</Bold> and will naturally come up with ways of <Bold>improving the quality</Bold> and <Bold>joy</Bold> of our collaboration.
   	</Paragraph>
   	<Paragraph>
-  		My thinking has been shaped by a handful of disciplines/ways of seing that I can readily put to the table when working on a given project. <b>Diversity of thought</b> helps me frame the problem at hand in a way that yields <b>creative solutions</b> and <b>effective strategies</b> that could not be found in any particular discipline alone.
+  		My thinking has been shaped by a handful of disciplines/ways of seing that I can readily put to the table when working on a given project. <Bold>Diversity of thought</Bold> helps me frame the problem at hand in a way that yields <Bold>creative solutions</Bold> and <Bold>effective strategies</Bold> that could not be found in any particular discipline alone.
   	</Paragraph>
   	<Paragraph emphasis>
   		See what's on my mind → <ColorLink>
@@ -165,13 +168,17 @@ export default () => (
   	</Paragraph>
   	<FlexWrapper>
   	<Paragraph>
-  		<b>Let's get to work!</b> I'm currently open to be hired.<br />As much as do I enjoy the silence - <b>team work</b> is where I flourish.
+  		<Bold>Let's get to work!</Bold> I'm currently looking to be hired.<br />As much as do I enjoy the silence - <Bold>team work</Bold> is where I flourish.
   	</Paragraph>
   	<Email href='mailto:baumzeit@posteo.me'>baumzeit@posteo.me</Email>
   	</FlexWrapper>
+  	<Paragraph>
+  		If you like to learn even a bit more about me and my other areas of interests please don't hesitate to find out.
+  	</Paragraph>
+  	<Paragraph emphasis>
+  		Let's start something great → <ColorLink>
+	  			<HistoryLink to='/contact'>Get in touch</HistoryLink>
+	  		</ColorLink>
+  	</Paragraph>
   </div>
 )
-
-// <Paragraph>
-// 			I believe that the interplay of <b>empowering user experiences, meaningful conveyance of data, non-obstrusive tools for collaboration</b> and <b>maintaining a healthy degree of critical thinking</b> is key for organisations/communities to become more resilient and able to respond to systemic inbalances more effectively.
-//     </Paragraph>

@@ -15,7 +15,7 @@ const w = {
     active: 'white',
     hover: 'white'
   },
-  widthHeader: '23.3vw',
+  widthHeader: '23vw',
   underline: {
     passive: '#111',
     active: '#111',
@@ -23,7 +23,7 @@ const w = {
   },
   shadow: '0 0.15em 1.6em -0.3em rgba(30, 30, 30, 0.7)',
   sizeIcon: '1.4rem',
-  colorTag: 'rgba(255,255,255, 0.1)'
+  colorTag: 'rgba(255,255,255, 0.2)'
 }
 
 const n = {
@@ -217,17 +217,18 @@ const LinkWrapper = styled.div`
 
 const Tag = styled.div`
   position: absolute;
-  top: -1.5rem;
-  left: 0;
+  top: 0.5rem;
+  left: 0.8rem;
   font-family: 'Muli';
-  font-size: 1.2rem;
-  color: ${props => props.wide ? w.colorTag : n.colorTag};
+  font-size: 0.8rem;
+  z-index: 10;
+  color: ${props => props.theme.wide ? w.colorTag : n.colorTag};
 `;
 
 export default () => (
   <NavBar>
+    <Tag>v0.7.0</Tag>
     <IconsBarWrapper>
-      <Tag></Tag>
       <SocialIconsBar />
     </IconsBarWrapper>
     <SideHeader id="header">

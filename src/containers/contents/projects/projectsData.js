@@ -5,7 +5,7 @@ export default [
       title: 'Baumzeit Portfolio Page',
       description: 'play win lose its up to you and gnome the nice little friend with his fascination for spaceships and nature.'
     },
-    img: '',
+    img: 'portfolio_baumzeit.jpg',
     url: {
       live: 'https://www.github.com',
       code: 'https://github.com/baumzeit/portfolio-baumzeit/'

@@ -20,13 +20,13 @@ const Anchor = styled.a`
   & :hover { 
     & .socialIcon {
       opacity: 0;
-      transition: opacity 200ms ease;
+      transition: opacity 100ms ease;
     }
     & #caption {
       opacity: 1;
       color: ${props => props.theme.colorHighlight};
-      transition: opacity 250ms ease,
-                  color 250ms ease;
+      transition: opacity 100ms ease,
+                  color 100ms ease;
     }
   }
 `;
