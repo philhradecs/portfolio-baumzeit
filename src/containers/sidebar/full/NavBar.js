@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import styled from 'styled-components';
 import NavLinks from '../NavLinks';
 import SocialIconsBar from '../SocialIconsBar';
@@ -9,17 +9,17 @@ const w = {
   font: '1.4rem',
   widthBar: '22vw',
   indent: '9vw',
-  bg: '#292F2B',
+  bg: '#2E2D2A',
   colorFont: {
-    passive: '#ddd',
+    passive: '#c5ccc8',
     active: 'white',
     hover: 'white'
   },
   widthHeader: '23vw',
   underline: {
-    passive: '#111',
+    passive: '#21201e',
     active: '#111',
-    hover: '#B20032'
+    hover: '#191817'
   },
   shadow: '0 0.15em 1.6em -0.3em rgba(30, 30, 30, 0.7)',
   sizeIcon: '1.4rem',

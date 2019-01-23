@@ -2,8 +2,8 @@ export default [
   
   {
     data: {
-      title: 'Baumzeit Portfolio Page',
-      description: 'play win lose its up to you and gnome the nice little friend with his fascination for spaceships and nature.'
+      title: 'My Personal Website',
+      description: 'A multi page website built with React. The website offers '
     },
     img: 'portfolio_baumzeit.jpg',
     url: {
@@ -20,7 +20,7 @@ export default [
     },
     img: 'vmhx.jpg',
     url: {
-      live: 'https://www.github.com',
+      live: 'https://thread-bandana.glitch.me/',
       code: 'https://github.com/baumzeit/cover-art-explorer/'
     },
     tags: ['React', 'socket.io', 'API', 'UI']
@@ -142,8 +142,21 @@ export default [
     },
     tags: ['Responsive Design', 'CSS', 'Accessibility', 'HTML5']
   },
+
+  {
+    data: {
+      title: 'Chat Room',
+      description: 'play win lose its up to you and gnome the nice little friend with his fascination for spaceships and nature.'
+    },
+    img: 'chat_room.png',
+    url: {
+      live: 'https://mountain-grape.glitch.me/',
+      code: 'https://github.com/baumzeit/socket-chat-room/'
+    },
+    tags: ['Node', 'Express', 'passportJS', 'socket.io']
+  },
    
-    {
+  {
     data: {
       title: 'URL Shortener',
       description: 'play win lose its up to you and gnome the nice little friend with his fascination for spaceships and nature.'
@@ -167,19 +180,6 @@ export default [
       code: 'https://github.com/baumzeit/fcc-exercise-tracker'
     },
     tags: ['Node', 'Express', 'RESTful', 'API', 'MongoDB', 'Mongoose']
-  },
-  
-  {
-    data: {
-      title: 'Social Authentication',
-      description: 'play win lose its up to you and gnome the nice little friend with his fascination for spaceships and nature.'
-    },
-    img: '',
-    url: {
-      live: '#',
-      code: 'https://github.com/baumzeit/'
-    },
-    tags: ['Node', 'Express', 'PassportJS', 'Authentication']
   },
   
   {

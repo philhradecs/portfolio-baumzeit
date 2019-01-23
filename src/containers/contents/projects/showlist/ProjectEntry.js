@@ -4,7 +4,6 @@ import styled, { css } from 'styled-components';
 import Preview from './Preview';
 
 const ProjectEntry = styled.li`
-
   background: ${props => props.theme.contentBg};
 
   width: 100%;
@@ -55,10 +54,8 @@ const Title = styled.h2`
   grid-area: ti;
   align-self: center;
   color: black;
-  font-size: 1.2rem;
-  margin: 0;
-  margin-bottom: 0.3rem;
-  padding: 0.5rem 0;
+  font-size: 1.25rem;
+  margin: 0 1rem 0.3rem 0;
 `;
 const Description = styled.p`
   font-family: 'Roboto Slab';
@@ -70,12 +67,8 @@ const Description = styled.p`
 `;
 const PreviewWrapper = styled.div`
   grid-area: pw;
-  transform: translateX(calc(0px - 1.8rem - 2vw - 2px)); // padding - excess - border
-  width: calc(100% + calc(1.8rem + 2vw));
-`;
-
-const LiveLink = styled.a`
-  background: black;
+  transform: translateX(calc(0px - 1.8rem - 2vw - 2px)); /*padding - excess - border*/
+  width: calc(100% + calc(1.8rem + 2vw));  
 `;
 
 export default ({ projectData: { data, tags, url, img }}) => (

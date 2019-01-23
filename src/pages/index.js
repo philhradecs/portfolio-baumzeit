@@ -1,7 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
-import { DarkTitle, Paragraph } from '../styles/styledPageComponents';
+import { Paragraph, Bold } from '../styles/styledPageComponents';
 import HistoryLink from '../containers/sidebar/HistoryLink';
+import Delayed from '../containers/contents/projects/showlist/Delayed';
 
 const Welcome = styled.h1`
 	font-family: 'Titillium Web';
@@ -26,11 +27,8 @@ const SubLine = styled.span`
 	margin-top: 0.2rem;
 	margin-left: 1vw;
 	flex: 1;
+  opacity: 0.8;
 	border-bottom: 1px solid ${props => props.theme.colorHighlight};
-`;
-
-const Bold = styled.span`
-	font-weight: 400;
 `;
 
 const Look = styled.span`
@@ -84,12 +82,16 @@ const Email = styled.a`
 	color: black;
 	&:hover {
 		border-bottom: 1px solid ${props => props.theme.colorHighlight};
-		transition: border-color 160ms ease-out;
+		transition: border 160ms ease-out;
 	}
 `;
 
+const HomeWrapper = styled.div`
+  margin: 0 -2.2vw 0 -2.6vw;
+`;
 
-const furtherTech = ['Git', 'ES6', 'CSS-in-JS', 'React Transition Group', 'Express', 'socket.io', 'Mongoose', 'passportJS', 'HelmetJS', 'Webpack', 'CSS3', 'HTML5', 'Pen and Paper'];
+
+const furtherTech = ['Git', 'ES6', 'CSS-in-JS', 'React Transition Group', 'Express', 'socket.io', 'Mongoose', 'passportJS', 'HelmetJS', 'Mocha', 'Chai', 'Webpack', 'CSS3', 'HTML5', 'Pen and Paper'];
 
 const resources = [{
 		name: 'freeCodeCamp',
@@ -98,7 +100,7 @@ const resources = [{
 	},
 	{
 		name: 'Programming Languages', 
-		type: 'course',
+		type: 'course series',
 		url: 'https://www.coursera.org/learn/programming-languages'
 	},
 	{
@@ -114,8 +116,9 @@ const resources = [{
 ]
 
 export default () => (
-  <div>
-    <Welcome>Hello, I'm <Look value='#AAC14F'>Philip Hradecsni</Look></Welcome>
+  <Delayed waitBeforeShow={260}>
+  <HomeWrapper>
+    <Welcome>Hello, I'm <Look>Philip Hradecsni</Look></Welcome>
     <Subtitle><span>Javascript Developer / Designer</span><SubLine /></Subtitle>
     <Paragraph emphasis>
     	Based in the Austrian woodlands close to the city of Vienna, I am developing <Bold>frontend and backend</Bold> applications using responsibly <Bold>state of the art technologies</Bold> to create <Bold>meaningful and effortless</Bold> user experiences that bring about the best of our users.
@@ -125,9 +128,9 @@ export default () => (
     </Paragraph>
     <Paragraph>
     	 Namely: {furtherTech.map((t, i) => (
-    	 	<span>
+    	 	<span key={t}>
     	 		{i !== 0 && ' / '}
-    	 		<Look value='black' key={t}>{t}</Look>
+    	 		<Look value='black'>{t}</Look>
     	 	</span>
     	 ))} and more.
     </Paragraph>
@@ -137,7 +140,7 @@ export default () => (
 				</ColorLink>
     </Paragraph>
     <Paragraph>
-    	Even before setting off to become a developer I have been designing my own learning trajectories full sail, persistently carried by a <Bold>wholehearted curiosity</Bold> to better understand how we shape the world we live in, yearning for <Bold>more creative and sustainable approaches</Bold> in dealing with difficult problems - able to <Bold>break free of debilitating patterns</Bold> both small and large scale.
+    	Even before setting off to become a developer I have been designing my own learning trajectories full sail, persistently carried by a <Bold>wholehearted curiosity</Bold> to better understand how we shape the world we live in, yearning for <Bold>more creative and sustainable approaches</Bold> in dealing with difficult problems - able to <Bold>break free of constraining patterns</Bold> both small and large scale.
   	</Paragraph>
   	<FlexWrapper>
   		<Paragraph>
@@ -156,10 +159,10 @@ export default () => (
   		</ColorLink>
   	</Paragraph>
   	<Paragraph>
-    	Coming from a background in the NGO and Social Entrepreneurship environment I am aware of the <Bold>importance of a well-functioning team</Bold> - to deliver even when resources are scarce. I'm <Bold>sensible to the needs of the group</Bold> and will naturally come up with ways of <Bold>improving the quality</Bold> and <Bold>joy</Bold> of our collaboration.
+    	Coming from a background in the NGO and Social Entrepreneurship environment I am aware of the <Bold>importance of a well-functioning team</Bold> - to deliver even when resources are scarce. I'm <Bold>sensible to the state of the group</Bold> and will naturally come up with ways of <Bold>getting the most out of our collaboration</Bold>.
   	</Paragraph>
   	<Paragraph>
-  		My thinking has been shaped by a handful of disciplines/ways of seing that I can readily put to the table when working on a given project. <Bold>Diversity of thought</Bold> helps me frame the problem at hand in a way that yields <Bold>creative solutions</Bold> and <Bold>effective strategies</Bold> that could not be found in any particular discipline alone.
+  		My thinking has been shaped by a diverse set of disciplines/ways of seeing that I can readily put to the table when working on a given project. <Bold>Diversity of thought</Bold> helps me frame the problem at hand in ways that yield <Bold>creative solutions</Bold> and <Bold>effective strategies</Bold> that could not be found in any particular discipline alone.
   	</Paragraph>
   	<Paragraph emphasis>
   		See what's on my mind → <ColorLink>
@@ -173,12 +176,14 @@ export default () => (
   	<Email href='mailto:baumzeit@posteo.me'>baumzeit@posteo.me</Email>
   	</FlexWrapper>
   	<Paragraph>
-  		If you like to learn even a bit more about me and my other areas of interests please don't hesitate to find out.
+  		If you like to learn more about me and my other areas of interest don't hesitate to find out.<br />
+      I like to hear your ideas and enjoy a good conversation over a nice cup of coffee about the topics that move us.
   	</Paragraph>
   	<Paragraph emphasis>
-  		Let's start something great → <ColorLink>
-	  			<HistoryLink to='/contact'>Get in touch</HistoryLink>
+  		Let's get something started → <ColorLink>
+	  			<HistoryLink to='/contact'>Contact me</HistoryLink>
 	  		</ColorLink>
   	</Paragraph>
-  </div>
+  </HomeWrapper>
+  </Delayed>
 )

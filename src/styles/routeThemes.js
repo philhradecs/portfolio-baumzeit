@@ -4,7 +4,7 @@ export default {
     navImg: 'home.jpg', 
     pageView: false,
     contentBg: '#757865',
-    colorHighlight: '#AAC14F'
+    colorHighlight: '#9fb55e'
   },
   '/404': {
     wide: false,
@@ -29,17 +29,17 @@ export default {
   },
   '/mind': {
     wide: false,
-    navImg: 'https://img.freepik.com/free-vector/hexagonal-pattern_1051-833.jpg', 
+    navImg: 'mind.jpg', 
     pageView: true,
     contentBg: '#9DA995',
-    colorHighlight: 'darkMagenta'
+    colorHighlight: '#313D63'
   },
   '/projects': {
     wide: false,
-    navImg: 'http://www.onextrapixel.com/wp-content/uploads/2014/08/24-FineClassicalPatternBackground.jpg', 
+    navImg: 'projects.jpg', 
     pageView: false,
     contentBg: '#E3DED0',
-    colorHighlight: 'darkMagenta'
+    colorHighlight: '#8E433D'
   },
   'default': {
     wide: false,

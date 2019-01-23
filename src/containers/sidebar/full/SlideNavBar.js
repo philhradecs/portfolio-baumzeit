@@ -26,7 +26,7 @@ export default ({ location }) => (
     <CSSTransition 
       key={location.key}
       classNames={getTransitionName(location)}
-      timeout={300}
+      timeout={250}
       exit={false}
       unmountOnExit
     >

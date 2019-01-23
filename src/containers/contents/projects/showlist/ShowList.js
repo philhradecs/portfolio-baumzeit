@@ -7,6 +7,7 @@ import Delayed from './Delayed';
 import projectsData from '../projectsData';
 
 const List = styled.ul`
+  list-style: none;
   padding: 0;
 
   & li {
@@ -28,7 +29,6 @@ const List = styled.ul`
     &.refresh-exit {
       opacity: 1;
       overflow: hidden;
-
     }
     &.refresh-exit.refresh-exit-active {
       opacity: 0.01;
@@ -46,7 +46,7 @@ const List = styled.ul`
 `;
 
 export default ({ activeFilters }) => (
-<Delayed waitBeforeShow={300}>
+<Delayed waitBeforeShow={260}>
   <List>
     <TransitionGroup component={null}>
         {projectsData.map(project => {

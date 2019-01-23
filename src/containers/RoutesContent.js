@@ -1,7 +1,7 @@
 import React from 'react';
 import { Routes } from 'react-static';
 import { Location } from '@reach/router';
-import styled, { ThemeProvider } from 'styled-components';
+import styled, { ThemeProvider, css } from 'styled-components';
 import { CSSTransition, TransitionGroup } from 'react-transition-group';
 
 import routeThemes from '../styles/routeThemes';
@@ -21,20 +21,23 @@ const FixedGridArea = styled.div`
 
 const ContentWrapper = styled.section`
   grid-area: fixedArea;
-  background: ${props => props.theme.pageView
-                  ? props.theme.contentBg
-                  : 'transparent'};
-  padding: ${props => props.theme.pageView
-                ? '0 3.2vw'
-                : '0 2.2vw 3.5vh 0.5vw'};
-  box-shadow: ${props => props.theme.pageView 
-                  ? '0 0.1em 1.6em -0.3em rgba(30, 30, 30, 0.7)'
-                  : ''};
+  background: 'transparent';
+  padding: 0 3vw;
+  //padding: 0 2.2vw 3.5vh 0.5vw;
+  box-shadow: '';
+
+  ${({theme}) =>
+    theme.pageView && css`
+      background: ${theme.contentBg};
+      box-shadow: 0 0.1em 1.6em -0.3em rgba(30, 30, 30, 0.7);
+    `  
+  }
+
   border-radius: 0.4rem;
-  position: absolute;
+  //position: absolute;
   top: 0;
   width: 100%;
-  min-height: 100%;
+  //min-height: 100%;
 
   &.fade-enter {
     opacity: 0.01;

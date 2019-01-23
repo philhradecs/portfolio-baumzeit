@@ -1,13 +1,17 @@
 import styled from 'styled-components';
 
 const LightTitle = styled.h1`
-  font-size: 1.7rem;
+  font-size: 1.75rem;
   color: white;
   font-weight: 400;
 `;
 
 const DarkTitle = styled(LightTitle)`
   color: #222;
+`;
+
+const Bold = styled.span`
+  font-weight: 400;
 `;
 
 const Paragraph = styled.p`
@@ -22,4 +26,4 @@ const Paragraph = styled.p`
   margin-left: ${props => props.emphasis ? '-0.6rem' : '0' }
 `;
 
-export { LightTitle, DarkTitle, Paragraph }
+export { LightTitle, DarkTitle, Paragraph, Bold }
