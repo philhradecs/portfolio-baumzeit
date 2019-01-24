@@ -6,7 +6,7 @@ const Button = styled.div`
   max-width: 12rem;
   font-family: 'Muli';
   font-weight: 400;
-  font-size: 0.9rem;
+  font-size: 0.95rem;
   white-space: nowrap;
   margin-left: 1rem;
   height: 100%;

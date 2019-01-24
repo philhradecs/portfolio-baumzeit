@@ -15,9 +15,9 @@ export default () => (
     <Paragraph>
       That (which poses a terrifying notion for any software developer) can actually be an <Bold>invaluable resource</Bold> for working in teams if one knows how to <Bold>bridge the metaphorical gap</Bold>. Listening to and effectively mediating between multiple perspectives on a given problem is a <Bold>spring for innovative solutions</Bold> and <Bold>sustainable strategies</Bold>.<br/>
     </Paragraph>
-    <Paragraph>
-      This is a placeholder mockup. There's more information coming soon.
+    <Paragraph emphasis>
+      This is a placeholder image. I will soon add more information to this section.
     </Paragraph>
-    <Mindmap src='/other/mindmap_mockup.png' alt='mindmap mockup'/>
+    <Mindmap src='/other/mindmap_placeholder.png' alt='mindmap placeholder'/>
   </div>
 )

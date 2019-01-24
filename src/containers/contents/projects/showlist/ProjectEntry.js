@@ -13,7 +13,7 @@ const ProjectEntry = styled.li`
   border-radius: 0.3rem;
 
   display: grid;
-  grid-template-columns: 3fr 1fr 6fr;
+  grid-template-columns: 3fr 1fr 10fr;
   grid-template-rows: 1fr 4fr;
   grid-template-areas: 
     'ti ta ta'
@@ -54,13 +54,13 @@ const Title = styled.h2`
   grid-area: ti;
   align-self: center;
   color: black;
-  font-size: 1.25rem;
+  font-size: 1.15rem;
   margin: 0 1rem 0.3rem 0;
 `;
 const Description = styled.p`
   font-family: 'Roboto Slab';
-  font-weight: 400;
-  font-size: 0.9rem;
+  font-weight: 300;
+  font-size: 1.3rem;
   grid-area: de;
   margin-top: 0.5rem;
   margin-left: 2rem;

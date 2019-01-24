@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { Paragraph, Bold } from '../styles/styledPageComponents';
+import { Paragraph, Bold, Email } from '../styles/styledPageComponents';
 import HistoryLink from '../containers/sidebar/HistoryLink';
 import Delayed from '../containers/contents/projects/showlist/Delayed';
 
@@ -8,7 +8,7 @@ const Welcome = styled.h1`
 	font-family: 'Titillium Web';
 	font-weight: 300;
 	margin: 0;
-	font-size: 2.4rem;
+	font-size: 2rem;
 `;
 
 const Subtitle = styled.p`
@@ -73,19 +73,6 @@ const FlexWrapper = styled.div`
 	}
 `;
 
-const Email = styled.a`
-	align-self: center;
-	text-decoration: none;
-	margin-left: 3rem;
-	font-weight: 400;
-	font-size: 1.5rem;
-	color: black;
-	&:hover {
-		border-bottom: 1px solid ${props => props.theme.colorHighlight};
-		transition: border 160ms ease-out;
-	}
-`;
-
 const HomeWrapper = styled.div`
   margin: 0 -2.2vw 0 -2.6vw;
 `;
@@ -144,7 +131,7 @@ export default () => (
   	</Paragraph>
   	<FlexWrapper>
   		<Paragraph>
-  		 Working on <Bold>hands-on projects</Bold> while paying very <Bold>close attention to the fundamentals</Bold> has tought me to ask the right questions and formed an <Bold>intuition for identifying problems</Bold> and <Bold>choosing the right tools to solve them</Bold>. I put together a small list of notable resources that were seminal to my education as developer.
+  		 Working on <Bold>hands-on projects</Bold> while paying very <Bold>close attention to the fundamentals</Bold> has tought me to ask the right questions and formed an <Bold>intuition for identifying problems</Bold> and <Bold>choosing the right tools to solve them</Bold>. I put together a small list of notable resources that have been seminal to my ongoing education as a developer.
 	  	</Paragraph>
 	  	<List>
 	  		{resources.map(item => 
@@ -176,12 +163,11 @@ export default () => (
   	<Email href='mailto:baumzeit@posteo.me'>baumzeit@posteo.me</Email>
   	</FlexWrapper>
   	<Paragraph>
-  		If you like to learn more about me and my other areas of interest don't hesitate to find out.<br />
-      I like to hear your ideas and enjoy a good conversation over a nice cup of coffee about the topics that move us.
+  		Are you looking for a project partner or someone to exchange ideas with?<br />
   	</Paragraph>
   	<Paragraph emphasis>
   		Let's get something started → <ColorLink>
-	  			<HistoryLink to='/contact'>Contact me</HistoryLink>
+	  			<HistoryLink to='/contact'>Get in touch</HistoryLink>
 	  		</ColorLink>
   	</Paragraph>
   </HomeWrapper>

@@ -11,7 +11,7 @@ const transitionDuration = 250;
 const FixedGridArea = styled.div`
   display: grid;
   grid-template-areas: 'fixedArea';
-  padding: ${props => props.singleColumn ? '0' : '3.5vh 2.5vw 3.5vh 4.4vw'};
+  padding: ${props => props.singleColumn ? '0' : '3.5vh 2.5vw 3vh 4.4vw'};
 
   min-height: ${props => props.singleColumn ? '100%' : '100vh'};
   overflow: auto;
@@ -23,13 +23,12 @@ const ContentWrapper = styled.section`
   grid-area: fixedArea;
   background: 'transparent';
   padding: 0 3vw;
-  //padding: 0 2.2vw 3.5vh 0.5vw;
   box-shadow: '';
 
   ${({theme}) =>
     theme.pageView && css`
       background: ${theme.contentBg};
-      box-shadow: 0 0.1em 1.6em -0.3em rgba(30, 30, 30, 0.7);
+      box-shadow: 0 0.1em 1.3em -0.3em rgba(30, 30, 30, 0.7);
     `  
   }
 

@@ -14,10 +14,23 @@ const Bold = styled.span`
   font-weight: 400;
 `;
 
+const Email = styled.a`
+  align-self: center;
+  text-decoration: none;
+  margin-left: 3rem;
+  font-weight: 400;
+  font-size: 1.5rem;
+  color: black;
+  &:hover {
+    border-bottom: 1px solid ${props => props.theme.colorHighlight};
+    transition: border 160ms ease-out;
+  }
+`;
+
 const Paragraph = styled.p`
 	font-family: 'Roboto Slab';
 	font-weight: 300;
-  font-size: 0.95rem;
+  font-size: 1rem;
   margin: 1.5rem 0;
   line-height: 1.5;
   color: black;
@@ -26,4 +39,4 @@ const Paragraph = styled.p`
   margin-left: ${props => props.emphasis ? '-0.6rem' : '0' }
 `;
 
-export { LightTitle, DarkTitle, Paragraph, Bold }
+export { LightTitle, DarkTitle, Paragraph, Bold, Email }

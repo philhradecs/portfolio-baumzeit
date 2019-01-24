@@ -15,30 +15,30 @@ export default {
   },
   '/contact': {
     wide: false,
-    navImg: 'http://www.onextrapixel.com/wp-content/uploads/2014/08/24-FineClassicalPatternBackground.jpg', 
+    navImg: 'contact.jpg', 
     pageView: true,
-    contentBg: '#88929D',
+    contentBg: '#c9be9d',
     colorHighlight: 'thistle'
   },
   '/cv': {
     wide: false,
-    navImg: 'http://www.onextrapixel.com/wp-content/uploads/2014/08/24-FineClassicalPatternBackground.jpg', 
+    navImg: 'cv.jpg', 
     pageView: true,
-    contentBg: '#B39475',
+    contentBg: '#5B9791',
     colorHighlight: 'darkMagenta'
   },
   '/mind': {
     wide: false,
     navImg: 'mind.jpg', 
     pageView: true,
-    contentBg: '#9DA995',
+    contentBg: '#a9b5a1',
     colorHighlight: '#313D63'
   },
   '/projects': {
     wide: false,
     navImg: 'projects.jpg', 
     pageView: false,
-    contentBg: '#E3DED0',
+    contentBg: '#eae2c9',
     colorHighlight: '#8E433D'
   },
   'default': {

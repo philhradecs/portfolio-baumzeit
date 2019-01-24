@@ -8,7 +8,7 @@ const transitionDuration = '300ms';
 const w = {
   font: '1.4rem',
   widthBar: '22vw',
-  indent: '9vw',
+  indent: '11vw',
   bg: '#2E2D2A',
   colorFont: {
     passive: '#c5ccc8',
@@ -27,7 +27,7 @@ const w = {
 }
 
 const n = {
-  font: '1.1rem',
+  font: '1.2rem',
   widthBar: '10vw',
   indent: '2.5vw',
   bg: 'transparent',
@@ -49,7 +49,7 @@ const n = {
 
 const NavBar = styled.aside`
   min-height: 100vh; 
-  padding-top: 6.5vh;
+  padding-top: 5.6vh;
   display: grid;
   grid-template-rows: auto 2fr 3fr;
   position: relative;
