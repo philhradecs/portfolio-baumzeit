@@ -107,7 +107,7 @@ const resources = [{
 export default () => (
   
   <HomeWrapper>
-    <Welcome>Hello, I'm <Look>Philip Hradecsni</Look></Welcome>
+    <Welcome>Hello, I'm <Look value={colorHighlight}>Philip Hradecsni</Look></Welcome>
     <Subtitle><span>Javascript Developer / Designer</span><SubLine /></Subtitle>
     <Delayed waitBeforeShow={260}>
     <Paragraph emphasis>

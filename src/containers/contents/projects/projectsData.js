@@ -42,7 +42,7 @@ export default [
   {
     data: {
       title: 'Tic Tac Toe with Gnome',
-      description: "A beautiful Samorost themed Tic Tac Toe game that can be played with a human friend or against the little Gnome (AI). Players can enter their names and the game keeps track of the score.\nWritten in HTML5, CSS3 and vanillaJS entirely proper management of the DOM throughout the course of the different application states as well as designing and developing the algorithms for the AI were very interesting and challenging aspects of this project."
+      description: "A beautiful Samorost themed Tic Tac Toe game that can be played with a human friend or against the little Gnome (AI). Players can enter their names and the game keeps track of the score. Written in HTML5, CSS3 and vanillaJS entirely. Proper and reliable management of the DOM throughout different application states as well as the design and development of the algorithms for the AI were very interesting and challenging aspects of this project."
     },
     img: 'tic_tac_toe.jpg',
     url: {
