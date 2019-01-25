@@ -21,6 +21,7 @@ const Email = styled.a`
   font-weight: 400;
   font-size: 1.5rem;
   color: black;
+  border-color: transparent;
   &:hover {
     border-bottom: 1px solid ${props => props.theme.colorHighlight};
     transition: border 160ms ease-out;

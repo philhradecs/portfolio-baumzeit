@@ -2,8 +2,8 @@ export default [
   
   {
     data: {
-      title: 'My Personal Website',
-      description: 'A multi page website built with React. The website offers '
+      title: 'Personal Website / Portfolio',
+      description: "A multi page personal website built with React.\nThe site should provide a simple structure and communicate clearly and coherently a suitable range of relevant information about me. Transitions across routes are realised using the routers API together with CSS Transition Groups for a seamless native-like user experience. The projects data is presented via a filter view mechanism for easy navigation of the catalogue. Mobile view and additional interactive content will be added soon."
     },
     img: 'portfolio_baumzeit.jpg',
     url: {
@@ -15,8 +15,8 @@ export default [
   
   {
     data: {
-      title: 'Cover Art Explorer',
-      description: '(work in progress) ... play win lose its up to you and gnome the nice little friend with his fascination for spaceships and nature.'
+      title: 'Music Art Explorer',
+      description: "(work in progress) My goal is to create a tool that makes it possible to compare music cover art throughout different decades, genres and countries utilizing the Discogs API. Through distraction-free and customizable views of art and meta data, characteristics and patterns within and across visual cultures start to reveal themselves to the user who can generate a shareable url link for any particular view.\nUsing React together with socket.io to communicate with the Node/Express server allows for real-time actualization of data and representation of state."
     },
     img: 'vmhx.jpg',
     url: {
@@ -29,7 +29,7 @@ export default [
   {
     data: {
       title: 'Drum Machine',
-      description: 'play win lose its up to you and gnome the nice little friend with his fascination for spaceships and nature.'
+      description: "A drum machine using the keyboard to play sounds on click. The application displays the active sound and allows toggling between two sound sets and adjusting the volume. Built with React."
     },
     img: 'drum_machine.jpg',
     url: {
@@ -42,7 +42,7 @@ export default [
   {
     data: {
       title: 'Tic Tac Toe with Gnome',
-      description: 'play win lose its up to you and gnome the nice little friend with his fascination for spaceships and nature.'
+      description: "A beautiful Samorost themed Tic Tac Toe game that can be played with a human friend or against the little Gnome (AI). Players can enter their names and the game keeps track of the score.\nWritten in HTML5, CSS3 and vanillaJS entirely proper management of the DOM throughout the course of the different application states as well as designing and developing the algorithms for the AI were very interesting and challenging aspects of this project."
     },
     img: 'tic_tac_toe.jpg',
     url: {
@@ -55,7 +55,7 @@ export default [
   {
     data: {
       title: 'Simon in Bali',
-      description: 'play win lose its up to you and gnome the nice little friend with his fascination for spaceships and nature.'
+      description: "This is my interpretation of the classic Simon game embracing the beautiful aesthetics of Balinese culture. The game adds one note to the sequence that is played back to the player after successfully reproducing the previous one gradually increasing the speed. The game ends after round 20 rewarding the victorious player with a visual feedback and a short and nice winning melody that I came up with.\nBuilt with HTML5, CSS3, Javascript and a little sound library."
     },
     img: 'simon.jpg',
     url: {
@@ -68,7 +68,7 @@ export default [
   {
     data: {
       title: 'Pomodoro Clock',
-      description: 'play win lose its up to you and gnome the nice little friend with his fascination for spaceships and nature.'
+      description: "The Clock allows the user to set individual times for work phase and break phase that will alternate between each other, respectively displaying the time remaining. Built with HTML5, CSS3 and vanillaJS."
     },
     img: 'pomodoro_clock.jpg',
     url: {
@@ -81,7 +81,7 @@ export default [
   {
     data: {
       title: 'Treemap Diagram',
-      description: 'this project blabla nice visualization tree has leaves wants to be resized and change dataset.'
+      description: "An application that displays three different datasets in form of a treemap diagram where the relative size of the tile corresponds with the relative value of the datapoint within the set. Memoization is used to load each dataset only once per session. Metadata is displayd dynamically as a tooltip and the map's legends are generated from the dataset's internal categories allowing users to find corresponding areas in the diagram by hovering over any legend entry with the mouse. The currently rendered dataset can be switched by clicking the panel or using the arrow keys on the keyboard. The treemap is rendered accordingly based on the window size."
     },
     img: 'treemap.jpg',
     url: {
@@ -94,7 +94,7 @@ export default [
   {
     data: {
       title: 'Choropleth Map',
-      description: 'play win lose its up to you and gnome the nice little friend with his fascination for spaceships and nature.'
+      description: "A D3 Data Visualization mapping statistical data to a topographical representation of the United States. The individual areas on the map are dynamically colored using a color scale. Hovering over the any part of the map shows a tooltip with related metadata."
     },
     img: 'choropleth.jpg',
     url: {
@@ -107,7 +107,7 @@ export default [
   {
     data: {
       title: 'Heat Map',
-      description: 'play win lose its up to you and gnome the nice little friend with his fascination for spaceships and nature.'
+      description: "play win lose its up to you and gnome the nice little friend with his fascination for spaceships and nature."
     },
     img: 'heat_map.jpg',
     url: {
@@ -120,7 +120,7 @@ export default [
   {
     data: {
       title: 'Scatterplot Chart',
-      description: 'play win lose its up to you and gnome the nice little friend with his fascination for spaceships and nature.'
+      description: "play win lose its up to you and gnome the nice little friend with his fascination for spaceships and nature."
     },
     img: 'scatterplot.jpg',
     url: {
@@ -133,7 +133,7 @@ export default [
   {
     data: {
       title: 'Responsive Survey Form',
-      description: 'play win lose its up to you and gnome the nice little friend with his fascination for spaceships and nature.'
+      description: "play win lose its up to you and gnome the nice little friend with his fascination for spaceships and nature."
     },
     img: 'survey_form.jpg',
     url: {
@@ -146,7 +146,7 @@ export default [
   {
     data: {
       title: 'Chat Room',
-      description: 'play win lose its up to you and gnome the nice little friend with his fascination for spaceships and nature.'
+      description: "play win lose its up to you and gnome the nice little friend with his fascination for spaceships and nature."
     },
     img: 'chat_room.png',
     url: {
@@ -159,7 +159,7 @@ export default [
   {
     data: {
       title: 'URL Shortener',
-      description: 'play win lose its up to you and gnome the nice little friend with his fascination for spaceships and nature.'
+      description: "play win lose its up to you and gnome the nice little friend with his fascination for spaceships and nature."
     },
     img: 'url_shortener.jpg',
     url: {
@@ -172,7 +172,7 @@ export default [
   {
     data: {
       title: 'Exercise Tracker',
-      description: 'play win lose its up to you and gnome the nice little friend with his fascination for spaceships and nature.'
+      description: "play win lose its up to you and gnome the nice little friend with his fascination for spaceships and nature."
     },
     img: 'exercise_tracker.png',
     url: {
@@ -185,7 +185,7 @@ export default [
   {
     data: {
       title: 'Twitch.tv Streamer',
-      description: 'play win lose its up to you and gnome the nice little friend with his fascination for spaceships and nature.'
+      description: "play win lose its up to you and gnome the nice little friend with his fascination for spaceships and nature."
     },
     img: 'twitch_streamer.jpg',
     url: {
@@ -198,7 +198,7 @@ export default [
   {
     data: {
       title: 'Quote Generator',
-      description: 'play win lose its up to you and gnome the nice little friend with his fascination for spaceships and nature.'
+      description: "play win lose its up to you and gnome the nice little friend with his fascination for spaceships and nature."
     },
     img: 'quote_generator.jpg',
     url: {

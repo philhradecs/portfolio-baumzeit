@@ -12,7 +12,7 @@ if (typeof window !== 'undefined') {
 
 const GlobalStyle = createGlobalStyle`
 
-  .wf-loading {
+  .wf-loading * {
     opacity: 0;
   }
 

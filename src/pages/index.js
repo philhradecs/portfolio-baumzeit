@@ -4,6 +4,8 @@ import { Paragraph, Bold, Email } from '../styles/styledPageComponents';
 import HistoryLink from '../containers/sidebar/HistoryLink';
 import Delayed from '../containers/contents/projects/showlist/Delayed';
 
+const colorHighlight = '#9fb55e';
+
 const Welcome = styled.h1`
 	font-family: 'Titillium Web';
 	font-weight: 300;
@@ -28,11 +30,11 @@ const SubLine = styled.span`
 	margin-left: 1vw;
 	flex: 1;
   opacity: 0.8;
-	border-bottom: 1px solid ${props => props.theme.colorHighlight};
+	border-bottom: 1px solid ${colorHighlight};
 `;
 
 const Look = styled.span`
-	color: ${props => props.value || props.theme.colorHighlight};
+	color: ${props => props.value || 'black'};
 	font-weight: 400;
 	padding: 0 0.3rem;
 `;
@@ -41,7 +43,7 @@ const ColorLink = styled(Look)`
 	& a {
 		font-size: 0.85rem;
 		text-decoration: none;
-		background: ${props => props.value || props.theme.colorHighlight};
+		background: ${props => props.value || colorHighlight};
 		color: white;
 		padding: 0.25rem 0.4rem;
 		border-radius: 0.2rem;
@@ -103,10 +105,11 @@ const resources = [{
 ]
 
 export default () => (
-  <Delayed waitBeforeShow={260}>
+  
   <HomeWrapper>
     <Welcome>Hello, I'm <Look>Philip Hradecsni</Look></Welcome>
     <Subtitle><span>Javascript Developer / Designer</span><SubLine /></Subtitle>
+    <Delayed waitBeforeShow={260}>
     <Paragraph emphasis>
     	Based in the Austrian woodlands close to the city of Vienna, I am developing <Bold>frontend and backend</Bold> applications using responsibly <Bold>state of the art technologies</Bold> to create <Bold>meaningful and effortless</Bold> user experiences that bring about the best of our users.
     </Paragraph>
@@ -117,7 +120,7 @@ export default () => (
     	 Namely: {furtherTech.map((t, i) => (
     	 	<span key={t}>
     	 		{i !== 0 && ' / '}
-    	 		<Look value='black'>{t}</Look>
+    	 		<Look>{t}</Look>
     	 	</span>
     	 ))} and more.
     </Paragraph>
@@ -170,6 +173,7 @@ export default () => (
 	  			<HistoryLink to='/contact'>Get in touch</HistoryLink>
 	  		</ColorLink>
   	</Paragraph>
+    </Delayed>
   </HomeWrapper>
-  </Delayed>
+  
 )

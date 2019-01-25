@@ -18,7 +18,7 @@ const w = {
   widthHeader: '23vw',
   underline: {
     passive: '#21201e',
-    active: '#111',
+    active: '#9fb55e',
     hover: '#191817'
   },
   shadow: '0 0.15em 1.6em -0.3em rgba(30, 30, 30, 0.7)',
@@ -39,8 +39,8 @@ const n = {
   widthHeader: '11.3vw',
   underline: {
     passive: 'transparent',
-    active: '#222',
-    hover: '#222'
+    active: 'rgba(20,20,20, 0.3)',
+    hover: 'rgba(20,20,20, 0.5)'
   },
   shadow: '0 0.15em 1.6em -0.3em transparent',
   sizeIcon: '1.1rem',
@@ -131,10 +131,12 @@ const NavBar = styled.aside`
     & .link {
       color: ${props => props.theme.wide ? w.color : n.color};
       padding-left: ${props => props.theme.wide ? w.indent : n.indent};
+      border-bottom: 1px solid ${props => props.theme.wide ? w.underline.passive : n.underline.passive};
       font-size: ${props => props.theme.wide ? w.font : n.font};
       transition: color ${transitionDuration} ease,
                   padding-left ${transitionDuration} ease,
-                  font-size ${transitionDuration} ease;
+                  font-size ${transitionDuration} ease,
+                  border-bottom ${transitionDuration} ease;
     }
   }
 
@@ -160,6 +162,7 @@ const NavBar = styled.aside`
       color: ${props => props.theme.wide ? w.color : n.color};
       padding-left: ${props => props.theme.wide ? w.indent : n.indent};
       font-size: ${props => props.theme.wide ? w.font : n.font};
+      border-bottom: 1px solid ${props => props.theme.wide ? w.underline.passive : n.underline.passive};
     }
   }
 `;
@@ -199,16 +202,16 @@ const LinkWrapper = styled.div`
     padding-left: ${props => props.theme.wide ? w.indent : n.indent};
     color: ${props => props.theme.wide ? w.colorFont.passive : n.colorFont.passive};
     font-size: ${props => props.theme.wide ? w.font : n.font};
-    transition: border-color 140ms ease,
-                color 140ms ease;
     border-bottom: 1px solid ${props => props.theme.wide ? w.underline.passive : n.underline.passive};
 
     & :hover, & :focus {
       border-color: ${props => props.theme.wide ? w.underline.hover : n.underline.hover};
       color: ${props => props.theme.wide ? w.colorFont.hover : n.colorFont.hover};
+      transition: border-color 140ms ease,
+                color 140ms ease;
     }
     &.active {
-      border-color: ${props => props.theme.colorHighlight};/*${props => props.theme.wide ? w.underline.active : n.underline.active};*/
+      border-color: ${props => props.theme.wide ? w.underline.active : n.underline.active};
       color: ${props => props.theme.wide ? w.colorFont.active : n.colorFont.active};
       pointer-events: none;
     }

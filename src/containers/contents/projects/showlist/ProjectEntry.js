@@ -55,15 +55,17 @@ const Title = styled.h2`
   align-self: center;
   color: black;
   font-size: 1.15rem;
-  margin: 0 1rem 0.3rem 0;
+  margin: 0 1rem 0.2rem 0;
 `;
 const Description = styled.p`
   font-family: 'Roboto Slab';
   font-weight: 300;
-  font-size: 1.3rem;
+  font-size: 1.1rem;
   grid-area: de;
-  margin-top: 0.5rem;
-  margin-left: 2rem;
+  margin-top: 1rem;
+  margin-left: 3rem;
+  line-height: 1.7;
+  white-space: pre-line;
 `;
 const PreviewWrapper = styled.div`
   grid-area: pw;

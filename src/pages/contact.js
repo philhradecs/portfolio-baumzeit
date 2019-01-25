@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { LightTitle, Paragraph, Bold, Email } from '../styles/styledPageComponents';
+import { LightTitle, Paragraph, Email } from '../styles/styledPageComponents';
 
 const FindMe = styled.img`
   width: 100%;
@@ -22,7 +22,7 @@ export default () => (
     </Paragraph>
     <Email href='mailto:baumzeit@posteo.me'>baumzeit@posteo.me</Email>
     <Paragraph emphasis>
-      This is a placeholder image. I will soon add more information to this section.
+      This is a placeholder image. I'm working on a gallery of upcoming projects'.
     </Paragraph>
     <FindMe src='/other/contact_placeholder.png' alt='contact placeholder' />
   </div>

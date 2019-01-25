@@ -17,29 +17,29 @@ export default {
     wide: false,
     navImg: 'contact.jpg', 
     pageView: true,
-    contentBg: '#c9be9d',
-    colorHighlight: 'thistle'
+    contentBg: '#d1caa7',
+    colorHighlight: 'white'
   },
   '/cv': {
     wide: false,
     navImg: 'cv.jpg', 
     pageView: true,
     contentBg: '#5B9791',
-    colorHighlight: 'darkMagenta'
+    colorHighlight: '#5B9791'
   },
   '/mind': {
     wide: false,
     navImg: 'mind.jpg', 
     pageView: true,
     contentBg: '#a9b5a1',
-    colorHighlight: '#313D63'
+    colorHighlight: '#a9b5a1'
   },
   '/projects': {
     wide: false,
     navImg: 'projects.jpg', 
     pageView: false,
-    contentBg: '#eae2c9',
-    colorHighlight: '#8E433D'
+    contentBg: '#e5decc',
+    colorHighlight: '#aaa'
   },
   'default': {
     wide: false,
