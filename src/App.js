@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Root } from 'react-static';
-import styled, { createGlobalStyle } from 'styled-components';
+import styled, { createGlobalStyle, css } from 'styled-components';
+import withSizes from 'react-sizes';
 
 import ProvideNavBar from './containers/sidebar/ProvideNavBar';
 import RoutesContent from './containers/RoutesContent';
@@ -44,25 +45,33 @@ const SiteLayout = styled.div`
   grid-template-rows: 1fr;
   height: 100vh;
 
-  /*@media only screen and (max-width: 767px) {
-    grid-template-columns: 1fr;
-    grid-template-rows: 4rem auto;
-  }*/  
+  ${({ singleColumn }) => (
+    singleColumn && css`
+      grid-template-columns: 1fr;
+      grid-template-rows: 4rem auto;
+    `
+  )}
 `;
 
 class App extends Component {
-    
+  componentDidMount() {
+    document.title = 'Portfolio Baumzeit';
+  }
   render() {
     return (
       <Root>
         <GlobalStyle />
-        <SiteLayout>
-          <ProvideNavBar singleColumn={false} />
-          <RoutesContent singleColumn={false} />
+        <SiteLayout singleColumn={this.props.singleColumn}>
+          <ProvideNavBar singleColumn={this.props.singleColumn} />
+          <RoutesContent singleColumn={this.props.singleColumn} />
         </SiteLayout>
       </Root>
     );
   }
 }
 
-export default App
+const mapSizesToProps = ({ width }) => ({
+  singleColumn: !width || width < 1024
+})
+
+export default withSizes(mapSizesToProps)(App)

@@ -12,7 +12,6 @@ const FixedGridArea = styled.div`
   display: grid;
   grid-template-areas: 'fixedArea';
   padding: ${props => props.singleColumn ? '0' : '3.5vh 2.5vw 3vh 4.4vw'};
-
   min-height: ${props => props.singleColumn ? '100%' : '100vh'};
   overflow: auto;
   overflow-y: overlay;
@@ -33,10 +32,8 @@ const ContentWrapper = styled.section`
   }
 
   border-radius: 0.4rem;
-  //position: absolute;
   top: 0;
   width: 100%;
-  //min-height: 100%;
 
   &.fade-enter {
     opacity: 0.01;

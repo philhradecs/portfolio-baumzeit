@@ -17,6 +17,7 @@
     "react": "^16.7.0",
     "react-dom": "^16.7.0",
     "react-hot-loader": "^4.3.12",
+    "react-sizes": "^1.0.4",
     "react-static": "^6.0.0-beta.30",
     "react-static-plugin-styled-components": "^6.0.8",
     "react-transition-group": "^2.5.2",

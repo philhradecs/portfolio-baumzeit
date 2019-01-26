@@ -6,8 +6,7 @@ import Preview from './Preview';
 const ProjectEntry = styled.li`
   background: ${props => props.theme.contentBg};
 
-  width: 100%;
-  height: 350px;
+  height: auto;
   margin: 0 0 2rem 2vw;
   padding: 0rem 2rem 2rem 1.8rem;
   border-radius: 0.3rem;
@@ -55,6 +54,7 @@ const Title = styled.h2`
   align-self: center;
   color: black;
   font-size: 1.15rem;
+  padding: 1rem 0;
   margin: 0 1rem 0.2rem 0;
 `;
 const Description = styled.p`

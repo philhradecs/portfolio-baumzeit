@@ -41,6 +41,7 @@ const Look = styled.span`
 
 const ColorLink = styled(Look)`
 	& a {
+    white-space: nowrap;
 		font-size: 0.85rem;
 		text-decoration: none;
 		background: ${props => props.value || colorHighlight};
@@ -68,15 +69,17 @@ const Resource = styled.li`
 
 const FlexWrapper = styled.div`
 	display: flex;
+  flex-direction: ${props => props.theme.singleColumn ? 'column' : 'row'};
 	& p {
 		text-align: justify;
 		margin: 0;
 		margin-right: 1.2rem;
+    margin-bottom: ${props => props.theme.singleColumn ? '1rem' : '0'};
 	}
 `;
 
 const HomeWrapper = styled.div`
-  margin: 0 -2.2vw 0 -2.6vw;
+  margin: ${props => props.theme.singleColumn ? '0' : '0 -2.2vw 0 -2.6vw'};
 `;
 
 

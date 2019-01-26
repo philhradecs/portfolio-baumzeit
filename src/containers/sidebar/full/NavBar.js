@@ -230,7 +230,7 @@ const Tag = styled.div`
 
 export default () => (
   <NavBar>
-    <Tag>v0.7.0</Tag>
+    <Tag>v0.7</Tag>
     <IconsBarWrapper>
       <SocialIconsBar />
     </IconsBarWrapper>

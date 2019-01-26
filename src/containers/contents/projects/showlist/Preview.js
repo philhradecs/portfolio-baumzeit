@@ -17,6 +17,7 @@ const Image = styled.div`
   background-size: cover;
   border-radius: 0.3rem;
   height: 100%;
+  max-height: 260px;
 `;
 
 const LinkOverlay = styled.div`

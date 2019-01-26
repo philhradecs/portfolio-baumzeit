@@ -3,7 +3,7 @@ export default [
   {
     data: {
       title: 'Personal Website / Portfolio',
-      description: "A multi page personal website built with React.\nThe site should provide a simple structure and communicate clearly and coherently a suitable range of relevant information about me. Transitions across routes are realised using the routers API together with CSS Transition Groups for a seamless native-like user experience. The projects data is presented via a filter view mechanism for easy navigation of the catalogue. Mobile view and additional interactive content will be added soon."
+      description: "A multi page personal website built with React. The site should provide a simple structure and communicate clearly and coherently a suitable range of relevant information about me. Transitions across routes are realised using the routers API together with CSS Transition Groups for a seamless native-like user experience. The projects data is presented via a filter view mechanism for easy navigation of the catalogue. Mobile view and additional interactive content will be added soon."
     },
     img: 'portfolio_baumzeit.jpg',
     url: {
@@ -16,7 +16,7 @@ export default [
   {
     data: {
       title: 'Music Art Explorer',
-      description: "(work in progress) My goal is to create a tool that makes it possible to compare music cover art throughout different decades, genres and countries utilizing the Discogs API. Through distraction-free and customizable views of art and meta data, characteristics and patterns within and across visual cultures start to reveal themselves to the user who can generate a shareable url link for any particular view.\nUsing React together with socket.io to communicate with the Node/Express server allows for real-time actualization of data and representation of state."
+      description: "(work in progress) My goal is to create a tool that makes it possible to compare music cover art throughout different decades, genres and countries utilizing the Discogs API. Through distraction-free and customizable views of art and meta data, characteristics and patterns within and across visual cultures start to reveal themselves to the user who can generate a shareable url link for any particular view. Using React together with socket.io to communicate with the Node/Express server allows for real-time actualization of data and representation of state."
     },
     img: 'vmhx.jpg',
     url: {
@@ -55,7 +55,7 @@ export default [
   {
     data: {
       title: 'Simon in Bali',
-      description: "This is my interpretation of the classic Simon game embracing the beautiful aesthetics of Balinese culture. The game adds one note to the sequence that is played back to the player after successfully reproducing the previous one gradually increasing the speed. The game ends after round 20 rewarding the victorious player with a visual feedback and a short and nice winning melody that I came up with.\nBuilt with HTML5, CSS3, Javascript and a little sound library."
+      description: "This is my interpretation of the classic Simon game embracing the beautiful aesthetics of Balinese culture. The game adds one note to the sequence that is played back to the player after successfully reproducing the previous one gradually increasing the speed. The game ends after round 20 rewarding the victorious player with a visual feedback and a short and nice winning melody that I came up with. Built with HTML5, CSS3, Javascript and a little sound library."
     },
     img: 'simon.jpg',
     url: {
@@ -81,7 +81,7 @@ export default [
   {
     data: {
       title: 'Treemap Diagram',
-      description: "An application that displays three different datasets in form of a treemap diagram where the relative size of the tile corresponds with the relative value of the datapoint within the set. Memoization is used to load each dataset only once per session. Metadata is displayd dynamically as a tooltip and the map's legends are generated from the dataset's internal categories allowing users to find corresponding areas in the diagram by hovering over any legend entry with the mouse. The currently rendered dataset can be switched by clicking the panel or using the arrow keys on the keyboard. The treemap is rendered accordingly based on the window size."
+      description: "An application that displays three different datasets in form of a treemap diagram where the relative size of the tile corresponds with the relative value of the datapoint within the set. Memoization is used to load each dataset only once per session. Metadata is displayd dynamically as a tooltip and the map's legends are generated from the dataset's internal categories allowing users to find corresponding areas in the diagram by hovering over any legend entry with the mouse. The currently rendered dataset can be changed by clicking the panel or using the arrow keys on the keyboard. The treemap is rendered accordingly based on the window size."
     },
     img: 'treemap.jpg',
     url: {
@@ -94,7 +94,7 @@ export default [
   {
     data: {
       title: 'Choropleth Map',
-      description: "A D3 Data Visualization mapping statistical data to a topographical representation of the United States. The individual areas on the map are dynamically colored using a color scale. Hovering over the any part of the map shows a tooltip with related metadata."
+      description: "An application using D3 that maps statistical data to a topographical representation of the United States. The individual areas on the map are dynamically colored using a color scale. Hovering over any part of the map shows a tooltip with related metadata."
     },
     img: 'choropleth.jpg',
     url: {
@@ -107,7 +107,7 @@ export default [
   {
     data: {
       title: 'Heat Map',
-      description: "play win lose its up to you and gnome the nice little friend with his fascination for spaceships and nature."
+      description: "An application using D3 to visualize changes of monthly global temperature average over time. A tooltip is displayed on hover providing details about the corresponding data point."
     },
     img: 'heat_map.jpg',
     url: {
@@ -116,11 +116,11 @@ export default [
     },
     tags: ['D3', 'Data Visualization']
   },
-  
+  /*
   {
     data: {
       title: 'Scatterplot Chart',
-      description: "play win lose its up to you and gnome the nice little friend with his fascination for spaceships and nature."
+      description: "A"
     },
     img: 'scatterplot.jpg',
     url: {
@@ -129,11 +129,11 @@ export default [
     },
     tags: ['D3', 'Data Visualization']
   },
-  
+  */
   {
     data: {
       title: 'Responsive Survey Form',
-      description: "play win lose its up to you and gnome the nice little friend with his fascination for spaceships and nature."
+      description: "A template for a responsive Survey Form that works well on devices of all sizes without  "
     },
     img: 'survey_form.jpg',
     url: {

@@ -6,7 +6,7 @@ import FilterBar from '../containers/contents/projects/filterbar/FilterBar';
 import ShowList from '../containers/contents/projects/showlist/ShowList';
 
 const Wrapper = styled.div`
-  margin: 0 -2.2vw 0 -2.6vw;
+  margin: ${props => props.theme.singleColumn ? '0' : '0 -2.2vw 0 -2.6vw'};
 `;
 
 class Projects extends Component {
