@@ -8,7 +8,7 @@ export default ({ singleColumn }) => (
   <Location>
     {({ location }) => (
       singleColumn
-      ? <TopNavBar location={location} />
+      ? <TopNavBar />
       : <SlideNavBar location={location} />
     )}
   </Location>

@@ -28,7 +28,7 @@ const LinkWrapper = styled.div`
   margin-left: 3vw;
 `;
 
-export default ({ location }) => (
+export default () => (
   <FlexWrapper>
     <SocialIconsBar />
     <LinkWrapper>

@@ -3,7 +3,7 @@ export default [
   {
     data: {
       title: 'Personal Website / Portfolio',
-      description: "A multi page personal website built with React. The site should provide a simple structure and communicate clearly and coherently a suitable range of relevant information about me. Transitions across routes are realised using the routers API together with CSS Transition Groups for a seamless native-like user experience. The projects data is presented via a filter view mechanism for easy navigation of the catalogue. Mobile view and additional interactive content will be added soon."
+      description: "A multi page personal website built with React. The site should provide a simple structure and communicate clearly and coherently a suitable range of relevant information about myself. Transitions across routes are realized using the routers API together with CSS Transition Groups for a seamless native-like user experience. The projects data is presented via a filter view mechanism for easy navigation of the catalogue. Additional interactive content will be added soon."
     },
     img: 'portfolio_baumzeit.jpg',
     url: {
@@ -116,7 +116,7 @@ export default [
     },
     tags: ['D3', 'Data Visualization']
   },
-  /*
+
   {
     data: {
       title: 'Scatterplot Chart',
@@ -129,7 +129,7 @@ export default [
     },
     tags: ['D3', 'Data Visualization']
   },
-  */
+  
   {
     data: {
       title: 'Responsive Survey Form',
@@ -148,7 +148,7 @@ export default [
       title: 'Chat Room',
       description: "play win lose its up to you and gnome the nice little friend with his fascination for spaceships and nature."
     },
-    img: 'chat_room.png',
+    img: 'chat_room.jpg',
     url: {
       live: 'https://mountain-grape.glitch.me/',
       code: 'https://github.com/baumzeit/socket-chat-room/'

@@ -13,7 +13,7 @@ const ProjectEntry = styled.li`
 
   display: grid;
   grid-template-columns: 3fr 1fr 10fr;
-  grid-template-rows: 1fr 4fr;
+  grid-template-rows: auto auto;
   grid-template-areas: 
     'ti ta ta'
     'pw pw de';

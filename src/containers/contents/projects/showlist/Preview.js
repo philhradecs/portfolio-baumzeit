@@ -10,6 +10,8 @@ const Container = styled.div`
   background: var(--body-bg);
   border-radius: 0.3rem;
   position: relative;
+  height: 260px;
+  max-height: 260px;
 `;
 
 const Image = styled.div`
@@ -17,7 +19,6 @@ const Image = styled.div`
   background-size: cover;
   border-radius: 0.3rem;
   height: 100%;
-  max-height: 260px;
 `;
 
 const LinkOverlay = styled.div`
