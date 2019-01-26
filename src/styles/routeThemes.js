@@ -8,7 +8,7 @@ export default {
   },
   '/404': {
     wide: false,
-    navImg: 'http://www.onextrapixel.com/wp-content/uploads/2014/08/24-FineClassicalPatternBackground.jpg', 
+    navImg: '', 
     pageView: true,
     contentBg: 'blue',
     colorHighlight: 'darkMagenta'

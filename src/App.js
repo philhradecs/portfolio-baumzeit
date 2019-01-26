@@ -1,9 +1,12 @@
 import React, { Component } from 'react';
 import { Root } from 'react-static';
 import styled, { createGlobalStyle, css } from 'styled-components';
+import { Location } from '@reach/router';
 import withSizes from 'react-sizes';
 
 import ProvideNavBar from './containers/sidebar/ProvideNavBar';
+import TopNavBar from './containers/sidebar/top/TopNavBar';
+import SlideNavBar from './containers/sidebar/full/SlideNavBar';
 import RoutesContent from './containers/RoutesContent';
 import loadWebFonts from './loadWebFonts';
 
@@ -39,39 +42,57 @@ const GlobalStyle = createGlobalStyle`
   }
 `;
 
-const SiteLayout = styled.div`
+const DesktopLayout = styled.div`
   display: grid;
   grid-template-columns: auto 1fr;
   grid-template-rows: 1fr;
   height: 100vh;
+`;
 
-  ${({ singleColumn }) => (
-    singleColumn && css`
-      grid-template-columns: 1fr;
-      grid-template-rows: 4rem auto;
-    `
-  )}
+const MobileLayout = styled.div`
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 4rem auto;
+  height: 100vh;
 `;
 
 class App extends Component {
+
   componentDidMount() {
     document.title = 'Portfolio Baumzeit';
+    this.checkLayout();
   }
+
+  checkLayout() {
+    if (window.innerWidth < 768 && !this.props.isMobile) {
+      this.forceUpdate();
+    }
+  }
+
   render() {
     return (
       <Root>
         <GlobalStyle />
-        <SiteLayout singleColumn={this.props.singleColumn}>
-          <ProvideNavBar singleColumn={this.props.singleColumn} />
-          <RoutesContent singleColumn={this.props.singleColumn} />
-        </SiteLayout>
+        <Location>
+          {({ location }) => (
+            this.props.isMobile
+              ? <MobileLayout>
+                  <TopNavBar />
+                  <RoutesContent isMobile />
+                </MobileLayout>
+              : <DesktopLayout>
+                  <SlideNavBar location={location}/>
+                  <RoutesContent />
+                </DesktopLayout>
+          )}
+        </Location>
       </Root>
     );
   }
 }
 
 const mapSizesToProps = ({ width }) => ({
-  singleColumn: !width || width < 1024
+  isMobile: !width ? false : (width < 768)
 })
 
-export default withSizes(mapSizesToProps)(App)
+export default withSizes(mapSizesToProps)(App);

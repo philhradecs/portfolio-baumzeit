@@ -20,7 +20,7 @@ const ProjectEntry = styled.li`
   justify-content: center;
 
   ${props =>
-      props.theme.singleColumn && css`
+      props.theme.isMobile && css`
         grid-template-columns: 1fr;
         grid-template-rows: auto 200px auto auto;
         grid-template-areas: 'ti'

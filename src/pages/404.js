@@ -5,8 +5,7 @@ export default () => (
   <div>
     <LightTitle>404</LightTitle>
     <Paragraph>
-      React, static sites, performance, speed. It's the stuff that makes us
-      tick.
+      Sorry, this page does not exist! Try the menu links.
     </Paragraph>
   </div>
 )

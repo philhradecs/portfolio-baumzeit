@@ -11,8 +11,8 @@ const transitionDuration = 250;
 const FixedGridArea = styled.div`
   display: grid;
   grid-template-areas: 'fixedArea';
-  padding: ${props => props.singleColumn ? '0' : '3.5vh 2.5vw 3vh 4.4vw'};
-  min-height: ${props => props.singleColumn ? '100%' : '100vh'};
+  padding: ${props => props.isMobile ? '0' : '3.5vh 2.5vw 3vh 4.4vw'};
+  min-height: ${props => props.isMobile ? '100%' : '100vh'};
   overflow: auto;
   overflow-y: overlay;
   position: relative;
@@ -54,10 +54,10 @@ const ContentWrapper = styled.section`
   }
 `;
 
-export default ({ singleColumn }) => (
+export default ({ isMobile }) => (
   <Location>
     {({ location }) => (
-      <FixedGridArea singleColumn={singleColumn}>
+      <FixedGridArea isMobile={isMobile}>
         <TransitionGroup component={null}>
           <CSSTransition 
             key={location.key}
@@ -66,7 +66,7 @@ export default ({ singleColumn }) => (
             unmountOnExit
           >
             <ThemeProvider theme={() => { const theme = routeThemes[location.pathname] || routeThemes.default;
-                                          return { singleColumn, ...theme }}}>
+                                          return { isMobile, ...theme }}}>
               <ContentWrapper>
                 <Routes />
               </ContentWrapper>
