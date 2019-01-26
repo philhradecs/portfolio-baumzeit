@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Root } from 'react-static';
 import styled, { createGlobalStyle, css } from 'styled-components';
 import { Location } from '@reach/router';
-import withSizes from 'react-sizes';
+import Media from 'react-media';
 
 import ProvideNavBar from './containers/sidebar/ProvideNavBar';
 import TopNavBar from './containers/sidebar/top/TopNavBar';
@@ -38,7 +38,6 @@ const GlobalStyle = createGlobalStyle`
     --body-bg: #fafafa;
     background: var(--body-bg);
     font-family: 'Titillium Web';
-
   }
 `;
 
@@ -46,6 +45,10 @@ const DesktopLayout = styled.div`
   display: grid;
   grid-template-columns: auto 1fr;
   grid-template-rows: 1fr;
+  grid-template-areas: 
+    'desktopNav'
+    'desktopRoute';
+
   height: 100vh;
 `;
 
@@ -53,20 +56,16 @@ const MobileLayout = styled.div`
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 4rem auto;
-  height: 100vh;
+  grid-template-areas: 
+    'mobileNav'
+    'mobileRoute';
+  height: 100vh;  
 `;
 
 class App extends Component {
 
   componentDidMount() {
     document.title = 'Portfolio Baumzeit';
-    this.checkLayout();
-  }
-
-  checkLayout() {
-    if (window.innerWidth < 768 && !this.props.isMobile) {
-      this.forceUpdate();
-    }
   }
 
   render() {
@@ -75,15 +74,21 @@ class App extends Component {
         <GlobalStyle />
         <Location>
           {({ location }) => (
-            this.props.isMobile
-              ? <MobileLayout>
-                  <TopNavBar />
-                  <RoutesContent isMobile />
-                </MobileLayout>
-              : <DesktopLayout>
-                  <SlideNavBar location={location}/>
-                  <RoutesContent />
-                </DesktopLayout>
+            <Media query="(min-width: 992px)">
+              {matches =>
+                matches ? ( 
+                  <DesktopLayout>
+                    <SlideNavBar style={{"gridArea": "desktopNav"}} location={location}/>
+                    <RoutesContent style={{"gridArea": "desktopRoute"}}/>
+                  </DesktopLayout> 
+                ) : (
+                  <MobileLayout>
+                    <TopNavBar style={{"gridArea": "mobileNav"}} location={location}/>
+                    <RoutesContent style={{"gridArea": "mobileRoute"}} isMobile />
+                 </MobileLayout>
+                )
+              }
+            </Media>
           )}
         </Location>
       </Root>
@@ -91,8 +96,5 @@ class App extends Component {
   }
 }
 
-const mapSizesToProps = ({ width }) => ({
-  isMobile: !width ? false : (width < 768)
-})
-
-export default withSizes(mapSizesToProps)(App);
+export default App;
+        

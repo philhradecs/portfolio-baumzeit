@@ -27,7 +27,7 @@ const ContentWrapper = styled.section`
   ${({theme}) =>
     theme.pageView && css`
       background: ${theme.contentBg};
-      box-shadow: 0 0.1em 1.3em -0.3em rgba(30, 30, 30, 0.7);
+      box-shadow: 0 0.1em 0.9em -0.3em rgba(30, 30, 30, 0.7);
     `  
   }
 
