@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { LightTitle, Paragraph, Email } from '../styles/styledPageComponents';
+import { LightTitle, Paragraph, Email, Bold } from '../styles/styledPageComponents';
 
 const FindMe = styled.img`
   width: 100%;
@@ -10,11 +10,11 @@ export default () => (
   <div>
     <LightTitle>Contact</LightTitle>
     <Paragraph>
-      Thanks for your interest. There are so many things worth exploring and groundbreaking connections to be made.<br/>
-      What is possible with digital technology? How does it integrate in our daily routines? Does it help us live good and healthy lives together and are we able to handle it? 
+      Thanks for your interest. There are so <Bold>many things worth exploring</Bold> and <Bold>groundbreaking connections</Bold> to be made.<br/>
+      What is possible with digital technology? How does it shape our daily routines? Does it help us live good and healthy lives together and are we able to handle it? 
     </Paragraph>
     <Paragraph emphasis>
-      I wonder: Given the circumstances .. What does it really take for any new digital product to be adopted appreciatively and responsibly, helping people thrive not turning on themselves and nature?
+      I wonder: Given the circumstances .. <Bold>What does it really take</Bold> for any new digital product to be adopted <Bold>appreciatively</Bold> and <Bold>responsibly</Bold>, helping people <Bold>thrive not turning on themselves and nature</Bold>?
     </Paragraph>
     <Paragraph>
       Apart from coding I like to spend my time playing boardgames and videogames, listening to good music and walking around in nature.<br/>
@@ -22,7 +22,7 @@ export default () => (
     </Paragraph>
     <Email href='mailto:baumzeit@posteo.me'>baumzeit@posteo.me</Email>
     <Paragraph emphasis>
-      This is a placeholder image. I'm working on a gallery of upcoming projects'.
+      This is a placeholder image. I'm working on a neat gallery of my upcoming projects.
     </Paragraph>
     <FindMe src='/other/contact_placeholder.png' alt='contact placeholder' />
   </div>

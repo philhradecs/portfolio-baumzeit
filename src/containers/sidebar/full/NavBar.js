@@ -2,11 +2,12 @@ import React from 'react';
 import styled from 'styled-components';
 import NavLinks from '../NavLinks';
 import SocialIconsBar from '../SocialIconsBar';
+import PulseTag from './PulseTag';
 
 const transitionDuration = '300ms';
 
 const w = {
-  font: '1.4rem',
+  font: '1.45rem',
   widthBar: '22vw',
   indent: '11vw',
   bg: '#2E2D2A',
@@ -22,8 +23,7 @@ const w = {
     hover: '#191817'
   },
   shadow: '0 0.15em 1.6em -0.3em rgba(30, 30, 30, 0.7)',
-  sizeIcon: '1.4rem',
-  colorTag: 'rgba(255,255,255, 0.2)'
+  sizeIcon: '1.4rem'
 }
 
 const n = {
@@ -43,8 +43,7 @@ const n = {
     hover: 'rgba(20,20,20, 0.5)'
   },
   shadow: '0 0.15em 1.6em -0.3em transparent',
-  sizeIcon: '1.1rem',
-  colorTag: 'rgba(0,0,0, 0.1)'
+  sizeIcon: '1.1rem'
 }
 
 const NavBar = styled.aside`
@@ -178,7 +177,7 @@ const SideHeader = styled.div`
   min-width: ${props => props.theme.wide ? '11rem' : '4.5rem'}; 
   width: ${props => props.theme.wide ? w.widthHeader : n.widthHeader};
   border-radius: 0 0.35em 0.35em 0;
-  box-shadow: 0 3px 8px 0 rgba(0,0,0,0.2),0 0 0 1px rgba(0,0,0,0.08); /*0 0.15em 1.6em -0.5em rgba(30, 30, 30, 0.7);*/
+  box-shadow: 0 0.1rem 0.5rem 0 rgba(0,0,0,0.2), 0 0 0 1px rgba(0,0,0,0.08); /*0 0.15em 1.6em -0.5em rgba(30, 30, 30, 0.7);*/
   overflow: hidden;
   position: relative;
 `;
@@ -218,19 +217,9 @@ const LinkWrapper = styled.div`
   }
 `;
 
-const Tag = styled.div`
-  position: absolute;
-  top: 0.5rem;
-  left: 0.8rem;
-  font-family: 'Muli';
-  font-size: 0.8rem;
-  z-index: 10;
-  color: ${props => props.theme.wide ? w.colorTag : n.colorTag};
-`;
-
 export default () => (
   <NavBar>
-    <Tag>v0.7</Tag>
+    <PulseTag>v0.7</PulseTag>
     <IconsBarWrapper>
       <SocialIconsBar />
     </IconsBarWrapper>

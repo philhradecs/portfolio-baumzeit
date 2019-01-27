@@ -53,7 +53,7 @@ const Title = styled.h2`
   grid-area: ti;
   align-self: center;
   color: black;
-  font-size: 1.15rem;
+  font-size: 1.2rem;
   padding: 1rem 0;
   margin: 0 1rem 0.2rem 0;
 `;
@@ -63,7 +63,7 @@ const Description = styled.p`
   font-size: 1.1rem;
   grid-area: de;
   margin-top: 1rem;
-  margin-left: 3rem;
+  margin-left: 3vw;
   line-height: 1.7;
   white-space: pre-line;
 `;

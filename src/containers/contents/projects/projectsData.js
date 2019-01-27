@@ -7,16 +7,16 @@ export default [
     },
     img: 'portfolio_baumzeit.jpg',
     url: {
-      live: 'https://www.github.com',
+      live: 'https://portfolio-baumzeit.netlify.com/',
       code: 'https://github.com/baumzeit/portfolio-baumzeit/'
     },
-    tags: ['React', 'Animated Routes', 'CSS', 'Responsive Design']
+    tags: ['React', 'Animated Routes', 'CSS3', 'Responsive Design']
   },
   
   {
     data: {
       title: 'Music Art Explorer',
-      description: "(work in progress) My goal is to create a tool that makes it possible to compare music cover art throughout different decades, genres and countries utilizing the Discogs API. Through distraction-free and customizable views of art and meta data, characteristics and patterns within and across visual cultures start to reveal themselves to the user who can generate a shareable url link for any particular view. Using React together with socket.io to communicate with the Node/Express server allows for real-time actualization of data and representation of state."
+      description: "(work in progress) A user-friendly tool to compare music cover art throughout different decades, genres and countries utilizing the Discogs API. Through distraction-free and customizable views of art and meta data, characteristics and patterns within and across visual cultures start to reveal themselves to the user who can generate a shareable url link for any particular view. Using React together with socket.io to communicate with the Node/Express server allows for real-time actualization of data and representation of state."
     },
     img: 'vmhx.jpg',
     url: {
@@ -29,7 +29,7 @@ export default [
   {
     data: {
       title: 'Drum Machine',
-      description: "A drum machine using the keyboard to play sounds on click. The application displays the active sound and allows toggling between two sound sets and adjusting the volume. Built with React."
+      description: "A drum machine using the keyboard to play sounds on click. The application displays the name of the active sound and allows toggling between two sound sets as well as adjusting the volume. Built with React."
     },
     img: 'drum_machine.jpg',
     url: {
@@ -49,7 +49,7 @@ export default [
       live: 'https://baumzeit.github.io/fcc-tic-tac-toe/',
       code: 'https://github.com/baumzeit/fcc-tic-tac-toe/'
     },
-    tags: ['vanillaJS', 'DOM Manipulation', 'Algorithms', 'AI', 'CSS']
+    tags: ['vanillaJS', 'DOM Manipulation', 'Algorithms', 'AI', 'CSS3']
   },
   
   {
@@ -62,7 +62,7 @@ export default [
       live: 'https://baumzeit.github.io/fcc-simon-in-bali/',
       code: 'https://github.com/baumzeit/fcc-simon-in-bali/'
     },
-    tags: ['vanillaJS', 'OOP', 'CSS']
+    tags: ['vanillaJS', 'OOP', 'CSS3']
   },
   
   {
@@ -73,7 +73,7 @@ export default [
     img: 'pomodoro_clock.jpg',
     url: {
       live: 'https://baumzeit.github.io/fcc-pomodoro-clock/',
-      code: 'https://github.com/baumzeit/fcc-d3-choropleth-map/'
+      code: 'https://github.com/baumzeit/fcc-pomodoro-clock/'
     },
     tags: ['vanillaJS', 'DOM Manipulation']
   },
@@ -94,7 +94,7 @@ export default [
   {
     data: {
       title: 'Choropleth Map',
-      description: "An application using D3 that maps statistical data to a topographical representation of the United States. The individual areas on the map are dynamically colored using a color scale. Hovering over any part of the map shows a tooltip with related metadata."
+      description: "A data visualization created with D3 that mapping statistical education data to a topographical representation of the United States. The individual areas on the map are dynamically colored based on the data value using a color scale. Hovering over any part of the map shows a tooltip showing related metadata for the corresponding data point."
     },
     img: 'choropleth.jpg',
     url: {
@@ -107,7 +107,7 @@ export default [
   {
     data: {
       title: 'Heat Map',
-      description: "An application using D3 to visualize changes of monthly global temperature average over time. A tooltip is displayed on hover providing details about the corresponding data point."
+      description: "A data visualization created with D3 showing changes in the monthly global temperature average over time. Each data point is dynamically colored and allocated on the diagram area based on its temperature value, year, and month. A tooltip provides details about the corresponding data point on hover."
     },
     img: 'heat_map.jpg',
     url: {
@@ -120,7 +120,7 @@ export default [
   {
     data: {
       title: 'Scatterplot Chart',
-      description: "A"
+      description: "A data visualization created with D3 showing doping allegations of the fastest riders in professional bicycle racing. The datapoints are colored accordingly revealing a tooltip with information on hover and redirecting to the corresponding rider's Wikipedia page on click."
     },
     img: 'scatterplot.jpg',
     url: {
@@ -133,33 +133,33 @@ export default [
   {
     data: {
       title: 'Responsive Survey Form',
-      description: "A template for a responsive Survey Form that works well on devices of all sizes without  "
+      description: "A template for a responsive Survey Form that scales to devices of all sizes without compromising its well-balanced appearance. Accessibility requirements are met. Created using CSS3's Grid Layout, Flexbox and HTML5."
     },
     img: 'survey_form.jpg',
     url: {
       live: 'https://baumzeit.github.io/fcc-survey-form/',
       code: 'https://github.com/baumzeit/fcc-survey-form/'
     },
-    tags: ['Responsive Design', 'CSS', 'Accessibility', 'HTML5']
+    tags: ['Responsive Design', 'CSS3', 'Accessibility', 'HTML5']
   },
 
   {
     data: {
       title: 'Chat Room',
-      description: "play win lose its up to you and gnome the nice little friend with his fascination for spaceships and nature."
+      description: "A chat room utilizing the Github authentication strategy based on client - server communication with socket.io. Sent messages are broadcasted to all connected sockets as well as information about users joining and leaving the chat room. Views are rendered using PugJS templating engine."
     },
     img: 'chat_room.jpg',
     url: {
       live: 'https://mountain-grape.glitch.me/',
       code: 'https://github.com/baumzeit/socket-chat-room/'
     },
-    tags: ['Node', 'Express', 'passportJS', 'socket.io']
+    tags: ['Node', 'Express', 'passportJS', 'PugJS', 'socket.io']
   },
    
   {
     data: {
       title: 'URL Shortener',
-      description: "play win lose its up to you and gnome the nice little friend with his fascination for spaceships and nature."
+      description: "A microservice allowing users to generate short URLs. On the backend the input URL validated both in terms of format using RegEx and availability using the Node dns module. A MongoDB database is accessed by the Node server to create or retrieve the record holding the pair of shortened and full url string. Asynchronous tasks and errors are handled using ES6 Promises syntax."
     },
     img: 'url_shortener.jpg',
     url: {
@@ -172,7 +172,7 @@ export default [
   {
     data: {
       title: 'Exercise Tracker',
-      description: "play win lose its up to you and gnome the nice little friend with his fascination for spaceships and nature."
+      description: "A microservice allowing users to save their personal exercise log. After a unique user id is created, exercises can be saved to the database with various validated fields. An exercise log can be retrieved via GET request providing user id and, optionally, start and end date as well as a output limit."
     },
     img: 'exercise_tracker.png',
     url: {
@@ -185,7 +185,7 @@ export default [
   {
     data: {
       title: 'Twitch.tv Streamer',
-      description: "play win lose its up to you and gnome the nice little friend with his fascination for spaceships and nature."
+      description: "An application providing a neat user interface for viewing, profile picture and live information aboute a set of Twitch streams based on the Twitch API. The list can be filtered by online and offline streams providing a direct link to the live stream or the streamer's profile respectively."
     },
     img: 'twitch_streamer.jpg',
     url: {
@@ -198,7 +198,7 @@ export default [
   {
     data: {
       title: 'Quote Generator',
-      description: "play win lose its up to you and gnome the nice little friend with his fascination for spaceships and nature."
+      description: "A simple app showing design quotes from an API. A new random quote can be generated by the click of a button and quotes can be shared via Twitter."
     },
     img: 'quote_generator.jpg',
     url: {

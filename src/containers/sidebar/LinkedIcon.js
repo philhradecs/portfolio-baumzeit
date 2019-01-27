@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 const Anchor = styled.a`
+  font-family: 'Nunito';
   text-decoration: none;
   min-height: 3.5rem;
   font-size: ${props => props.theme.wide ? '1.3rem' : '1.1rem'};

@@ -3,6 +3,7 @@ import styled from 'styled-components';
 
 const Anchor = styled.a`
   text-decoration: none;
+  outline: 0;
 `;
 
 const Button = styled.div`

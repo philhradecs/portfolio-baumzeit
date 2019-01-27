@@ -1,5 +1,6 @@
 export default {
   '/': {
+    pathname: 'home',
     wide: true,
     navImg: 'home.jpg', 
     pageView: false,
@@ -7,20 +8,23 @@ export default {
     colorHighlight: '#9fb55e'
   },
   '/404': {
-    wide: false,
-    navImg: '', 
-    pageView: true,
+    pathname: '404',
+    wide: true,
+    navImg: '404.jpg', 
+    pageView: false,
     contentBg: 'blue',
     colorHighlight: 'darkMagenta'
   },
   '/contact': {
+    pathname: 'contact',
     wide: false,
     navImg: 'contact.jpg', 
     pageView: true,
-    contentBg: '#d1caa7',
-    colorHighlight: 'white'
+    contentBg: '#E2D0A8',
+    colorHighlight: '#5B9791'
   },
   '/cv': {
+    pathname: 'cv',
     wide: false,
     navImg: 'cv.jpg', 
     pageView: true,
@@ -28,6 +32,7 @@ export default {
     colorHighlight: '#5B9791'
   },
   '/mind': {
+    pathname: 'mind',
     wide: false,
     navImg: 'mind.jpg', 
     pageView: true,
@@ -35,6 +40,7 @@ export default {
     colorHighlight: '#a9b5a1'
   },
   '/projects': {
+    pathname: 'projects',
     wide: false,
     navImg: 'projects.jpg', 
     pageView: false,
@@ -42,6 +48,7 @@ export default {
     colorHighlight: '#aaa'
   },
   'default': {
+    pathname: 'default',
     wide: false,
     navImg: 'http://fabrilabo.ro/wp-content/uploads/2015/11/default-image2.jpg',
     pageView: true,

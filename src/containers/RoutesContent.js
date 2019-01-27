@@ -23,17 +23,15 @@ const ContentWrapper = styled.section`
   background: 'transparent';
   padding: 0 3vw;
   box-shadow: '';
+  border-radius: 0.4rem;
+  width: 100%;
 
   ${({theme}) =>
     theme.pageView && css`
       background: ${theme.contentBg};
-      box-shadow: 0 0.1em 0.9em -0.4em rgba(0, 0, 0, 0.8);
+      box-shadow: 0 0.1em 0.9em -0.45em rgba(0, 0, 0, 0.8);
     `  
   }
-
-  border-radius: 0.4rem;
-  top: 0;
-  width: 100%;
 
   &.fade-enter {
     opacity: 0.01;

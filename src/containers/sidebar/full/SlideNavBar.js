@@ -22,7 +22,7 @@ const getTransitionName = (location) => {
 }
 
 export default ({ location }) => (
-  <TransitionGroup component={null}>
+  <TransitionGroup>
     <CSSTransition 
       key={location.key}
       classNames={getTransitionName(location)}

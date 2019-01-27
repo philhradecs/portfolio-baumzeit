@@ -38,7 +38,6 @@ const GlobalStyle = createGlobalStyle`
   }
 
   body {
-
     --body-bg: #fafafa;
     background: var(--body-bg);
     font-family: 'Titillium Web';
@@ -49,7 +48,6 @@ const DesktopLayout = styled.div`
   display: grid;
   grid-template-columns: auto 1fr;
   grid-template-rows: 1fr;
-
   height: 100vh;
 `;
 
