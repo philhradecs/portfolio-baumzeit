@@ -36,7 +36,7 @@ const ProjectEntry = styled.li`
 const Tags = styled.p`
   grid-area: ta;
   align-self: center;
-  font-family: 'Muli';
+  font-family: 'Nunito';
   font-weight: 300;
   font-size: 1rem;
   padding: 0;

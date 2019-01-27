@@ -4,9 +4,9 @@ import styled from 'styled-components';
 const Button = styled.div`
   flex: 1;
   max-width: 12rem;
-  font-family: 'Muli';
-  font-weight: 400;
-  font-size: 0.95rem;
+  font-family: 'Nunito';
+  font-weight: 300;
+  font-size: 1rem;
   white-space: nowrap;
   margin-left: 1rem;
   height: 100%;
@@ -20,7 +20,9 @@ const Button = styled.div`
   &.enabled:hover, &.active {
     background: ${props => props.color};
     color: var(--body-bg);
+    font-weight: 400;
     transition: background 80ms ease-out,
+                font-weight 40ms ease-out,
                 color 80ms ease;
   }
 `;

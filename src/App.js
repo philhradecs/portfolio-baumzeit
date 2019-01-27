@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Root } from 'react-static';
-import styled, { createGlobalStyle, css } from 'styled-components';
+import styled, { createGlobalStyle } from 'styled-components';
 import { Location } from '@reach/router';
 import Media from 'react-media';
 
@@ -10,9 +10,13 @@ import SlideNavBar from './containers/sidebar/full/SlideNavBar';
 import RoutesContent from './containers/RoutesContent';
 import loadWebFonts from './loadWebFonts';
 
-if (typeof window !== 'undefined') {
-  loadWebFonts();
-}
+require('typeface-titillium-web');
+require('typeface-roboto-slab');
+require('typeface-nunito');
+// 
+// if (typeof window !== 'undefined') {
+//   loadWebFonts();
+// }
 
 const GlobalStyle = createGlobalStyle`
 
