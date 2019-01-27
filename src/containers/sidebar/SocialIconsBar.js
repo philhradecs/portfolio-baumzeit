@@ -1,7 +1,10 @@
 import React from 'react';
 import styled from 'styled-components';
+import { config } from '@fortawesome/fontawesome-svg-core';
 import { faGithub, faGoodreadsG, faFacebook } from '@fortawesome/free-brands-svg-icons';
 import LinkedIcon from './LinkedIcon';
+
+config.autoAddCss = false;
 
 const IconWrapper = styled.div`
   display: flex;

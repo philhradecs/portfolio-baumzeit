@@ -45,9 +45,6 @@ const DesktopLayout = styled.div`
   display: grid;
   grid-template-columns: auto 1fr;
   grid-template-rows: 1fr;
-  grid-template-areas: 
-    'desktopNav'
-    'desktopRoute';
 
   height: 100vh;
 `;
@@ -56,9 +53,6 @@ const MobileLayout = styled.div`
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 4rem auto;
-  grid-template-areas: 
-    'mobileNav'
-    'mobileRoute';
   height: 100vh;  
 `;
 
@@ -78,13 +72,13 @@ class App extends Component {
               {matches =>
                 matches ? ( 
                   <DesktopLayout>
-                    <SlideNavBar style={{"gridArea": "desktopNav"}} location={location}/>
-                    <RoutesContent style={{"gridArea": "desktopRoute"}}/>
+                    <SlideNavBar location={location}/>
+                    <RoutesContent />
                   </DesktopLayout> 
                 ) : (
                   <MobileLayout>
-                    <TopNavBar style={{"gridArea": "mobileNav"}} location={location}/>
-                    <RoutesContent style={{"gridArea": "mobileRoute"}} isMobile />
+                    <TopNavBar location={location}/>
+                    <RoutesContent isMobile />
                  </MobileLayout>
                 )
               }
