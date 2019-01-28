@@ -1,12 +1,14 @@
 import React from 'react';
 import styled, { css } from 'styled-components';
-import { LightTitle, Paragraph, Bold } from '../styles/styledPageComponents';
+import { LightTitle, Paragraph } from '../styles/styledPageComponents';
 
 const ImageWrapper = styled.div`
   display: flex;
-  width: 100%;
+  width: 60%;
+  height: auto;
   position: relative;
   justify-content: center;
+  align-items: center;
 
   &:hover img {
     border: 1px solid rgba(0,0,0,0.6);
@@ -14,12 +16,14 @@ const ImageWrapper = styled.div`
   }
 `;
 const Image = styled.img`
-  width: 30%;
-  height: auto;
+  //display: block;
+  object-fit: contain;
+  width: 100%;
   transform: rotate(22deg);
   box-shadow: 0.1rem 0.1rem 2rem rgba(0,0,0,0.3);
   z-index: 0;
   border: 0px solid transparent;
+  border-radius: 0.3rem;
 
   ${({left}) =>
     left && css`
@@ -30,13 +34,14 @@ const Image = styled.img`
 `;
 const Anchor = styled.a`
   display: flex;
+  justify-content: center;
 `;
 
 export default () => (
   <div>
     <LightTitle>CV</LightTitle>
     <Paragraph>
-      Click CV to download PDF →
+      Click CV to download as PDF →
     </Paragraph>
     <Anchor href='/cv/Philip_Hradecsni_CV.pdf'>
       <ImageWrapper>
