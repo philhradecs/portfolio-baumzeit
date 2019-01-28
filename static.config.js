@@ -2,6 +2,7 @@ import React from 'react';
 
 export default {
   plugins: ['react-static-plugin-styled-components'],
+  siteRoot: 'https://portfolio-baumzeit.netlify.com',
   Document: ({ Html, Head, Body, children, siteData, renderMeta }) => (
     <Html lang="en-US">
       <Head>

@@ -20,7 +20,7 @@ export default {
     wide: false,
     navImg: 'contact.jpg', 
     pageView: true,
-    contentBg: '#E2D0A8',
+    contentBg: '#e2d3b1',
     colorHighlight: '#5B9791'
   },
   '/cv': {

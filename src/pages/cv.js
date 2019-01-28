@@ -4,8 +4,6 @@ import { LightTitle, Paragraph } from '../styles/styledPageComponents';
 
 const ImageWrapper = styled.div`
   display: flex;
-  width: 60%;
-  height: auto;
   position: relative;
   justify-content: center;
   align-items: center;
@@ -16,9 +14,9 @@ const ImageWrapper = styled.div`
   }
 `;
 const Image = styled.img`
-  //display: block;
-  object-fit: contain;
-  width: 100%;
+  display: block;
+  max-width: 30%;
+  height: auto;
   transform: rotate(22deg);
   box-shadow: 0.1rem 0.1rem 2rem rgba(0,0,0,0.3);
   z-index: 0;
