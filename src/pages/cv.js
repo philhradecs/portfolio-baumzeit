@@ -1,12 +1,49 @@
 import React from 'react';
-import { LightTitle, Paragraph } from '../styles/styledPageComponents';
+import styled, { css } from 'styled-components';
+import { LightTitle, Paragraph, Bold } from '../styles/styledPageComponents';
+
+const ImageWrapper = styled.div`
+  display: flex;
+  width: 100%;
+  position: relative;
+  justify-content: center;
+
+  &:hover img {
+    border: 1px solid rgba(0,0,0,0.6);
+    transition: border 100ms ease-out 10ms;
+  }
+`;
+const Image = styled.img`
+  width: 30%;
+  height: auto;
+  transform: rotate(22deg);
+  box-shadow: 0.1rem 0.1rem 2rem rgba(0,0,0,0.3);
+  z-index: 0;
+  border: 0px solid transparent;
+
+  ${({left}) =>
+    left && css`
+      z-index: 5;
+      transform: rotate(-28deg);
+    `
+    }
+`;
+const Anchor = styled.a`
+  display: flex;
+`;
 
 export default () => (
   <div>
     <LightTitle>CV</LightTitle>
     <Paragraph>
-      React, static sites, performance, speed. It's the stuff that makes us
-      tick.
+      Click CV to download PDF →
     </Paragraph>
+    <Anchor href='/cv/Philip_Hradecsni_CV.pdf'>
+      <ImageWrapper>
+        <Image src='/cv/Philip_Hradecsni_CV-1.jpg' left />
+        <Image src='/cv/Philip_Hradecsni_CV-2.jpg' right />
+      </ImageWrapper>
+    </Anchor>
+   
   </div>
 )
