@@ -1,6 +1,21 @@
 import React from 'react';
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+
+const hoverStyles = css`
+  &:hover { 
+    & .socialIcon {
+      opacity: 0;
+      transition: opacity 100ms ease;
+    }
+    & #caption {
+      opacity: 1;
+      color: ${props => props.theme.colorHighlight};
+      transition: opacity 100ms ease,
+                  color 100ms ease;
+    }
+  }
+`;
 
 const Anchor = styled.a`
   font-family: 'Nunito';
@@ -17,27 +32,18 @@ const Anchor = styled.a`
   justify-content: center;
   align-items: center;
   position: relative;
-
-  & :hover { 
-    & .socialIcon {
-      opacity: 0;
-      transition: opacity 100ms ease;
-    }
-    & #caption {
-      opacity: 1;
-      color: ${props => props.theme.colorHighlight};
-      transition: opacity 100ms ease,
-                  color 100ms ease;
-    }
+  
+  ${({ noCaption }) =>
+    !noCaption && hoverStyles
   }
 `;
 
 const CaptionWrapper = styled.div`
+  display: ${props => props.noCaption ? 'none' : 'flex'};
   position: absolute;
   top: 0;
   height: 100%;
   font-size: 0.65em;
-  display: flex;
   align-items: center;
   justify-content: center;
 `;
@@ -47,10 +53,10 @@ const Caption = styled.div`
   opacity: 0;
 `;
 
-export default ({ icon, url, name }) => (
-  <Anchor href={url} target="_blank" rel="noopener noreferrer">
+export default ({ icon, url, name, noCaption }) => (
+  <Anchor href={url} target="_blank" rel="noopener noreferrer" noCaption={noCaption}>
     <FontAwesomeIcon icon={icon} className='socialIcon'/>
-    <CaptionWrapper>
+    <CaptionWrapper noCaption={noCaption}>
       <Caption id="caption">{name}</Caption>
     </CaptionWrapper>
   </Anchor>
