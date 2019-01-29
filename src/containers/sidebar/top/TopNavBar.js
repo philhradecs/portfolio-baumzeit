@@ -16,6 +16,7 @@ const FlexWrapper = styled.div`
     min-width: 2rem;
     padding: 0 0.2rem;
     text-align: center;
+    color: black;
 
     &.active, &:hover {
       border-bottom: 1px solid black;
@@ -30,7 +31,7 @@ const LinkWrapper = styled.div`
 
 export default () => (
   <FlexWrapper>
-    <SocialIconsBar />
+    <SocialIconsBar noCaption/>
     <LinkWrapper>
       <NavLinks row />
     </LinkWrapper>
