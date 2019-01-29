@@ -4,11 +4,9 @@ import styled, { createGlobalStyle } from 'styled-components';
 import { Location } from '@reach/router';
 import Media from 'react-media';
 
-import ProvideNavBar from './containers/sidebar/ProvideNavBar';
 import TopNavBar from './containers/sidebar/top/TopNavBar';
 import SlideNavBar from './containers/sidebar/full/SlideNavBar';
 import RoutesContent from './containers/RoutesContent';
-import loadWebFonts from './loadWebFonts';
 
 require('typeface-titillium-web');
 require('typeface-roboto-slab');
@@ -19,16 +17,6 @@ require('typeface-nunito');
 // }
 
 const GlobalStyle = createGlobalStyle`
-
-  .wf-loading * {
-    opacity: 0;
-  }
-
-  .wf-active *, 
-  .wf-inactive * {
-    transition: opacity 400ms ease-out;  
-  }
-
   * {
     box-sizing: border-box;
   }
@@ -54,15 +42,11 @@ const DesktopLayout = styled.div`
 const MobileLayout = styled.div`
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 4rem auto;
+  grid-template-rows: 3.5rem auto;
   height: 100vh;  
 `;
 
 class App extends Component {
-
-  componentDidMount() {
-    document.title = 'Portfolio Baumzeit';
-  }
 
   render() {
     return (
