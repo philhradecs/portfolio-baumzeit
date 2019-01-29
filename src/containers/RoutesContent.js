@@ -11,8 +11,8 @@ const transitionDuration = 250;
 const FixedGridArea = styled.div`
   display: grid;
   grid-template-areas: 'fixedArea';
-  padding: ${props => props.isMobile ? '0' : '3.5vh 2.5vw 3vh 4.4vw'};
-  min-height: ${props => props.isMobile ? '100%' : '100vh'};
+  padding: ${props => props.isMobile ? '0' : '3.5vh 2.5vw 3.5vh 4.4vw'};
+  height: ${props => props.isMobile ? '100%' : '100vh'};
   overflow: auto;
   overflow-y: overlay;
   position: relative;
