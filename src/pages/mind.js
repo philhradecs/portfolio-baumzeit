@@ -2,8 +2,15 @@ import React from 'react';
 import styled from 'styled-components';
 import { LightTitle, Paragraph, Bold } from '../styles/styledPageComponents';
 
+const FlexWrapper = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+`;
+
 const Mindmap = styled.img`
-  width: 100%;
+  width: 90%;
+  margin-left: -3vw;
 `;
 
 export default () => (
@@ -18,6 +25,8 @@ export default () => (
     <Paragraph emphasis>
       This is a placeholder image. I am working on an interactive visualization using D3.
     </Paragraph>
-    <Mindmap src='/other/mindmap_placeholder.png' alt='mindmap placeholder'/>
+    <FlexWrapper>
+      <Mindmap src='/other/mindmap_placeholder.png' alt='mindmap placeholder'/>
+    </FlexWrapper>
   </div>
 )

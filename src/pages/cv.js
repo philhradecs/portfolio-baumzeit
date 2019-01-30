@@ -11,12 +11,11 @@ const FlexContainer = styled.div`
 const Anchor = styled.a`
   display: flex;
   justify-content: center;
-  width: 70%;
+  width: 75%;
   position: relative;
   padding: 5vw;
   padding-bottom: 2vw;
-  margin-top: -5vw;
-  margin-left: 5vw;
+  margin-top: -3vw;
 `;
 
 const ImageWrapper = styled.div`
@@ -30,7 +29,7 @@ const Image = styled.img`
   display: inline-block;
   position: relative;
   height: auto;
-  width: 50%;
+  max-width: 50%;
   transform: rotate(19deg);
   box-shadow: 0.1rem 0.1rem 2rem rgba(0,0,0,0.3);
   border: 0px solid transparent;

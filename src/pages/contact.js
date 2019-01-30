@@ -2,8 +2,16 @@ import React from 'react';
 import styled from 'styled-components';
 import { LightTitle, Paragraph, Email, Bold } from '../styles/styledPageComponents';
 
+const FlexWrapper = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: -2vw;
+`;
+
 const FindMe = styled.img`
-  width: 100%;
+  width: 78%;
+  
 `;
 
 export default () => (
@@ -22,8 +30,10 @@ export default () => (
     </Paragraph>
     <Email href='mailto:baumzeit@posteo.me'>baumzeit@posteo.me</Email>
     <Paragraph emphasis>
-      This is a placeholder image. I'm working on a neat gallery of my upcoming projects.
+      This is a placeholder image.<br/>I'm working on a neat gallery for my upcoming projects.
     </Paragraph>
-    <FindMe src='/other/contact_placeholder.png' alt='contact placeholder' />
+    <FlexWrapper>
+      <FindMe src='/other/contact_placeholder.png' alt='contact placeholder' />
+    </FlexWrapper>
   </div>
 )
