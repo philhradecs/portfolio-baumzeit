@@ -3,9 +3,9 @@ import React from 'react';
 export default {
   plugins: ['react-static-plugin-styled-components'],
   getSiteData: async () => ({
-    title: 'Portfolio Baumzeit'
+    title: 'Portfolio Baumzeit',
+    lastBuilt: Date.now()
   }),
-  siteRoot: 'https://portfolio-baumzeit.netlify.com',
   Document: ({ Html, Head, Body, children, siteData }) => (
     <Html lang="en-US">
       <Head>

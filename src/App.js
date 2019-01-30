@@ -11,10 +11,6 @@ import RoutesContent from './containers/RoutesContent';
 require('typeface-titillium-web');
 require('typeface-roboto-slab');
 require('typeface-nunito');
-// 
-// if (typeof window !== 'undefined') {
-//   loadWebFonts();
-// }
 
 const GlobalStyle = createGlobalStyle`
   * {
