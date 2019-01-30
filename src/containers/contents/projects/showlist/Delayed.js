@@ -8,9 +8,11 @@ class Delayed extends React.Component {
     }
 
     componentDidMount() {
-        setTimeout(() => {
-            this.setState({hidden: false});
-        }, this.props.waitBeforeShow);
+        setTimeout(() => { this.show() }, this.props.waitBeforeShow);
+    }
+
+    show() {
+        this.setState({hidden:false});
     }
 
     render() {
