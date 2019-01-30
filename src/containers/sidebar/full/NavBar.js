@@ -177,7 +177,7 @@ const SideHeader = styled.div`
   min-width: ${props => props.theme.wide ? '11rem' : '4.5rem'}; 
   width: ${props => props.theme.wide ? w.widthHeader : n.widthHeader};
   border-radius: 0 0.35em 0.35em 0;
-  box-shadow: 0 0.1rem 0.5rem 0 rgba(0,0,0,0.2), 0 0 0 1px rgba(0,0,0,0.08); /*0 0.15em 1.6em -0.5em rgba(30, 30, 30, 0.7);*/
+  box-shadow: 0 0.1rem 0.5rem 0 rgba(0,0,0,0.2), 0 0 0 1px rgba(0,0,0,0.02); /*0 0.15em 1.6em -0.5em rgba(30, 30, 30, 0.7);*/
   overflow: hidden;
   position: relative;
 `;
@@ -206,8 +206,8 @@ const LinkWrapper = styled.div`
     & :hover, & :focus {
       border-color: ${props => props.theme.wide ? w.underline.hover : n.underline.hover};
       color: ${props => props.theme.wide ? w.colorFont.hover : n.colorFont.hover};
-      transition: border-color 140ms ease,
-                color 140ms ease;
+      transition: border-color 160ms ease,
+                color 160ms ease;
     }
     &.active {
       border-color: ${props => props.theme.wide ? w.underline.active : n.underline.active};

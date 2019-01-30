@@ -39,7 +39,7 @@ class Projects extends Component {
       <Wrapper>
         <DarkTitle>Projects</DarkTitle>
         <Paragraph>
-          Browse through some of the projects I've done over the past 14 months. <Bold>Filter by categories</Bold>, look at the <Bold>source code</Bold> and try a <Bold>live version</Bold>.
+          <Bold>Filter by categories</Bold>, look at the <Bold>source code</Bold> and try a <Bold>live version</Bold>.
         </Paragraph>
         <FilterBar filterToggle={this.filterToggle}/>
         <ShowList activeFilters={this.state.activeFilters} />
