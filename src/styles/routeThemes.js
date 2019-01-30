@@ -20,7 +20,7 @@ export default {
     wide: false,
     navImg: 'contact.jpg', 
     pageView: true,
-    contentBg: '#e2d3b1',
+    contentBg: '#dbbda8',
     colorHighlight: '#5B9791'
   },
   '/cv': {
@@ -28,23 +28,23 @@ export default {
     wide: false,
     navImg: 'cv.jpg', 
     pageView: true,
-    contentBg: '#5B9791',
-    colorHighlight: '#5B9791'
+    contentBg: '#80A1A8',
+    colorHighlight: '#C33B23'
   },
   '/mind': {
     pathname: 'mind',
     wide: false,
     navImg: 'mind.jpg', 
     pageView: true,
-    contentBg: '#a9b5a1',
-    colorHighlight: '#a9b5a1'
+    contentBg: '#c6c6ad',
+    colorHighlight: '#B32B7F'
   },
   '/projects': {
     pathname: 'projects',
     wide: false,
     navImg: 'projects.jpg', 
     pageView: false,
-    contentBg: '#e5decc',
+    contentBg: '#E5E2D9',
     colorHighlight: '#aaa'
   },
   'default': {
