@@ -11,6 +11,7 @@ export default {
     <Html lang="en-US">
       <Head>
         <title>{siteData.title}</title>
+        <link rel="shortcut icon" type="image/png" href="/favicon.png"/>
         <meta name="author" content="Philip Hradecsni" />
         <meta name="lastBuilt" content={siteData.lastBuilt} />
         <meta charSet="UTF-8" />
