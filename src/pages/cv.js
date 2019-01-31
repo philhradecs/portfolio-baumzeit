@@ -52,10 +52,10 @@ export default () => (
       <Bold>Click image to download as PDF →</Bold>
     </Paragraph>
     <FlexContainer>
-      <Anchor href='/assets_cv/public_cv_philip_hradecsni.pdf'>
+      <Anchor href='/assets_cv/public_cv_philip_hradecsni.pdf' download media_type="application/pdf">
         <ImageWrapper>
-          <Image src='/assets_cv/Philip_Hradecsni_CV-1.jpg' left />
-          <Image src='/assets_cv/Philip_Hradecsni_CV-2.jpg' right />
+          <Image src='/assets_cv/Philip_Hradecsni_CV-1.jpg' alt="image of cv" left />
+          <Image src='/assets_cv/Philip_Hradecsni_CV-2.jpg' alt="image of cv" right />
         </ImageWrapper>
       </Anchor>
     </FlexContainer>

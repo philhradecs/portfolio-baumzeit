@@ -32,7 +32,7 @@ const LinkOverlay = styled.div`
   width: 100%;
   background: rgba(0,0,0,0);
 
-  &:hover {
+  &:hover, &:focus-within {
     background: rgba(0,0,0,0.35);
     transition: background 80ms ease-out;
 
