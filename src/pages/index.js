@@ -148,7 +148,7 @@ export default () => (
   	</FlexWrapper>
   	<Paragraph emphasis>
   		Here's my CV → <ColorLink>
-  			<a href='/assets_cv/Philip_Hradecsni_CV.pdf' target='_blank' rel='noopnener noreferrer'>Download CV</a>
+  			<a href='/assets_cv/public_cv_philip_hradecsni.pdf' download media_type="application/pdf">Download CV</a>
   		</ColorLink>
   	</Paragraph>
   	<Paragraph>
