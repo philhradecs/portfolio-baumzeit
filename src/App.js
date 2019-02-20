@@ -51,8 +51,9 @@ class App extends Component {
         <Location>
           {({ location }) => (
             <Media query="(min-width: 992px)">
-              {matches =>
-                matches ? ( 
+              {matches => {
+                console.log(matches)
+                return matches ? ( 
                   <DesktopLayout>
                     <SlideNavBar location={location}/>
                     <RoutesContent />
@@ -63,7 +64,7 @@ class App extends Component {
                     <RoutesContent isMobile />
                  </MobileLayout>
                 )
-              }
+              }}
             </Media>
           )}
         </Location>
