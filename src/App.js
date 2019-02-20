@@ -52,7 +52,7 @@ class App extends Component {
           {({ location }) => (
             <Media query="(min-width: 992px)">
               {matches => {
-                console.log(matches)
+                console.log('matches:' + matches)
                 return matches ? ( 
                   <DesktopLayout>
                     <SlideNavBar location={location}/>
