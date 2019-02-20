@@ -180,7 +180,7 @@ const LinkWrapper = styled.div`
 
 export default () => (
   <NavBar>
-    <PulseTag>v0.7</PulseTag>
+    <PulseTag>v0.7.1</PulseTag>
     <IconsBarWrapper>
       <SocialIconsBar />
     </IconsBarWrapper>

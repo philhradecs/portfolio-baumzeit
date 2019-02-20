@@ -43,6 +43,18 @@ const MobileLayout = styled.div`
 `;
 
 class App extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      isClient: false
+    }
+  }
+
+  componentDidMount() {
+    this.setState({
+      isClient: true
+    });
+  }
 
   render() {
     return (
@@ -52,7 +64,6 @@ class App extends Component {
           {({ location }) => (
             <Media query="(min-width: 992px)">
               {matches => {
-                console.log('matches:' + matches)
                 return matches ? ( 
                   <DesktopLayout>
                     <SlideNavBar location={location}/>
