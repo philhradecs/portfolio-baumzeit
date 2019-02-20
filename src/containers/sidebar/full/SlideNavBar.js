@@ -1,22 +1,22 @@
 import React from 'react';
 import { CSSTransition, TransitionGroup } from 'react-transition-group';
 import { ThemeProvider } from 'styled-components';
-import routeThemes from '../../../styles/routeThemes';
+import getThemeForPath from '../../../styles/getThemeForPath';
 
 import NavBar from './NavBar';
 
 const getTransitionName = (location) => {
   // assign default prevPath on first page load (where there is no history)
-  if (!location.state || !Object.prototype.hasOwnProperty.call(routeThemes, location.state.prevPath)) {
+  if (!location.state || !getThemeForPath(location.state.prevPath)) {
     location.state = { prevPath: 'default'};
   }
   // check if current path is defined and assign default path if it is not
-  if (!Object.prototype.hasOwnProperty.call(routeThemes, location.pathname)) {
+  if (!getThemeForPath(location.pathname)) {
     location.pathname = 'default';
   }
   // prevPath was passed to the Link component in sidebar/full/NavLinks
-  const wasWide = routeThemes[location.state.prevPath].wide;
-  const willBeWide = routeThemes[location.pathname].wide;
+  const wasWide = getThemeForPath(location.state.prevPath).wide;
+  const willBeWide = getThemeForPath(location.pathname).wide;
   
   return (wasWide !== willBeWide) ? 'resize' : 'keepSize';
 }
@@ -30,7 +30,7 @@ export default ({ location }) => (
       exit={false}
       unmountOnExit
     >
-      <ThemeProvider theme={routeThemes[location.pathname]}>
+      <ThemeProvider theme={getThemeForPath(location.pathname)}>
         <NavBar />
       </ThemeProvider>
     </CSSTransition>

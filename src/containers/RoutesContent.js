@@ -4,7 +4,7 @@ import { Location } from '@reach/router';
 import styled, { ThemeProvider, css } from 'styled-components';
 import { CSSTransition, TransitionGroup } from 'react-transition-group';
 
-import routeThemes from '../styles/routeThemes';
+import getThemeForPath from '../styles/getThemeForPath';
 
 const transitionDuration = 250;
 
@@ -64,7 +64,7 @@ export default ({ isMobile }) => (
             timeout={transitionDuration}
             unmountOnExit
           >
-            <ThemeProvider theme={() => { const theme = routeThemes[location.pathname] || routeThemes.default;
+            <ThemeProvider theme={() => { const theme = getThemeForPath(location.pathname);
                                           return { isMobile, ...theme }}}>
               <ContentWrapper>
                 <Routes />

@@ -52,7 +52,7 @@ export default {
     wide: false,
     navImg: 'http://fabrilabo.ro/wp-content/uploads/2015/11/default-image2.jpg',
     pageView: true,
-    contentBg: 'thistle',
+    contentBg: 'transparent',
     colorHighlight: 'darkMagenta'
   }
 }
