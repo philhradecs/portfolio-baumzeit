@@ -43,6 +43,18 @@ const MobileLayout = styled.div`
 `;
 
 class App extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      isClient: false
+    }
+  }
+
+  componentDidMount() {
+    this.setState({
+      isClient: true
+    });
+  }
 
   render() {
     return (
@@ -63,7 +75,7 @@ class App extends Component {
                     <RoutesContent isMobile />
                  </MobileLayout>
                 )
-              }
+              }}
             </Media>
           )}
         </Location>

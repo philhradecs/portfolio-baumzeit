@@ -7,11 +7,11 @@ import NavBar from './NavBar';
 
 const getTransitionName = (location) => {
   // assign default prevPath on first page load (where there is no history)
-  if (!location.state || !routeThemes.hasOwnProperty(location.state.prevPath)) {
+  if (!location.state || !Object.prototype.hasOwnProperty.call(routeThemes, location.state.prevPath)) {
     location.state = { prevPath: 'default'};
   }
   // check if current path is defined and assign default path if it is not
-  if (!routeThemes.hasOwnProperty(location.pathname)) {
+  if (!Object.prototype.hasOwnProperty.call(routeThemes, location.pathname)) {
     location.pathname = 'default';
   }
   // prevPath was passed to the Link component in sidebar/full/NavLinks
