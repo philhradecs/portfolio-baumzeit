@@ -75,7 +75,7 @@ class App extends Component {
                     <RoutesContent isMobile />
                  </MobileLayout>
                 )
-              }}
+              }
             </Media>
           )}
         </Location>
