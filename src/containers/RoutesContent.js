@@ -55,7 +55,6 @@ const ContentWrapper = styled.section`
 export default ({ isMobile }) => (
   <Location>
     {({ location }) => {
-      console.log(location)
       return <FixedGridArea isMobile={isMobile}>
         <TransitionGroup component={null}>
           <CSSTransition 
