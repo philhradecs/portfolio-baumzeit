@@ -83,7 +83,7 @@ const HomeWrapper = styled.div`
 `;
 
 
-const furtherTech = ['Git', 'ES6', 'CSS-in-JS', 'React Transition Group', 'Express', 'socket.io', 'Mongoose', 'passportJS', 'HelmetJS', 'Mocha', 'Chai', 'Webpack', 'CSS3', 'HTML5', 'Pen and Paper'];
+const furtherTech = ['Git', 'ES6', 'CSS-in-JS', 'React Transition Group', 'Express', 'Templeting Engines', 'socket.io', 'Mongoose', 'passportJS', 'HelmetJS', 'Mocha', 'Chai', 'Webpack', 'CSS3', 'HTML5', 'Pen and Paper'];
 
 const resources = [{
 		name: 'freeCodeCamp',

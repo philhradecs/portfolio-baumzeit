@@ -3,7 +3,7 @@ export default [
   {
     data: {
       title: 'Personal Website / Portfolio',
-      description: "A multi page personal website built with React. The site should provide a simple structure and communicate clearly and coherently a suitable range of relevant information about myself. Transitions across routes are realized using the routers API together with CSS Transition Groups for a seamless native-like user experience. The projects data is presented via a filter view mechanism for easy navigation of the catalogue. Additional interactive content will be added soon."
+      description: "Personal website built with React. The server side rendered single page application should provide an unobstrusive UI and communicate clearly and coherently a suitable range of relevant information about myself. Transitions across routes are realized using the reach router's API together with CSS Transition Groups for a seamless native-like user experience. The projects data is presented via a filter view mechanism for easy navigation of the catalog. Additional interactive content will be added soon."
     },
     img: 'portfolio_baumzeit.jpg',
     url: {
@@ -16,7 +16,7 @@ export default [
   {
     data: {
       title: 'Music Art Explorer',
-      description: "(work in progress) A user-friendly tool to compare music cover art throughout different decades, genres and countries utilizing the Discogs API. Through distraction-free and customizable views of art and meta data, characteristics and patterns within and across visual cultures start to reveal themselves to the user who can generate a shareable url link for any particular view. Using React together with socket.io to communicate with the Node/Express server allows for real-time actualization of data and representation of state."
+      description: "(work in progress) A user-friendly tool  to compare music cover art throughout different decades, genres and countries utilizing the Discogs API. Through distraction-free and customizable views of art and meta data, characteristics and patterns within and across visual cultures start to reveal themselves to the user who can generate a shareable url link for any particular view. Using React together with socket.io to communicate with the Node/Express server allows for real-time actualization of data and representation of state."
     },
     img: 'vmhx.jpg',
     url: {
@@ -141,6 +141,19 @@ export default [
       code: 'https://github.com/baumzeit/fcc-survey-form/'
     },
     tags: ['Responsive Design', 'CSS3', 'Accessibility', 'HTML5']
+  },
+
+  {
+    data: {
+      title: 'Book Library App',
+      description: "A responsive library app built using Express, Pug Templating and a MongoDB database. The functionality includes creating, reading, updating and deleting Author, Genre, Book and Book Copy Data. User input is validated and sanitized using express-validator. The client-side views are dynamically generated and represent any changes in the database."
+    },
+    img: 'express_library.jpg',
+    url: {
+      live: 'https://express-mongo-library.herokuapp.com/catalog',
+      code: 'https://github.com/baumzeit/express-locallibrary'
+    },
+    tags: ['Node', 'Express', 'MongoDB', 'Mongoose', 'PugJS', 'Bootstrap']
   },
 
   {
