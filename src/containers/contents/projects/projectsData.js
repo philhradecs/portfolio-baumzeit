@@ -153,7 +153,7 @@ export default [
       live: 'https://express-mongo-library.herokuapp.com/catalog',
       code: 'https://github.com/baumzeit/express-locallibrary'
     },
-    tags: ['Node', 'Express', 'MongoDB', 'Mongoose', 'PugJS', 'Bootstrap']
+    tags: ['Node', 'Express', 'MongoDB', 'Mongoose', 'PugJS', 'Responsive Design', 'Bootstrap']
   },
 
   {
