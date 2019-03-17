@@ -12,6 +12,19 @@ export default [
     },
     tags: ['React', 'Animated Routes', 'CSS3', 'Responsive Design']
   },
+
+  {
+    data: {
+      title: 'Data Visualization Society Signups',
+      description: "Upon signup for the Data Visualization Society, people were asked to self-evaluate their experience levels on a scale from 1 (no experience) to 5 (master) in the areas 'data', 'visualization' and 'society'. This visualization built with D3 uses data collected during the first 18 days since signup opened. Detailed data is shown contextually by hovering over different areas of the chart. The raw data is processed and restructured before DOM representations are created."
+    },
+    img: 'dvs_signups.jpg',
+    url: {
+      live: 'https://baumzeit.github.io/dataviz-dvs-signups/',
+      code: 'https://github.com/baumzeit/dataviz-dvs-signups/'
+    },
+    tags: [ 'D3', 'UI', 'Data Visualization']
+  },
   
   {
     data: {
