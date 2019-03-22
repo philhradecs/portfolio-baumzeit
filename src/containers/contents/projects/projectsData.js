@@ -1,5 +1,31 @@
 export default [
-  
+
+  {
+    data: {
+      title: 'Drinking around the world',
+      description: "An interactive dot chart built with D3 comparing countries around the world in regards to the amount and type of alcoholic drink consumed per person and year. Every country is represented as a dot in the histogram with further data displayed as a self-updating, animated pie chart. An integrated search function with auto-suggestion allows users to search and show data for a specific country. The piechart smoothly transitions from one state to the next which provides a delightful experience especially when exploring the data by hovering over the country dots area. Legends, axes, titles and sources provide enough context for the data display to stand for itself."
+    },
+    img: 'global_drinks.png',
+    url: {
+      live: 'https://baumzeit.github.io/dataviz-global-drinks/',
+      code: 'https://github.com/baumzeit/dataviz-global-drinks/'
+    },
+    tags: [ 'D3', 'UI', 'Animation', 'Data Visualization']
+  },  
+
+  {
+    data: {
+      title: 'Data Visualization Society Signups',
+      description: "Upon signup for the Data Visualization Society, people were asked to self-evaluate their experience levels on a scale from 1 (no experience) to 5 (master) in the areas 'data', 'visualization' and 'society'. This visualization built with D3 uses data collected during the first 18 days since signup opened. Detailed data is shown contextually by hovering over different areas of the chart. The raw data is processed and restructured before DOM representations are created."
+    },
+    img: 'dvs_signups.jpg',
+    url: {
+      live: 'https://baumzeit.github.io/dataviz-dvs-signups/',
+      code: 'https://github.com/baumzeit/dataviz-dvs-signups/'
+    },
+    tags: [ 'D3', 'UI', 'Data Visualization']
+  },
+
   {
     data: {
       title: 'Personal Website / Portfolio',
@@ -15,15 +41,15 @@ export default [
 
   {
     data: {
-      title: 'Data Visualization Society Signups',
-      description: "Upon signup for the Data Visualization Society, people were asked to self-evaluate their experience levels on a scale from 1 (no experience) to 5 (master) in the areas 'data', 'visualization' and 'society'. This visualization built with D3 uses data collected during the first 18 days since signup opened. Detailed data is shown contextually by hovering over different areas of the chart. The raw data is processed and restructured before DOM representations are created."
+      title: 'Book Library App',
+      description: "A responsive library app built using Express, Pug Templating and a MongoDB database. The functionality includes creating, reading, updating and deleting Author, Genre, Book and Book Copy Data. User input is validated and sanitized using express-validator. The client-side views are dynamically generated and represent any changes in the database."
     },
-    img: 'dvs_signups.jpg',
+    img: 'express_library.jpg',
     url: {
-      live: 'https://baumzeit.github.io/dataviz-dvs-signups/',
-      code: 'https://github.com/baumzeit/dataviz-dvs-signups/'
+      live: 'https://express-mongo-library.herokuapp.com/catalog',
+      code: 'https://github.com/baumzeit/express-locallibrary'
     },
-    tags: [ 'D3', 'UI', 'Data Visualization']
+    tags: ['Node', 'Express', 'MongoDB', 'Mongoose', 'PugJS', 'Responsive Design', 'Bootstrap']
   },
   
   {
@@ -64,6 +90,7 @@ export default [
     },
     tags: ['vanillaJS', 'DOM Manipulation', 'Algorithms', 'AI', 'CSS3']
   },
+
   
   {
     data: {
@@ -154,19 +181,6 @@ export default [
       code: 'https://github.com/baumzeit/fcc-survey-form/'
     },
     tags: ['Responsive Design', 'CSS3', 'Accessibility', 'HTML5']
-  },
-
-  {
-    data: {
-      title: 'Book Library App',
-      description: "A responsive library app built using Express, Pug Templating and a MongoDB database. The functionality includes creating, reading, updating and deleting Author, Genre, Book and Book Copy Data. User input is validated and sanitized using express-validator. The client-side views are dynamically generated and represent any changes in the database."
-    },
-    img: 'express_library.jpg',
-    url: {
-      live: 'https://express-mongo-library.herokuapp.com/catalog',
-      code: 'https://github.com/baumzeit/express-locallibrary'
-    },
-    tags: ['Node', 'Express', 'MongoDB', 'Mongoose', 'PugJS', 'Responsive Design', 'Bootstrap']
   },
 
   {
