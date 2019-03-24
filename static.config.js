@@ -6,7 +6,7 @@ export default {
     title: 'Portfolio Baumzeit',
     lastBuilt: Date.now()
   }),
-  siteRoot: 'https://portfolio-baumzeit.netlify.com',
+  // siteRoot: 'https://portfolio-baumzeit.netlify.com',
   Document: ({ Html, Head, Body, children, siteData }) => (
     <Html lang="en-US">
       <Head>
