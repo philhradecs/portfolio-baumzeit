@@ -5,8 +5,8 @@ export default (pathname) => {
     if (!pathname) {
         return routeThemes.default;
     }
-    const re = /.+\/$/;
-    const sanitizedPath = pathname.replace(re, '');
+    const re = /(.+)\/$/;
+    const sanitizedPath = pathname.replace(re, '$1');
 
     console.log('sanitized path: ' + sanitizedPath)
     
