@@ -29,7 +29,7 @@ export default [
   {
     data: {
       title: 'freeCodeCamp Facebook Page Dataviz',
-      description: "A data visualization built with D3 showing data about the freeCodeCamp facebook page of roughly one year. The bars represent posts made to the facebook page and are laid out horizontally by date. The heights of the bars show the relative impacts of the corresponding posts with multiple factors available: reach, clicks and reactions. Hovering over the chart area live updates the the display at the bottom showing the title of the selected post."
+      description: "A data visualization built with D3 showing data about the freeCodeCamp facebook page of roughly one year. The bars represent posts made to the facebook page and are laid out horizontally by date. The heights of the bars show the relative impacts of the corresponding posts with multiple factors available: reach, clicks and reactions. Hovering over the chart area live updates the display at the bottom showing the title of the selected post."
     },
     img: 'dvs_facebook.png',
     url: {
