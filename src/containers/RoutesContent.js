@@ -29,7 +29,7 @@ const ContentWrapper = styled.section`
   ${({theme}) =>
     theme.pageView && css`
       background: ${theme.contentBg};
-      box-shadow: 0 0.1em 0.9em -0.45em rgba(0, 0, 0, 0.8);
+      box-shadow: 0 0.1em 0.7em -0.45em rgba(0, 0, 0, 0.8);
     `  
   }
 
@@ -54,8 +54,8 @@ const ContentWrapper = styled.section`
 
 export default ({ isMobile }) => (
   <Location>
-    {({ location }) => {
-      return <FixedGridArea isMobile={isMobile}>
+    {({ location }) => 
+      <FixedGridArea isMobile={isMobile}>
         <TransitionGroup component={null}>
           <CSSTransition 
             key={location.key}
@@ -72,7 +72,6 @@ export default ({ isMobile }) => (
           </CSSTransition>
         </TransitionGroup>
       </FixedGridArea>
-    }
     }
   </Location>
   

@@ -6,13 +6,9 @@ import getThemeForPath from '../../../styles/getThemeForPath';
 import NavBar from './NavBar';
 
 const getTransitionName = (location) => {
-  // assign default prevPath on first page load (where there is no history)
-  if (!location.state || !getThemeForPath(location.state.prevPath)) {
-    location.state = { prevPath: 'default'};
-  }
-  // check if current path is defined and assign default path if it is not
-  if (!getThemeForPath(location.pathname)) {
-    location.pathname = 'default';
+  // deal with the case where prevPath is not defined, e.g on first page load
+  if (!location.state) {
+    return 'keepSize';
   }
   // prevPath was passed to the Link component in sidebar/full/NavLinks
   const wasWide = getThemeForPath(location.state.prevPath).wide;
