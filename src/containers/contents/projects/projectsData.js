@@ -3,7 +3,7 @@ export default [
   {
     data: {
       title: 'Drinking around the world',
-      description: "An interactive dot chart built with D3 comparing countries around the world in regards to the amount and type of alcoholic drink consumed per person and year. Every country is represented as a dot in the histogram with further data displayed as a self-updating, animated pie chart. An integrated search function with auto-suggestion allows users to search and show data for a specific country. The piechart smoothly transitions from one state to the next which provides a delightful experience especially when exploring the data by hovering over the country dots area. Legends, axes, titles and sources provide enough context for the data display to stand for itself."
+      description: "An interactive dot chart built with D3 comparing countries around the world in regards to the amount and type of alcoholic drinks consumed per person and year. Every country is represented as a dot in the histogram with further data displayed as a self-updating, animated pie chart. An integrated search function with auto-suggestion allows users to search and show data for a specific country. The piechart smoothly transitions from one state to the next which provides a delightful experience especially when exploring the data by hovering over the country dots area. Legends, axes, titles and sources provide enough context for the data display to stand for itself."
     },
     img: 'global_drinks.png',
     url: {
@@ -22,6 +22,19 @@ export default [
     url: {
       live: 'https://baumzeit.github.io/dataviz-dvs-signups/',
       code: 'https://github.com/baumzeit/dataviz-dvs-signups/'
+    },
+    tags: [ 'D3', 'UI', 'Data Visualization']
+  },
+
+  {
+    data: {
+      title: 'freeCodeCamp Facebook Page Dataviz',
+      description: "A data visualization built with D3 showing data about the freeCodeCamp facebook page of roughly one year. The bars represent posts made to the facebook page and are laid out horizontally by date. The heights of the bars show the relative impacts of the corresponding posts with multiple factors available: reach, clicks and reactions. Hovering over the chart area live updates the the display at the bottom showing the title of the selected post."
+    },
+    img: 'dvs_facebook.png',
+    url: {
+      live: 'https://baumzeit.github.io/dataviz-fcc-facebook-page/',
+      code: 'https://github.com/baumzeit/dataviz-fcc-facebook-page'
     },
     tags: [ 'D3', 'UI', 'Data Visualization']
   },
