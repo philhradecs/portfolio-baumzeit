@@ -83,9 +83,10 @@ const HomeWrapper = styled.div`
 `;
 
 
-const furtherTech = ['Git', 'ES6', 'CSS-in-JS', 'React Transition Group', 'Express', 'Templating Engines', 'socket.io', 'Mongoose', 'passportJS', 'HelmetJS', 'Mocha', 'Chai', 'Webpack', 'CSS3', 'HTML5', 'Pen and Paper'];
+const furtherTech = ['Git', 'ES6', 'CSS-in-JS', 'Sass', 'React Transition Group', 'Express', 'Templating Engines', 'socket.io', 'Mongoose', 'passportJS', 'HelmetJS', 'Linting', 'Mocha', 'Chai', 'Webpack', 'CSS3', 'HTML5', 'Pen and Paper'];
 
-const resources = [{
+const resources = [
+    {
 		name: 'freeCodeCamp',
 		type: 'learning platform',
 		url: 'https://www.freecodecamp.org/'
@@ -104,7 +105,12 @@ const resources = [{
 		name: 'Composing Software',
 		type: 'book',
 		url: 'https://leanpub.com/composingsoftware'
-	}
+	},
+    {
+        name: 'D3.js in Action',
+        type: 'book',
+        url: 'https://www.manning.com/books/d3js-in-action-second-edition'
+    }
 ]
 
 export default () => (
