@@ -123,7 +123,7 @@ export default () => (
     	Based in the Austrian woodlands close to the city of Vienna, I am developing <Bold>frontend and backend</Bold> applications using responsibly <Bold>state of the art technologies</Bold> to create <Bold>meaningful and effortless</Bold> user experiences that bring about the best of our users.
     </Paragraph>
     <Paragraph>
-    	 I'm currently designing my work around <Look value='#357CC9'>React</Look>, <Look value='#026E00'>Node</Look>, <Look value='#62A999'>MongoDB</Look> and <Look value='#CC624E' bold>D3</Look> with a broad set of related technologies, frameworks, tools and packages to leverage efficiency, flexibility, maintainability, scalability, security and personal well-being.
+    	 I'm currently designing my work around <Look value='#357CC9'>React</Look>, <Look value='#CC624E' bold>D3</Look>, <Look value='#026E00'>Node</Look> and <Look value='#62A999'>MongoDB</Look> with a broad set of related frameworks, tools and libraries to leverage efficiency, flexibility, maintainability, scalability, security and personal well-being.
     </Paragraph>
     <Paragraph>
     	 Namely: {furtherTech.map((t, i) => (
