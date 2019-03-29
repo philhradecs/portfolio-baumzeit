@@ -7,10 +7,7 @@
 
 #### Server-side Rendering
 - performance optimizations
-- fix client/server mismatch issue (waiting for next react-media version to address this)
 
 #### React
 - split NavBar into smaller components
 - performance optimizations
-- unify theming
-- getTheme function with fallback
