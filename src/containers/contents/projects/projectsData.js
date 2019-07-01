@@ -1,6 +1,21 @@
 export default [
   {
     data: {
+      title: 'Music Art Explorer',
+      description: `(work in progress) An exploratory tool to compare music cover art throughout different time periods, genres and countries using data from the Discogs music library. Clean and sophisticated user interfaces, an engaging user experience, as well as customizable views of art and meta data help reveal characteristics and patterns within and across visual cultures to the user.
+      The application is powered by React, Apollo Client and Next.js. The GraphQL backend - fetching and shaping data from the Discogs API - is based on Apollo Server and Micro.`
+    },
+    img: 'vmhx.jpg',
+    url: {
+      live:
+        'https://vmx-client.baumzeit.now.sh/explorer?years=1980-1989&musicType=Folk%20Rock&country=Finland',
+      code: 'https://github.com/baumzeit/vmx-react-client'
+    },
+    tags: ['React', 'Apollo', 'GraphQL', 'SSR', 'API', 'UI', 'UX']
+  },
+
+  {
+    data: {
       title: 'Drinking around the world',
       description:
         'An interactive dot chart built with D3 comparing countries around the world in regards to the amount and type of alcoholic drinks consumed per person and year. Every country is represented as a dot in the histogram with further data displayed as a self-updating, animated pie chart. An integrated search function with auto-suggestion allows users to search and show data for a specific country. The piechart smoothly transitions from one state to the next which provides a delightful experience especially when exploring the data by hovering over the country dots area. Legends, axes, titles and sources provide enough context for the data display to stand for itself.'
@@ -75,21 +90,6 @@ export default [
       'Responsive Design',
       'Bootstrap'
     ]
-  },
-
-  {
-    data: {
-      title: 'Music Art Explorer',
-      description: `(work in progress) An exploratory tool to compare music cover art throughout different time periods, genres and countries using data from the Discogs music library. Clean and sophisticated user interfaces, an engaging user experience, as well as customizable views of art and meta data help reveal characteristics and patterns within and across visual cultures to the user.
-      The application is powered by React, Apollo Client and Next.js. The GraphQL backend - fetching and shaping data from the Discogs API - is based on Apollo Server and Micro.`
-    },
-    img: 'vmhx.jpg',
-    url: {
-      live:
-        'https://vmx-client.baumzeit.now.sh/explorer?years=1980-1989&musicType=Folk%20Rock&country=Finland',
-      code: 'https://github.com/baumzeit/vmx-react-client'
-    },
-    tags: ['React', 'Apollo', 'GraphQL', 'SSR', 'API', 'UI', 'UX']
   },
 
   {
