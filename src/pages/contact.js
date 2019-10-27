@@ -9,9 +9,10 @@ const FlexWrapper = styled.div`
   margin-top: -2vw;
 `;
 
+const ProppedAnchor = ({children, href}) => (<a href={href} target='_blank' rel='noreferrer noopener'>{children}</a>)
+
 const FindMe = styled.img`
   width: 78%;
-  
 `;
 
 export default () => (
@@ -25,8 +26,8 @@ export default () => (
       I wonder: Given the circumstances .. <Bold>What does it really take</Bold> for any new digital product to be adopted <Bold>appreciatively</Bold> and <Bold>responsibly</Bold>, helping people <Bold>thrive not turning on themselves and nature</Bold>?
     </Paragraph>
     <Paragraph>
-      Apart from coding I like to spend my time playing boardgames and videogames, listening to good music and walking around in nature.<br/>
-      You can meet me at <a href='https://www.meetup.com/de-DE/Free-Code-Camp-Vienna/' target='_blank' rel='noreferrer noopener'>freeCodeCamp Vienna Meetups</a> or get in touch via email or messenger.
+      Apart from coding I like to spend my time playing boardgames and video games, listening to good music and walking around in nature.<br/>
+        You will usually find me at these Meetups: <ProppedAnchor href='https://www.meetup.com/uxvienna/'>Vienna UX & Design</ProppedAnchor>, <ProppedAnchor href='https://www.meetup.com/ondataanddesign-vienna/'>On data and design – Vienna</ProppedAnchor>, <ProppedAnchor href='https://www.meetup.com/Vienna-Game-Dev-Meetup/'>Vienna GameDev Meetup</ProppedAnchor>, <ProppedAnchor href='https://www.meetup.com/ReactVienna/'>React Vienna</ProppedAnchor>, <ProppedAnchor href='https://www.meetup.com/Free-Code-Camp-Vienna/'>freeCodeCamp Vienna</ProppedAnchor> or get in touch via email or messenger.
     </Paragraph>
     <Email href='mailto:baumzeit@posteo.me'>baumzeit@posteo.me</Email>
     <Paragraph emphasis>
