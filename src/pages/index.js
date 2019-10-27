@@ -242,7 +242,7 @@ export default () => (
       </Paragraph>
       <FlexWrapper>
         <Paragraph>
-          <Bold>Let's get to work!</Bold> I'm currently looking to be hired.
+          <Bold>Let's get to work!</Bold> I'm currently working at <a href="https://webundsoehne.com/">Web & Söhne</a>.
           <br />
           As much as do I enjoy the silence - <Bold>team work</Bold> is where I
           flourish.
