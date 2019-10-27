@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { Paragraph, Bold, Email } from '../styles/styledPageComponents';
+import {Paragraph, Bold, Email, ProppedAnchor} from '../styles/styledPageComponents';
 import HistoryLink from '../containers/sidebar/HistoryLink';
 import Delayed from '../containers/contents/projects/showlist/Delayed';
 
@@ -198,9 +198,9 @@ export default () => (
         <List>
           {resources.map(item => (
             <Resource key={item.name}>
-              <a href={item.url} target="_blank" rel="noopener noreferrer">
+              <ProppedAnchor href={item.url}>
                 {item.name}
-              </a>{' '}
+              </ProppedAnchor>{' '}
               - {item.type}
             </Resource>
           ))}
@@ -242,7 +242,7 @@ export default () => (
       </Paragraph>
       <FlexWrapper>
         <Paragraph>
-          <Bold>Let's get to work!</Bold> I'm currently working at <a href="https://webundsoehne.com/">Web & Söhne</a>.
+          <Bold>Let's get to work!</Bold> I'm currently working at <ProppedAnchor href="https://webundsoehne.com/">Web & Söhne</ProppedAnchor>.
           <br />
           As much as do I enjoy the silence - <Bold>team work</Bold> is where I
           flourish.

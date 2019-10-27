@@ -1,3 +1,4 @@
+import React from 'react'
 import styled from 'styled-components';
 
 const LightTitle = styled.h1`
@@ -40,4 +41,10 @@ const Paragraph = styled.p`
   margin-left: ${props => props.emphasis ? '-0.6rem' : '0' }
 `;
 
-export { LightTitle, DarkTitle, Paragraph, Bold, Email }
+const StyledAnchor = styled.a`
+  text-decoration: none;
+`;
+
+const ProppedAnchor = ({children, href}) => (<StyledAnchor href={href} target='_blank' rel='noreferrer noopener'>{children}</StyledAnchor>)
+
+export { LightTitle, DarkTitle, Paragraph, Bold, Email, ProppedAnchor }

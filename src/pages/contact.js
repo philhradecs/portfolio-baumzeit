@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { LightTitle, Paragraph, Email, Bold } from '../styles/styledPageComponents';
+import {LightTitle, Paragraph, Email, Bold, ProppedAnchor} from '../styles/styledPageComponents';
 
 const FlexWrapper = styled.div`
   display: flex;
@@ -8,8 +8,6 @@ const FlexWrapper = styled.div`
   justify-content: center;
   margin-top: -2vw;
 `;
-
-const ProppedAnchor = ({children, href}) => (<a href={href} target='_blank' rel='noreferrer noopener'>{children}</a>)
 
 const FindMe = styled.img`
   width: 78%;
