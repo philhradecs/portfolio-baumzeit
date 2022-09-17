@@ -36,28 +36,29 @@ const Image = styled.img`
   border-radius: 0.3rem;
   z-index: auto;
 
-  ${({left}) =>
+  ${({ left }) =>
     left && css`
       z-index: 15;
       transform: rotate(-28deg);
       margin-bottom: 20px;
     `
-    }
+  }
 `;
 
 export default () => (
   <>
     <LightTitle>CV</LightTitle>
     <Paragraph emphasis>
-      <Bold>Click image to download as PDF →</Bold>
+      <Bold style={{ textDecoration: 'line-through' }}>Click image to download as PDF →</Bold>
+      {' '}Outdated
     </Paragraph>
-    <FlexContainer>
+    {/* <FlexContainer>
       <Anchor href='/assets_cv/public_cv_philip_hradecsni.pdf' download media_type="application/pdf">
         <ImageWrapper>
           <Image src='/assets_cv/Philip_Hradecsni_CV-1.jpg' alt="image of cv" left />
           <Image src='/assets_cv/Philip_Hradecsni_CV-2.jpg' alt="image of cv" right />
         </ImageWrapper>
       </Anchor>
-    </FlexContainer>
+    </FlexContainer> */}
   </>
 )
