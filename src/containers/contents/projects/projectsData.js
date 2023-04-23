@@ -9,7 +9,7 @@ export default [
     url: {
       live:
         'https://vmx-client.baumzeit.now.sh/explorer?years=1980-1989&musicType=Folk%20Rock&country=Finland',
-      code: 'https://github.com/baumzeit/vmx-react-client'
+      code: 'https://github.com/philhradecs/vmx-react-client'
     },
     tags: ['React', 'Apollo', 'GraphQL', 'SSR', 'API', 'UI', 'UX']
   },
@@ -22,8 +22,8 @@ export default [
     },
     img: 'global_drinks.png',
     url: {
-      live: 'https://baumzeit.github.io/dataviz-global-drinks/',
-      code: 'https://github.com/baumzeit/dataviz-global-drinks/'
+      live: 'https://philhradecs.github.io/dataviz-global-drinks/',
+      code: 'https://github.com/philhradecs/dataviz-global-drinks/'
     },
     tags: ['D3', 'UI', 'Animation', 'Data Visualization']
   },
@@ -36,8 +36,8 @@ export default [
     },
     img: 'dvs_signups.jpg',
     url: {
-      live: 'https://baumzeit.github.io/dataviz-dvs-signups/',
-      code: 'https://github.com/baumzeit/dataviz-dvs-signups/'
+      live: 'https://philhradecs.github.io/dataviz-dvs-signups/',
+      code: 'https://github.com/philhradecs/dataviz-dvs-signups/'
     },
     tags: ['D3', 'UI', 'Data Visualization']
   },
@@ -50,8 +50,8 @@ export default [
     },
     img: 'dvs_facebook.png',
     url: {
-      live: 'https://baumzeit.github.io/dataviz-fcc-facebook-page/',
-      code: 'https://github.com/baumzeit/dataviz-fcc-facebook-page'
+      live: 'https://philhradecs.github.io/dataviz-fcc-facebook-page/',
+      code: 'https://github.com/philhradecs/dataviz-fcc-facebook-page'
     },
     tags: ['D3', 'UI', 'Data Visualization']
   },
@@ -65,7 +65,7 @@ export default [
     img: 'portfolio_baumzeit.jpg',
     url: {
       live: 'https://portfolio-baumzeit.netlify.com/',
-      code: 'https://github.com/baumzeit/portfolio-baumzeit/'
+      code: 'https://github.com/philhradecs/portfolio-baumzeit/'
     },
     tags: ['React', 'Animated Routes', 'CSS3', 'Responsive Design']
   },
@@ -79,7 +79,7 @@ export default [
     img: 'express_library.jpg',
     url: {
       live: 'https://express-mongo-library.herokuapp.com/catalog',
-      code: 'https://github.com/baumzeit/express-locallibrary'
+      code: 'https://github.com/philhradecs/express-locallibrary'
     },
     tags: [
       'Node',
@@ -100,8 +100,8 @@ export default [
     },
     img: 'drum_machine.jpg',
     url: {
-      live: 'https://baumzeit.github.io/fcc-drum-machine/',
-      code: 'https://github.com/baumzeit/fcc-drum-machine/'
+      live: 'https://philhradecs.github.io/fcc-drum-machine/',
+      code: 'https://github.com/philhradecs/fcc-drum-machine/'
     },
     tags: ['React', 'UI']
   },
@@ -114,8 +114,8 @@ export default [
     },
     img: 'tic_tac_toe.jpg',
     url: {
-      live: 'https://baumzeit.github.io/fcc-tic-tac-toe/',
-      code: 'https://github.com/baumzeit/fcc-tic-tac-toe/'
+      live: 'https://philhradecs.github.io/fcc-tic-tac-toe/',
+      code: 'https://github.com/philhradecs/fcc-tic-tac-toe/'
     },
     tags: ['vanillaJS', 'DOM Manipulation', 'Algorithms', 'AI', 'CSS3']
   },
@@ -128,8 +128,8 @@ export default [
     },
     img: 'simon.jpg',
     url: {
-      live: 'https://baumzeit.github.io/fcc-simon-in-bali/',
-      code: 'https://github.com/baumzeit/fcc-simon-in-bali/'
+      live: 'https://philhradecs.github.io/fcc-simon-in-bali/',
+      code: 'https://github.com/philhradecs/fcc-simon-in-bali/'
     },
     tags: ['vanillaJS', 'OOP', 'CSS3']
   },
@@ -142,8 +142,8 @@ export default [
     },
     img: 'pomodoro_clock.jpg',
     url: {
-      live: 'https://baumzeit.github.io/fcc-pomodoro-clock/',
-      code: 'https://github.com/baumzeit/fcc-pomodoro-clock/'
+      live: 'https://philhradecs.github.io/fcc-pomodoro-clock/',
+      code: 'https://github.com/philhradecs/fcc-pomodoro-clock/'
     },
     tags: ['vanillaJS', 'DOM Manipulation']
   },
@@ -156,8 +156,8 @@ export default [
     },
     img: 'treemap.jpg',
     url: {
-      live: 'https://baumzeit.github.io/fcc-d3-treemap/',
-      code: 'https://github.com/baumzeit/fcc-d3-treemap/'
+      live: 'https://philhradecs.github.io/fcc-d3-treemap/',
+      code: 'https://github.com/philhradecs/fcc-d3-treemap/'
     },
     tags: ['D3', 'Responsive Design', 'UI', 'Data Visualization']
   },
@@ -170,8 +170,8 @@ export default [
     },
     img: 'choropleth.jpg',
     url: {
-      live: 'https://baumzeit.github.io/fcc-d3-choropleth-map/',
-      code: 'https://github.com/baumzeit/fcc-d3-choropleth-map/'
+      live: 'https://philhradecs.github.io/fcc-d3-choropleth-map/',
+      code: 'https://github.com/philhradecs/fcc-d3-choropleth-map/'
     },
     tags: ['D3', 'Cartography', 'Data Visualization']
   },
@@ -184,8 +184,8 @@ export default [
     },
     img: 'heat_map.jpg',
     url: {
-      live: 'https://baumzeit.github.io/fcc-d3-heat-map/',
-      code: 'https://github.com/baumzeit/fcc-d3-heat-map/'
+      live: 'https://philhradecs.github.io/fcc-d3-heat-map/',
+      code: 'https://github.com/philhradecs/fcc-d3-heat-map/'
     },
     tags: ['D3', 'Data Visualization']
   },
@@ -198,8 +198,8 @@ export default [
     },
     img: 'scatterplot.jpg',
     url: {
-      live: 'https://baumzeit.github.io/fcc-d3-scatter-plot/',
-      code: 'https://github.com/baumzeit/fcc-d3-scatter-plot/'
+      live: 'https://philhradecs.github.io/fcc-d3-scatter-plot/',
+      code: 'https://github.com/philhradecs/fcc-d3-scatter-plot/'
     },
     tags: ['D3', 'Data Visualization']
   },
@@ -212,8 +212,8 @@ export default [
     },
     img: 'survey_form.jpg',
     url: {
-      live: 'https://baumzeit.github.io/fcc-survey-form/',
-      code: 'https://github.com/baumzeit/fcc-survey-form/'
+      live: 'https://philhradecs.github.io/fcc-survey-form/',
+      code: 'https://github.com/philhradecs/fcc-survey-form/'
     },
     tags: ['Responsive Design', 'CSS3', 'Accessibility', 'HTML5']
   },
@@ -227,7 +227,7 @@ export default [
     img: 'chat_room.jpg',
     url: {
       live: 'https://mountain-grape.glitch.me/',
-      code: 'https://github.com/baumzeit/socket-chat-room/'
+      code: 'https://github.com/philhradecs/socket-chat-room/'
     },
     tags: ['Node', 'Express', 'passportJS', 'PugJS', 'socket.io']
   },
@@ -241,7 +241,7 @@ export default [
     img: 'url_shortener.jpg',
     url: {
       live: 'https://spotless-viola.glitch.me/',
-      code: 'https://github.com/baumzeit/fcc-url-shortener/'
+      code: 'https://github.com/philhradecs/fcc-url-shortener/'
     },
     tags: ['Node', 'Express', 'API', 'MongoDB', 'Mongoose']
   },
@@ -255,7 +255,7 @@ export default [
     img: 'exercise_tracker.png',
     url: {
       live: 'https://hazel-owner.glitch.me/',
-      code: 'https://github.com/baumzeit/fcc-exercise-tracker'
+      code: 'https://github.com/philhradecs/fcc-exercise-tracker'
     },
     tags: ['Node', 'Express', 'RESTful', 'API', 'MongoDB', 'Mongoose']
   },
@@ -268,8 +268,8 @@ export default [
     },
     img: 'twitch_streamer.jpg',
     url: {
-      live: 'https://baumzeit.github.io/fcc-twitchtv-streamer/',
-      code: 'https://github.com/baumzeit/fcc-twitchtv-streamer/'
+      live: 'https://philhradecs.github.io/fcc-twitchtv-streamer/',
+      code: 'https://github.com/philhradecs/fcc-twitchtv-streamer/'
     },
     tags: ['API', 'vanillaJS', 'UI']
   },
@@ -282,8 +282,8 @@ export default [
     },
     img: 'quote_generator.jpg',
     url: {
-      live: 'https://baumzeit.github.io/fcc-quote-generator/',
-      code: 'https://github.com/baumzeit/fcc-quote-generator/'
+      live: 'https://philhradecs.github.io/fcc-quote-generator/',
+      code: 'https://github.com/philhradecs/fcc-quote-generator/'
     },
     tags: ['API', 'vanillaJS', 'UI']
   }
